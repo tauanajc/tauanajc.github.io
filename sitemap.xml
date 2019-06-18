@@ -50,7 +50,7 @@
   </url>
   
   <url>
-    <loc>/authors/tauana-junqueira-cunha/</loc>
+    <loc>/authors/cunha-tj/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -67,7 +67,7 @@
   </url>
   
   <url>
-    <loc>/authors/gonzalo-giribet/</loc>
+    <loc>/authors/giribet-g/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -84,7 +84,19 @@
   </url>
   
   <url>
-    <loc>/authors/philippe-bouchet/</loc>
+    <loc>/authors/bouchet-p/</loc>
+    <lastmod>2019-02-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/kano-y/</loc>
+    <lastmod>2019-02-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/lemer-s/</loc>
     <lastmod>2019-02-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -92,18 +104,6 @@
   <url>
     <loc>/publication/cunha-2019-b/</loc>
     <lastmod>2019-02-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/sarah-lemer/</loc>
-    <lastmod>2019-02-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/authors/yasunori-kano/</loc>
-    <lastmod>2019-02-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -332,13 +332,13 @@
   </url>
   
   <url>
-    <loc>/authors/arthur-ziggiatti-g%C3%BCth/</loc>
+    <loc>/tags/brazil/</loc>
     <lastmod>2013-11-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/brazil/</loc>
+    <loc>/authors/bromberg-s/</loc>
     <lastmod>2013-11-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -350,14 +350,14 @@
   </url>
   
   <url>
-    <loc>/publication/cunha-2013/</loc>
+    <loc>/authors/g%C3%BCth-az/</loc>
     <lastmod>2013-11-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/paulo-yukio-gomes-sumida/</loc>
+    <loc>/publication/cunha-2013/</loc>
     <lastmod>2013-11-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -367,13 +367,13 @@
   </url>
   
   <url>
-    <loc>/authors/sandra-bromberg/</loc>
+    <loc>/tags/spatial-distribution/</loc>
     <lastmod>2013-11-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/spatial-distribution/</loc>
+    <loc>/authors/sumida-pyg/</loc>
     <lastmod>2013-11-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
