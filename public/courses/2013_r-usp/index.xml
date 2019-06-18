@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R Language in the Analysis of Ecological Data on Tauana J. Cunha</title>
+    <link>/courses/2013_r-usp/</link>
+    <description>Recent content in R Language in the Analysis of Ecological Data on Tauana J. Cunha</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Tauana Cunha {year}</copyright>
+    <lastBuildDate>Fri, 01 Feb 2013 22:18:45 -0400</lastBuildDate>
+    
+	    <atom:link href="/courses/2013_r-usp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>
