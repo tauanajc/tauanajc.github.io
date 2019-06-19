@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Courses Taught on Tauana J. Cunha</title>
-    <link>/courses/</link>
+    <link>https://tauanacunha.com/courses/</link>
     <description>Recent content in Courses Taught on Tauana J. Cunha</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Tauana Cunha {year}</copyright>
     
-	    <atom:link href="/courses/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://tauanacunha.com/courses/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

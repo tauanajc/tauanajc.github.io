@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Recent &amp; Upcoming Talks on Tauana J. Cunha</title>
-    <link>/talk/</link>
+    <link>https://tauanacunha.com/talk/</link>
     <description>Recent content in Recent &amp; Upcoming Talks on Tauana J. Cunha</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Tauana Cunha {year}</copyright>
     <lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://tauanacunha.com/talk/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Example Talk</title>
-      <link>/talk/example/</link>
+      <link>https://tauanacunha.com/talk/example/</link>
       <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
       
-      <guid>/talk/example/</guid>
+      <guid>https://tauanacunha.com/talk/example/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
