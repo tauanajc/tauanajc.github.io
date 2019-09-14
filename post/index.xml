@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Tauana J. Cunha</title>
-    <link>https://tauanacunha.com/post/</link>
+    <link>/post/</link>
     <description>Recent content in Posts on Tauana J. Cunha</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Tauana Cunha {year}</copyright>
     <lastBuildDate>Mon, 15 Feb 2016 20:12:58 -0400</lastBuildDate>
     
-	    <atom:link href="https://tauanacunha.com/post/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Were the first animals sponge-like? Complexity in the animal tree of life</title>
-      <link>https://tauanacunha.com/post/2016-metazoa/</link>
+      <link>/post/2016-metazoa/</link>
       <pubDate>Mon, 15 Feb 2016 20:12:58 -0400</pubDate>
       
-      <guid>https://tauanacunha.com/post/2016-metazoa/</guid>
+      <guid>/post/2016-metazoa/</guid>
       <description>&lt;p&gt;My post in the blog &lt;a href=&#34;http://sitn.hms.harvard.edu/flash/2016/were-the-first-animals-sponge-like-complexity-in-the-animal-tree-of-life&#34; target=&#34;_blank&#34;&gt;Science in the News&lt;/a&gt; about the early divergences in the animal tree of life:&lt;/p&gt;
 
 &lt;iframe src=&#34;http://sitn.hms.harvard.edu/flash/2016/were-the-first-animals-sponge-like-complexity-in-the-animal-tree-of-life&#34;
@@ -28,10 +28,10 @@
     
     <item>
       <title>Untangling the spider’s web</title>
-      <link>https://tauanacunha.com/post/2014-spider-web/</link>
+      <link>/post/2014-spider-web/</link>
       <pubDate>Sat, 13 Dec 2014 20:12:58 -0400</pubDate>
       
-      <guid>https://tauanacunha.com/post/2014-spider-web/</guid>
+      <guid>/post/2014-spider-web/</guid>
       <description>&lt;p&gt;My post in the blog &lt;a href=&#34;https://evobites.com/2014/12/13/cunha_spider_webs&#34; target=&#34;_blank&#34;&gt;Evo Bites&lt;/a&gt; about the evolution of spider groups that produce orb-shaped (circular) webs:&lt;/p&gt;
 
 &lt;iframe src=&#34;https://evobites.com/2014/12/13/cunha_spider_webs&#34;
@@ -42,10 +42,10 @@
     
     <item>
       <title>Origins of Eukaryotes: who are our closest relatives?</title>
-      <link>https://tauanacunha.com/post/2014-eukaryotes/</link>
+      <link>/post/2014-eukaryotes/</link>
       <pubDate>Wed, 30 Apr 2014 20:12:58 -0400</pubDate>
       
-      <guid>https://tauanacunha.com/post/2014-eukaryotes/</guid>
+      <guid>/post/2014-eukaryotes/</guid>
       <description>&lt;p&gt;My post in the blog &lt;a href=&#34;http://sitn.hms.harvard.edu/flash/2014/origins-of-eukaryotes-who-are-our-closest-relatives&#34; target=&#34;_blank&#34;&gt;Science in the News&lt;/a&gt; about broad relationships in the tree of life:&lt;/p&gt;
 
 &lt;iframe src=&#34;http://sitn.hms.harvard.edu/flash/2014/origins-of-eukaryotes-who-are-our-closest-relatives&#34;
