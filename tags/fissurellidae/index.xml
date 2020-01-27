@@ -2,42 +2,42 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fissurellidae on Tauana J. Cunha</title>
-    <link>https://tauanacunha.com/tags/fissurellidae/</link>
+    <link>/tags/fissurellidae/</link>
     <description>Recent content in Fissurellidae on Tauana J. Cunha</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Tauana Cunha {year}</copyright>
     <lastBuildDate>Tue, 01 Jan 2019 01:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="https://tauanacunha.com/tags/fissurellidae/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="/tags/fissurellidae/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Gastropod phylogeny</title>
-      <link>https://tauanacunha.com/project/inver-phylogeny/</link>
+      <link>/project/inver-phylogeny/</link>
       <pubDate>Tue, 01 Jan 2019 01:00:00 +0000</pubDate>
       
-      <guid>https://tauanacunha.com/project/inver-phylogeny/</guid>
-      <description>&lt;p&gt;With more than 40,000 described marine species, gastropods (snails, limpets and slugs) are arguably the most diverse group of invertebrates in the oceans today. With the main lineages diverging over 400 million years ago, deep relationships between major clades remain poorly understood. I use different sequencing approaches and custom bioinformatic pipelines to resolve gastropod relationships at different levels: from ancient divergences between major gastropod lineages &lt;a href=&#34;https://tauanacunha.com/publication/cunha-2019-a/&#34; target=&#34;_blank&#34;&gt;(Cunha &amp;amp; Giribet 2019 Proceedings B)&lt;/a&gt;, to superfamily/family relationships &lt;a href=&#34;https://tauanacunha.com/publication/cunha-2019-c/&#34; target=&#34;_blank&#34;&gt;(Cunha &amp;amp; Giribet 2019 bioRxiv)&lt;/a&gt;, to divergences between subfamilies and genera &lt;a href=&#34;https://tauanacunha.com/publication/cunha-2019-b/&#34; target=&#34;_blank&#34;&gt;(Cunha et al. 2019 MPE)&lt;/a&gt;.&lt;/p&gt;
+      <guid>/project/inver-phylogeny/</guid>
+      <description>&lt;p&gt;With more than 40,000 described marine species, gastropods (snails, limpets and slugs) are arguably the most diverse group of invertebrates in the oceans today. With the main lineages diverging over 400 million years ago, deep relationships between major clades remain poorly understood. I use different sequencing approaches and custom bioinformatic pipelines to resolve gastropod relationships at different levels: from ancient divergences between major gastropod lineages &lt;a href=&#34;/publication/cunha-2019-a/&#34; target=&#34;_blank&#34;&gt;(Cunha &amp;amp; Giribet 2019 Proceedings B)&lt;/a&gt;, to superfamily/family relationships &lt;a href=&#34;/publication/cunha-2019-c/&#34; target=&#34;_blank&#34;&gt;(Cunha &amp;amp; Giribet 2019 bioRxiv)&lt;/a&gt;, to divergences between subfamilies and genera &lt;a href=&#34;/publication/cunha-2019-b/&#34; target=&#34;_blank&#34;&gt;(Cunha et al. 2019 MPE)&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Marine biogeography</title>
-      <link>https://tauanacunha.com/project/marine-geo/</link>
+      <link>/project/marine-geo/</link>
       <pubDate>Mon, 01 Jan 2018 01:00:00 +0000</pubDate>
       
-      <guid>https://tauanacunha.com/project/marine-geo/</guid>
-      <description>&lt;p&gt;Marine gastropods are widely distributed in the oceans, occupying all kinds of habitats of an ecologically and geologically dynamic environment. They also present diverse reproductive strategies and life histories. I integrate calibrated phylogenies and geographical information on living and fossil species to infer large-scale biogeographical patterns for marine clades &lt;a href=&#34;https://tauanacunha.com/publication/cunha-2019-b/&#34; target=&#34;_blank&#34;&gt;(Cunha et al. 2019 MPE)&lt;/a&gt;. Although species with long-lived larval phases are expected to be better dispersers than species with direct development or short larval stages, conflicting evidence has been found. In an ongoing collaboration, we have found surprisingly little genetic structure between populations of a limpet separated by hundreds to a couple thousand kilometers (Pavón et al. in prep). As a Smithsonian Postdoctoral Fellow at STRI, I am comparing the population structure and dispersal capacity of different species of snails to study the spatial scale of gene flow from fine to large geographical extensions.&lt;/p&gt;
+      <guid>/project/marine-geo/</guid>
+      <description>&lt;p&gt;Marine gastropods are widely distributed in the oceans, occupying all kinds of habitats of an ecologically and geologically dynamic environment. They also present diverse reproductive strategies and life histories. I integrate calibrated phylogenies and geographical information on living and fossil species to infer large-scale biogeographical patterns for marine clades &lt;a href=&#34;/publication/cunha-2019-b/&#34; target=&#34;_blank&#34;&gt;(Cunha et al. 2019 MPE)&lt;/a&gt;. Although species with long-lived larval phases are expected to be better dispersers than species with direct development or short larval stages, conflicting evidence has been found. In an ongoing collaboration, we have found surprisingly little genetic structure between populations of a limpet separated by hundreds to a couple thousand kilometers (Pavón et al. in prep). As a Smithsonian Postdoctoral Fellow at STRI, I am comparing the population structure and dispersal capacity of different species of snails to study the spatial scale of gene flow from fine to large geographical extensions.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Evolution of shell shape</title>
-      <link>https://tauanacunha.com/project/shell-shape-evolution/</link>
+      <link>/project/shell-shape-evolution/</link>
       <pubDate>Sun, 01 Jan 2017 01:00:00 +0000</pubDate>
       
-      <guid>https://tauanacunha.com/project/shell-shape-evolution/</guid>
+      <guid>/project/shell-shape-evolution/</guid>
       <description>&lt;p&gt;From observations of the fossil record, it has been noticed that gastropod shells at the second half of the Mesozoic Era were sturdier and more ornamented than shells from earlier times. A coincident increase in predation has led to the hypothesis that enemy-related interactions were a main driver of phenotypic changes in these organisms (escalation hypothesis). Modern experiments provide data on better-defended forms at present times, but no quantitative data exists for most traits to evaluate the long-term impact of these interactions on the morphological evolution of gastropods. I use focus-stacking to photograph hundreds of fossil shells from the Mesozoic and early Cenozoic to study the evolution of shell shape, with particular attention to trends in spiral height.&lt;/p&gt;
 </description>
     </item>

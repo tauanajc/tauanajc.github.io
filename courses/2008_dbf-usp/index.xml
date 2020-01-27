@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Biological Diversity and Phylogeny on Tauana J. Cunha</title>
-    <link>https://tauanacunha.com/courses/2008_dbf-usp/</link>
+    <link>/courses/2008_dbf-usp/</link>
     <description>Recent content in Biological Diversity and Phylogeny on Tauana J. Cunha</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Tauana Cunha {year}</copyright>
     <lastBuildDate>Fri, 01 Feb 2008 22:18:45 -0400</lastBuildDate>
     
-	    <atom:link href="https://tauanacunha.com/courses/2008_dbf-usp/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="/courses/2008_dbf-usp/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

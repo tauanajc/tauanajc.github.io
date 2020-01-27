@@ -3,470 +3,475 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://tauanacunha.com/talk/example/</loc>
+    <loc>/talk/example/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/talk/</loc>
+    <loc>/talk/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/</loc>
+    <loc>/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/authors/admin/</loc>
+    <loc>/authors/admin/</loc>
     <lastmod>2020-01-10T14:00:00-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/authors/</loc>
+    <loc>/authors/</loc>
     <lastmod>2020-01-10T14:00:00-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/news/</loc>
+    <loc>/news/</loc>
     <lastmod>2020-01-10T14:00:00-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/news/2020-stri/</loc>
+    <loc>/news/2020-stri/</loc>
     <lastmod>2020-01-10T14:00:00-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/news/2019-usp-unicamp/</loc>
+    <loc>/news/2019-usp-unicamp/</loc>
     <lastmod>2019-09-05T20:12:58-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/authors/cunha-tj/</loc>
+    <loc>/authors/cunha-tj/</loc>
     <lastmod>2019-08-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/publication_types/2/</loc>
+    <loc>/publication_types/2/</loc>
     <lastmod>2019-08-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/publication/cunha-2019-c/</loc>
+    <loc>/publication/cunha-2019-c/</loc>
     <lastmod>2019-08-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/authors/giribet-g/</loc>
-    <lastmod>2019-08-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tauanacunha.com/publication_types/</loc>
+    <loc>/authors/giribet-g/</loc>
     <lastmod>2019-08-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/publication/</loc>
+    <loc>/publication_types/</loc>
+    <lastmod>2019-08-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/publication/</loc>
     <lastmod>2019-08-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/news/2019-wcm/</loc>
+    <loc>/news/2019-wcm/</loc>
     <lastmod>2019-08-17T18:35:58-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/news/2019-evolution-meeting/</loc>
+    <loc>/news/2019-evolution-meeting/</loc>
     <lastmod>2019-06-21T18:35:58-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/news/2019-phd-defense/</loc>
+    <loc>/news/2019-phd-defense/</loc>
     <lastmod>2019-06-03T20:12:58-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/news/2019-mpe/</loc>
+    <loc>/news/2019-mpe/</loc>
     <lastmod>2019-04-02T20:12:58-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/news/2019-proceedingsb/</loc>
+    <loc>/news/2019-proceedingsb/</loc>
     <lastmod>2019-03-13T20:12:58-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/publication/cunha-2019-a/</loc>
+    <loc>/publication/cunha-2019-a/</loc>
     <lastmod>2019-03-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/authors/bouchet-p/</loc>
+    <loc>/authors/bouchet-p/</loc>
     <lastmod>2019-02-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/authors/kano-y/</loc>
+    <loc>/authors/kano-y/</loc>
     <lastmod>2019-02-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/authors/lemer-s/</loc>
+    <loc>/authors/lemer-s/</loc>
     <lastmod>2019-02-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/publication/cunha-2019-b/</loc>
+    <loc>/publication/cunha-2019-b/</loc>
     <lastmod>2019-02-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/tags/bioinformatics/</loc>
+    <loc>/tags/bioinformatics/</loc>
     <lastmod>2019-01-01T01:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/tags/fissurellidae/</loc>
+    <loc>/tags/fissurellidae/</loc>
     <lastmod>2019-01-01T01:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/project/inver-phylogeny/</loc>
+    <loc>/project/inver-phylogeny/</loc>
     <lastmod>2019-01-01T01:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/tags/gastropoda/</loc>
-    <lastmod>2019-01-01T01:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tauanacunha.com/tags/phylogenomics/</loc>
+    <loc>/tags/gastropoda/</loc>
     <lastmod>2019-01-01T01:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/tags/phylogeny/</loc>
+    <loc>/tags/phylogenomics/</loc>
     <lastmod>2019-01-01T01:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/project/</loc>
+    <loc>/tags/phylogeny/</loc>
     <lastmod>2019-01-01T01:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/tags/systematics/</loc>
+    <loc>/project/</loc>
     <lastmod>2019-01-01T01:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/tags/</loc>
+    <loc>/tags/systematics/</loc>
     <lastmod>2019-01-01T01:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/tags/transcriptomes/</loc>
+    <loc>/tags/</loc>
     <lastmod>2019-01-01T01:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/tags/vetigastropoda/</loc>
+    <loc>/tags/transcriptomes/</loc>
     <lastmod>2019-01-01T01:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/news/2018-preprint/</loc>
+    <loc>/tags/vetigastropoda/</loc>
+    <lastmod>2019-01-01T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/news/2018-preprint/</loc>
     <lastmod>2018-10-31T20:12:58-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/news/2018-museum-visits/</loc>
+    <loc>/news/2018-museum-visits/</loc>
     <lastmod>2018-08-12T20:12:58-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/news/2018-fff/</loc>
+    <loc>/privacy/</loc>
+    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/news/2018-fff/</loc>
     <lastmod>2018-03-29T20:12:58-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/news/2018-teaching-award/</loc>
+    <loc>/news/2018-teaching-award/</loc>
     <lastmod>2018-03-07T20:12:58-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/courses/2018_inver-extensionharvard/</loc>
+    <loc>/courses/2018_inver-extensionharvard/</loc>
     <lastmod>2018-02-01T22:18:45-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/tags/biogeobears/</loc>
+    <loc>/tags/biogeobears/</loc>
     <lastmod>2018-01-01T01:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/tags/biogeography/</loc>
+    <loc>/tags/biogeography/</loc>
     <lastmod>2018-01-01T01:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/tags/dispersal/</loc>
+    <loc>/tags/dispersal/</loc>
     <lastmod>2018-01-01T01:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/project/marine-geo/</loc>
+    <loc>/project/marine-geo/</loc>
     <lastmod>2018-01-01T01:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/tags/patellogastropoda/</loc>
-    <lastmod>2018-01-01T01:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tauanacunha.com/tags/phylogeography/</loc>
+    <loc>/tags/patellogastropoda/</loc>
     <lastmod>2018-01-01T01:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/courses/2017_phylogeo-nomics-harvard/</loc>
+    <loc>/tags/phylogeography/</loc>
+    <lastmod>2018-01-01T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/courses/2017_phylogeo-nomics-harvard/</loc>
     <lastmod>2017-09-01T22:18:45-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/news/2017-g4symposium/</loc>
+    <loc>/news/2017-g4symposium/</loc>
     <lastmod>2017-04-27T20:12:58-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/news/2017-merit-gsas/</loc>
+    <loc>/news/2017-merit-gsas/</loc>
     <lastmod>2017-04-21T20:12:58-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/tags/disparity/</loc>
+    <loc>/tags/disparity/</loc>
     <lastmod>2017-01-01T01:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/tags/escalation-hypothesis/</loc>
+    <loc>/tags/escalation-hypothesis/</loc>
     <lastmod>2017-01-01T01:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/project/shell-shape-evolution/</loc>
+    <loc>/project/shell-shape-evolution/</loc>
     <lastmod>2017-01-01T01:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/tags/fossils/</loc>
-    <lastmod>2017-01-01T01:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tauanacunha.com/tags/morphospace/</loc>
+    <loc>/tags/fossils/</loc>
     <lastmod>2017-01-01T01:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/news/2016-ddig/</loc>
+    <loc>/tags/morphospace/</loc>
+    <lastmod>2017-01-01T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/news/2016-ddig/</loc>
     <lastmod>2016-12-20T20:12:58-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/news/2016-teaching-award/</loc>
+    <loc>/news/2016-teaching-award/</loc>
     <lastmod>2016-10-19T20:12:58-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/post/</loc>
+    <loc>/post/</loc>
     <lastmod>2016-02-15T20:12:58-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/post/2016-metazoa/</loc>
+    <loc>/post/2016-metazoa/</loc>
     <lastmod>2016-02-15T20:12:58-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/courses/2016_inver-harvard/</loc>
+    <loc>/courses/2016_inver-harvard/</loc>
     <lastmod>2016-02-01T22:18:45-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/news/2015-ssb/</loc>
+    <loc>/news/2015-ssb/</loc>
     <lastmod>2015-10-23T20:12:58-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/news/2015-teaching-award/</loc>
+    <loc>/news/2015-teaching-award/</loc>
     <lastmod>2015-10-20T20:12:58-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/post/2014-spider-web/</loc>
+    <loc>/post/2014-spider-web/</loc>
     <lastmod>2014-12-13T20:12:58-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/post/2014-eukaryotes/</loc>
+    <loc>/post/2014-eukaryotes/</loc>
     <lastmod>2014-04-30T20:12:58-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/tags/abrolhos/</loc>
+    <loc>/tags/abrolhos/</loc>
     <lastmod>2013-11-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/tags/brazil/</loc>
+    <loc>/tags/brazil/</loc>
     <lastmod>2013-11-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/authors/bromberg-s/</loc>
+    <loc>/authors/bromberg-s/</loc>
     <lastmod>2013-11-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/tags/dictyota/</loc>
+    <loc>/tags/dictyota/</loc>
     <lastmod>2013-11-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/authors/g%C3%BCth-az/</loc>
+    <loc>/authors/g%C3%BCth-az/</loc>
     <lastmod>2013-11-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/publication/cunha-2013/</loc>
+    <loc>/publication/cunha-2013/</loc>
     <lastmod>2013-11-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/tags/phytal-macrofauna/</loc>
-    <lastmod>2013-11-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tauanacunha.com/tags/spatial-distribution/</loc>
+    <loc>/tags/phytal-macrofauna/</loc>
     <lastmod>2013-11-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/authors/sumida-pyg/</loc>
+    <loc>/tags/spatial-distribution/</loc>
     <lastmod>2013-11-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/tags/temporal-distribution/</loc>
+    <loc>/authors/sumida-pyg/</loc>
     <lastmod>2013-11-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/courses/2013_r-usp/</loc>
+    <loc>/tags/temporal-distribution/</loc>
+    <lastmod>2013-11-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/courses/2013_r-usp/</loc>
     <lastmod>2013-02-01T22:18:45-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/tags/annelida/</loc>
+    <loc>/tags/annelida/</loc>
     <lastmod>2013-01-01T01:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/project/ecology/</loc>
+    <loc>/project/ecology/</loc>
     <lastmod>2013-01-01T01:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/tags/benthic-ecology/</loc>
-    <lastmod>2013-01-01T01:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tauanacunha.com/tags/crustacea/</loc>
+    <loc>/tags/benthic-ecology/</loc>
     <lastmod>2013-01-01T01:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/tags/fital/</loc>
+    <loc>/tags/crustacea/</loc>
     <lastmod>2013-01-01T01:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/tags/mollusca/</loc>
+    <loc>/tags/fital/</loc>
     <lastmod>2013-01-01T01:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/tags/seaweed/</loc>
+    <loc>/tags/mollusca/</loc>
     <lastmod>2013-01-01T01:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/courses/2010_inver-usp/</loc>
+    <loc>/tags/seaweed/</loc>
+    <lastmod>2013-01-01T01:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/courses/2010_inver-usp/</loc>
     <lastmod>2010-02-01T22:18:45-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/courses/2008_dbf-usp/</loc>
+    <loc>/courses/2008_dbf-usp/</loc>
     <lastmod>2008-02-01T22:18:45-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/categories/</loc>
+    <loc>/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/courses/</loc>
+    <loc>/courses/</loc>
   </url>
   
 </urlset>
