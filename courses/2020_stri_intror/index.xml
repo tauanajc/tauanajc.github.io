@@ -36,16 +36,5 @@
 Sections    Topic Content summary By Date     How R works R/RStudio, objects, manipulate data Ernesto Bonadies April 29   Flow control packages, loops, if/else, functions Lee Dietterich May 6   Graphics baseR, gpplot2 Tauana Cunha May 13   Statistical analysis anova, linear models, ordination Bruno de Medeiros May 20    Office Hours Lee Dietterich - every Monday @3pm</description>
     </item>
     
-    <item>
-      <title>Example Tutorial R Markdown</title>
-      <link>/courses/2020_stri_introR/tutorials/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Tue, 23 Jul 2013 21:13:14 -0500</pubDate>
-      
-      <guid>/courses/2020_stri_introR/tutorials/2015-07-23-r-rmarkdown/</guid>
-      <description>R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
-    </item>
-    
   </channel>
 </rss>
