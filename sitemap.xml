@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
@@ -13,9 +13,13 @@
   </url>
   
   <url>
-    <loc>/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>/courses/</loc>
+    <lastmod>2020-04-22T10:23:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/courses/2020_stri_intror/</loc>
+    <lastmod>2020-04-22T10:23:45-04:00</lastmod>
   </url>
   
   <url>
@@ -26,7 +30,6 @@
   <url>
     <loc>/authors/</loc>
     <lastmod>2020-01-10T14:00:00-04:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -47,13 +50,11 @@
   <url>
     <loc>/authors/cunha-tj/</loc>
     <lastmod>2019-08-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/publication_types/2/</loc>
     <lastmod>2019-08-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -64,13 +65,11 @@
   <url>
     <loc>/authors/giribet-g/</loc>
     <lastmod>2019-08-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/publication_types/</loc>
     <lastmod>2019-08-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -111,19 +110,16 @@
   <url>
     <loc>/authors/bouchet-p/</loc>
     <lastmod>2019-02-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/kano-y/</loc>
     <lastmod>2019-02-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/lemer-s/</loc>
     <lastmod>2019-02-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -134,13 +130,11 @@
   <url>
     <loc>/tags/bioinformatics/</loc>
     <lastmod>2019-01-01T01:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/fissurellidae/</loc>
     <lastmod>2019-01-01T01:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -151,49 +145,41 @@
   <url>
     <loc>/tags/gastropoda/</loc>
     <lastmod>2019-01-01T01:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/phylogenomics/</loc>
     <lastmod>2019-01-01T01:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/phylogeny/</loc>
     <lastmod>2019-01-01T01:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/project/</loc>
     <lastmod>2019-01-01T01:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/systematics/</loc>
     <lastmod>2019-01-01T01:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
     <lastmod>2019-01-01T01:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/transcriptomes/</loc>
     <lastmod>2019-01-01T01:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/vetigastropoda/</loc>
     <lastmod>2019-01-01T01:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -208,6 +194,11 @@
   
   <url>
     <loc>/privacy/</loc>
+    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
     <lastmod>2018-06-28T00:00:00+01:00</lastmod>
   </url>
   
@@ -229,19 +220,16 @@
   <url>
     <loc>/tags/biogeobears/</loc>
     <lastmod>2018-01-01T01:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/biogeography/</loc>
     <lastmod>2018-01-01T01:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/dispersal/</loc>
     <lastmod>2018-01-01T01:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -252,13 +240,11 @@
   <url>
     <loc>/tags/patellogastropoda/</loc>
     <lastmod>2018-01-01T01:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/phylogeography/</loc>
     <lastmod>2018-01-01T01:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -279,13 +265,11 @@
   <url>
     <loc>/tags/disparity/</loc>
     <lastmod>2017-01-01T01:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/escalation-hypothesis/</loc>
     <lastmod>2017-01-01T01:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -296,13 +280,11 @@
   <url>
     <loc>/tags/fossils/</loc>
     <lastmod>2017-01-01T01:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/morphospace/</loc>
     <lastmod>2017-01-01T01:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -353,31 +335,26 @@
   <url>
     <loc>/tags/abrolhos/</loc>
     <lastmod>2013-11-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/brazil/</loc>
     <lastmod>2013-11-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/bromberg-s/</loc>
     <lastmod>2013-11-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/dictyota/</loc>
     <lastmod>2013-11-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/g%C3%BCth-az/</loc>
     <lastmod>2013-11-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -388,25 +365,21 @@
   <url>
     <loc>/tags/phytal-macrofauna/</loc>
     <lastmod>2013-11-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/spatial-distribution/</loc>
     <lastmod>2013-11-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/sumida-pyg/</loc>
     <lastmod>2013-11-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/temporal-distribution/</loc>
     <lastmod>2013-11-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -417,7 +390,6 @@
   <url>
     <loc>/tags/annelida/</loc>
     <lastmod>2013-01-01T01:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -428,31 +400,26 @@
   <url>
     <loc>/tags/benthic-ecology/</loc>
     <lastmod>2013-01-01T01:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/crustacea/</loc>
     <lastmod>2013-01-01T01:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/fital/</loc>
     <lastmod>2013-01-01T01:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/mollusca/</loc>
     <lastmod>2013-01-01T01:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/seaweed/</loc>
     <lastmod>2013-01-01T01:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -467,11 +434,6 @@
   
   <url>
     <loc>/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/courses/</loc>
   </url>
   
 </urlset>
