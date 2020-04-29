@@ -100,7 +100,7 @@
 <p>If this is your first time interacting with a command line or learning a computer language, <code>R</code> may look a bit scary, the learning curve may be steep. But do not worry. Like everything in life, getting exposed to something new multiple times and practicing will get you there! And trust us, it is rewarding! At the end of this introductory course, we hope you will be more comfortable writing basic commands, plotting some graphs, using basic stats in <code>R</code>, and especially, more comfortable to explore whatever you want or need to do in <code>R</code>.</p>
 <p>First, lets take a look at the <code>R</code> interface. Try opening <code>R</code> in your computer. Between operating systems and different <code>R</code> versions there could be some differences, but in general should look like Figure1. As you can see, the interface has little information about how to use it and its not very intuitive. Luckyly, there is a program called <code>RStudio</code>, which gives a nicer and more intuite interface. From now on we are going to be working exclusively in RStudio, considering that it has very handy extra options in comparison to plain <code>R</code>.</p>
 <div class="figure">
-<img src="/figures/fig1_r.png" alt="Figure 1. R interface." />
+<img src="../../figures/fig1_r.png" alt="Figure 1. R interface." />
 <p class="caption">Figure 1. R interface.</p>
 </div>
 <div style="page-break-after: always;"></div>
@@ -112,7 +112,7 @@
 <li><p>The Files, Plots, Packages, Help window (Figure 2, yellow box) is very versatile, you can make many different things in this window. On the <code>Files</code> tab you can create new folders, delete files and move through you computer folders. It also gives you the option to set your working directory from here. The <code>Plot</code> tab is were you are going to visualize your plots. It has some handy options as allowing you to move though your previous plots. The <code>Packages</code> tab allows you to install, update and load packages. The <code>Help</code> tab opens a page describing information and usage of some <code>R</code> elements.</p></li>
 </ol>
 <div class="figure">
-<img src="/figures/fig2_rstudio.png" alt="Figure 2. RStudio interface." />
+<img src="../../figures/fig2_rstudio.png" alt="Figure 2. RStudio interface." />
 <p class="caption">Figure 2. RStudio interface.</p>
 </div>
 </div>
@@ -283,34 +283,34 @@ kindergarten&lt;-data.frame(age,weight_kg,combat_power,THC_content,sample_month)
 Try runnning this:</p>
 <pre class="r"><code>head(kindergarten) # Exploration of the first values of the data frame</code></pre>
 <pre><code>##   age weight_kg combat_power THC_content sample_month
-## 1   8  22.63997     148.3733        high     february
-## 2   6  17.88475     146.7342   very_high     february
-## 3   6  11.96143     178.9169    critical     february
-## 4   7  24.38337     119.1130        high     february
-## 5   7  16.03548     163.5342   very_high     february
-## 6   6  21.41805     187.8146    critical     february</code></pre>
+## 1   7  16.63899     124.1896        high     february
+## 2   8  17.23432     170.6294   very_high     february
+## 3   5  21.24199     121.1554    critical     february
+## 4   7  17.17156     121.8266        high     february
+## 5   7  14.86809     127.1126   very_high     february
+## 6   6  21.88647     129.9532    critical     february</code></pre>
 <pre class="r"><code>str(kindergarten)  # Structure of the data frame</code></pre>
 <pre><code>## &#39;data.frame&#39;:    12 obs. of  5 variables:
-##  $ age         : int  8 6 6 7 7 6 7 7 8 6 ...
-##  $ weight_kg   : num  22.6 17.9 12 24.4 16 ...
-##  $ combat_power: num  148 147 179 119 164 ...
+##  $ age         : int  7 8 5 7 7 6 8 6 6 6 ...
+##  $ weight_kg   : num  16.6 17.2 21.2 17.2 14.9 ...
+##  $ combat_power: num  124 171 121 122 127 ...
 ##  $ THC_content : Factor w/ 3 levels &quot;critical&quot;,&quot;high&quot;,..: 2 3 1 2 3 1 2 3 1 2 ...
 ##  $ sample_month: Factor w/ 2 levels &quot;february&quot;,&quot;november&quot;: 1 1 1 1 1 1 2 2 2 2 ...</code></pre>
 <pre class="r"><code>summary(kindergarten) # Some descriptive stats for each column</code></pre>
 <pre><code>##       age          weight_kg      combat_power      THC_content   sample_month
-##  Min.   :6.000   Min.   :11.96   Min.   :103.9   critical :4    february:6    
-##  1st Qu.:6.000   1st Qu.:18.41   1st Qu.:136.2   high     :4    november:6    
-##  Median :7.000   Median :20.10   Median :155.6   very_high:4                  
-##  Mean   :6.833   Mean   :19.50   Mean   :151.7                                
-##  3rd Qu.:7.000   3rd Qu.:21.46   3rd Qu.:173.2                                
-##  Max.   :8.000   Max.   :24.38   Max.   :187.8</code></pre>
+##  Min.   :5.000   Min.   :14.87   Min.   :110.3   critical :4    february:6    
+##  1st Qu.:6.000   1st Qu.:16.42   1st Qu.:121.7   high     :4    november:6    
+##  Median :7.000   Median :17.55   Median :128.5   very_high:4                  
+##  Mean   :6.667   Mean   :18.64   Mean   :138.8                                
+##  3rd Qu.:7.000   3rd Qu.:21.40   3rd Qu.:147.4                                
+##  Max.   :8.000   Max.   :23.76   Max.   :197.5</code></pre>
 <p>The output of <code>str(kindergarten)</code> gives a lot of information about the data frame. Starts in the top-left mentioning that is a data.frame object with 12 observations (rows) and and 5 variables (columns). Below that shows the name and the data type of each column. You will see in this example a new data type called <code>Factor</code>, which is a categorical variable with levels that correspond to each each of the categories.</p>
 <p>you can select individual columns using the dolar symbol (<code>$</code>). To use it, you have to write the name of the data frame object, add the dolar symbol, and write the name of the column. For example</p>
 <pre class="r"><code>kindergarten$age # Selecting the column called &quot;age&quot; from &quot;Kindergarten&quot;</code></pre>
-<pre><code>##  [1] 8 6 6 7 7 6 7 7 8 6 7 7</code></pre>
+<pre><code>##  [1] 7 8 5 7 7 6 8 6 6 6 7 7</code></pre>
 <p>Once you select an individual column, they behave pretty much like a vector. You can use functions on these columns or you can create new vector with the information of the column. Try this:</p>
 <pre class="r"><code>mean(kindergarten$age)</code></pre>
-<pre><code>## [1] 6.833333</code></pre>
+<pre><code>## [1] 6.666667</code></pre>
 <pre class="r"><code>age_new=kindergarten$age # New vector object with the column data
 
 age_sqrt=sqrt(kindergarten$age) # New vector object with sqrt values of age</code></pre>
@@ -318,24 +318,23 @@ age_sqrt=sqrt(kindergarten$age) # New vector object with sqrt values of age</cod
 <pre class="r"><code>#Find the rows with age&gt;6 using all the columns
 kindergarten[kindergarten$age&gt;6,] </code></pre>
 <pre><code>##    age weight_kg combat_power THC_content sample_month
-## 1    8  22.63997     148.3733        high     february
-## 4    7  24.38337     119.1130        high     february
-## 5    7  16.03548     163.5342   very_high     february
-## 7    7  20.43282     172.3364        high     november
-## 8    7  21.58707     103.9196   very_high     november
-## 9    8  18.82886     118.9000    critical     november
-## 11   7  18.58768     141.8864   very_high     november
-## 12   7  20.14106     175.7558    critical     november</code></pre>
+## 1    7  16.63899     124.1896        high     february
+## 2    8  17.23432     170.6294   very_high     february
+## 4    7  17.17156     121.8266        high     february
+## 5    7  14.86809     127.1126   very_high     february
+## 7    8  15.46284     111.0886        high     november
+## 11   7  23.75614     197.5179   very_high     november
+## 12   7  18.34656     139.7188    critical     november</code></pre>
 <pre class="r"><code>#Find all the rows with the THC_content equals to very_high using all the columns
 kindergarten[kindergarten$THC_content==&quot;very_high&quot;,] </code></pre>
 <pre><code>##    age weight_kg combat_power THC_content sample_month
-## 2    6  17.88475     146.7342   very_high     february
-## 5    7  16.03548     163.5342   very_high     february
-## 8    7  21.58707     103.9196   very_high     november
-## 11   7  18.58768     141.8864   very_high     november</code></pre>
+## 2    8  17.23432     170.6294   very_high     february
+## 5    7  14.86809     127.1126   very_high     february
+## 8    6  23.43474     110.3384   very_high     november
+## 11   7  23.75614     197.5179   very_high     november</code></pre>
 <pre class="r"><code>#Find all the rows with sample_month equals to february only in column 2
 kindergarten[kindergarten$sample_month==&quot;february&quot;,2]</code></pre>
-<pre><code>## [1] 22.63997 17.88475 11.96143 24.38337 16.03548 21.41805</code></pre>
+<pre><code>## [1] 16.63899 17.23432 21.24199 17.17156 14.86809 21.88647</code></pre>
 </div>
 <div id="importing-exporting-data" class="section level2">
 <h2>4. Importing exporting data</h2>
