@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on Tutorials</title>
-    <link>/courses/2020_stri_introR/page/</link>
+    <link>https://tauanacunha.com/courses/2020_stri_introR/page/</link>
     <description>Recent content in Pages on Tutorials</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 16 Apr 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/courses/2020_stri_introR/page/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tauanacunha.com/courses/2020_stri_introR/page/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Further Resources</title>
-      <link>/courses/2020_stri_introR/page/resources/</link>
+      <link>https://tauanacunha.com/courses/2020_stri_introR/page/resources/</link>
       <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/courses/2020_stri_introR/page/resources/</guid>
+      <guid>https://tauanacunha.com/courses/2020_stri_introR/page/resources/</guid>
       <description>You can find further introductory material (tutorials, full courses) for free in the following links:
   R by Data Carpentry
   R for Beginners by Emmanuel Paradis, and a Spanish translation, R para Principiantes
@@ -28,10 +28,10 @@
     
     <item>
       <title>Schedule</title>
-      <link>/courses/2020_stri_introR/page/schedule/</link>
+      <link>https://tauanacunha.com/courses/2020_stri_introR/page/schedule/</link>
       <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/courses/2020_stri_introR/page/schedule/</guid>
+      <guid>https://tauanacunha.com/courses/2020_stri_introR/page/schedule/</guid>
       <description>We meet every Wednesday @10am for one-hour sessions listed below. Tutorials will contain extra exercises to practice on your own time. Besides formal meeting times, each of the instructors will hold weekly office hours in Zoom in which they will be available to help with the tutorials or other R questions you may have. Keep an eye out on Slack for a link to Zoom meetings.
 Sections    Topic Content summary By Date     How R works R/RStudio, objects, manipulate data Ernesto Bonadies April 29   Flow control packages, loops, if/else, functions Lee Dietterich May 6   Graphics baseR, gpplot2 Tauana Cunha May 13   Statistical analysis anova, linear models, ordination Bruno de Medeiros May 20    Office Hours Lee Dietterich - every Monday @3pm</description>
     </item>

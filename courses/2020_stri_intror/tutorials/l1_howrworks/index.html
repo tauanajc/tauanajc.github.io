@@ -13,9 +13,9 @@
         <meta property="og:title" content="Tutorial 1 - How R Works">
 <meta property="og:description" content="Hello people! Welcome to the Introduction to R course 2020 organized by the STRI community. Some of you are already familiriazed with R and Rstudio, but for others this probably is one of the first times using it. So we will start from the beginning. Along the document you will find some examples, it’s highly recommended to try to run those examples in your computer. Thanks for joining and we hope this will be useful for your future projects :)">
 <meta property="og:type" content="article">
-<meta property="og:url" content="/courses/2020_stri_introR/tutorials/l1_howrworks/">
-        <link rel="stylesheet" href="/courses/2020_stri_introR/dist/site.css">
-        <link rel="stylesheet" href="/courses/2020_stri_introR/dist/syntax.css">
+<meta property="og:url" content="https://tauanacunha.com/courses/2020_stri_introR/tutorials/l1_howrworks/">
+        <link rel="stylesheet" href="https://tauanacunha.com/courses/2020_stri_introR/dist/site.css">
+        <link rel="stylesheet" href="https://tauanacunha.com/courses/2020_stri_introR/dist/syntax.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         
@@ -32,10 +32,10 @@
                     <div class="site-title-wrapper">
                         
                             <h1 class="site-title">
-                                <a title="Tutorials" href="/courses/2020_stri_introR/">Tutorials</a>
+                                <a title="Tutorials" href="https://tauanacunha.com/courses/2020_stri_introR/">Tutorials</a>
                             </h1>
                         
-                        <a class="button-square" href="/courses/2020_stri_introR/index.xml"><i class="fa fa-rss"></i></a>
+                        <a class="button-square" href="https://tauanacunha.com/courses/2020_stri_introR/index.xml"><i class="fa fa-rss"></i></a>
                         
                         
                         
@@ -283,34 +283,41 @@ kindergarten&lt;-data.frame(age,weight_kg,combat_power,THC_content,sample_month)
 Try runnning this:</p>
 <pre class="r"><code>head(kindergarten) # Exploration of the first values of the data frame</code></pre>
 <pre><code>##   age weight_kg combat_power THC_content sample_month
-## 1   8  19.27263     187.3702        high     february
-## 2   8  16.90402     132.6678   very_high     february
-## 3   5  21.92653     153.8184    critical     february
-## 4   6  18.88831     110.6797        high     february
-## 5   7  16.26644     190.9533   very_high     february
-## 6   9  20.96331     193.6401    critical     february</code></pre>
+## 1   6  24.56045     123.8467        high     february
+## 2   6  20.90853     112.3149   very_high     february
+## 3   5  20.00506     143.6971    critical     february
+## 4   7  21.71138     109.9927        high     february
+## 5   6  23.07814     107.4138   very_high     february
+## 6   7  20.26961     138.9920    critical     february</code></pre>
 <pre class="r"><code>str(kindergarten)  # Structure of the data frame</code></pre>
 <pre><code>## &#39;data.frame&#39;:    12 obs. of  5 variables:
-##  $ age         : int  8 8 5 6 7 9 7 7 6 7 ...
-##  $ weight_kg   : num  19.3 16.9 21.9 18.9 16.3 ...
-##  $ combat_power: num  187 133 154 111 191 ...
-##  $ THC_content : Factor w/ 3 levels &quot;critical&quot;,&quot;high&quot;,..: 2 3 1 2 3 1 2 3 1 2 ...
-##  $ sample_month: Factor w/ 2 levels &quot;february&quot;,&quot;november&quot;: 1 1 1 1 1 1 2 2 2 2 ...</code></pre>
+##  $ age         : int  6 6 5 7 6 7 7 5 7 7 ...
+##  $ weight_kg   : num  24.6 20.9 20 21.7 23.1 ...
+##  $ combat_power: num  124 112 144 110 107 ...
+##  $ THC_content : chr  &quot;high&quot; &quot;very_high&quot; &quot;critical&quot; &quot;high&quot; ...
+##  $ sample_month: chr  &quot;february&quot; &quot;february&quot; &quot;february&quot; &quot;february&quot; ...</code></pre>
 <pre class="r"><code>summary(kindergarten) # Some descriptive stats for each column</code></pre>
-<pre><code>##       age      weight_kg      combat_power      THC_content   sample_month
-##  Min.   :5   Min.   :15.30   Min.   :110.7   critical :4    february:6    
-##  1st Qu.:6   1st Qu.:17.25   1st Qu.:120.9   high     :4    november:6    
-##  Median :7   Median :19.11   Median :143.2   very_high:4                  
-##  Mean   :7   Mean   :19.32   Mean   :150.3                                
-##  3rd Qu.:8   3rd Qu.:21.20   3rd Qu.:188.3                                
-##  Max.   :9   Max.   :22.73   Max.   :193.6</code></pre>
+<pre><code>##       age         weight_kg      combat_power   THC_content       
+##  Min.   :5.00   Min.   :17.72   Min.   :107.4   Length:12         
+##  1st Qu.:6.00   1st Qu.:19.85   1st Qu.:116.2   Class :character  
+##  Median :6.00   Median :21.31   Median :129.2   Mode  :character  
+##  Mean   :6.25   Mean   :21.12   Mean   :139.7                     
+##  3rd Qu.:7.00   3rd Qu.:22.60   3rd Qu.:150.9                     
+##  Max.   :7.00   Max.   :24.56   Max.   :197.9                     
+##  sample_month      
+##  Length:12         
+##  Class :character  
+##  Mode  :character  
+##                    
+##                    
+## </code></pre>
 <p>The output of <code>str(kindergarten)</code> gives a lot of information about the data frame. Starts in the top-left mentioning that is a data.frame object with 12 observations (rows) and and 5 variables (columns). Below that shows the name and the data type of each column. You will see in this example a new data type called <code>Factor</code>, which is a categorical variable with levels that correspond to each each of the categories.</p>
 <p>you can select individual columns using the dolar symbol (<code>$</code>). To use it, you have to write the name of the data frame object, add the dolar symbol, and write the name of the column. For example</p>
 <pre class="r"><code>kindergarten$age # Selecting the column called &quot;age&quot; from &quot;Kindergarten&quot;</code></pre>
-<pre><code>##  [1] 8 8 5 6 7 9 7 7 6 7 8 6</code></pre>
+<pre><code>##  [1] 6 6 5 7 6 7 7 5 7 7 6 6</code></pre>
 <p>Once you select an individual column, they behave pretty much like a vector. You can use functions on these columns or you can create new vector with the information of the column. Try this:</p>
 <pre class="r"><code>mean(kindergarten$age)</code></pre>
-<pre><code>## [1] 7</code></pre>
+<pre><code>## [1] 6.25</code></pre>
 <pre class="r"><code>age_new=kindergarten$age # New vector object with the column data
 
 age_sqrt=sqrt(kindergarten$age) # New vector object with sqrt values of age</code></pre>
@@ -318,24 +325,21 @@ age_sqrt=sqrt(kindergarten$age) # New vector object with sqrt values of age</cod
 <pre class="r"><code>#Find the rows with age&gt;6 using all the columns
 kindergarten[kindergarten$age&gt;6,] </code></pre>
 <pre><code>##    age weight_kg combat_power THC_content sample_month
-## 1    8  19.27263     187.3702        high     february
-## 2    8  16.90402     132.6678   very_high     february
-## 5    7  16.26644     190.9533   very_high     february
-## 6    9  20.96331     193.6401    critical     february
-## 7    7  15.30454     123.4148        high     november
-## 8    7  22.58948     193.5704   very_high     november
-## 10   7  18.94301     121.3223        high     november
-## 11   8  20.66348     162.1329   very_high     november</code></pre>
+## 4    7  21.71138     109.9927        high     february
+## 6    7  20.26961     138.9920    critical     february
+## 7    7  19.37259     172.3337        high     november
+## 9    7  22.43712     197.8939    critical     november
+## 10   7  21.74839     134.5808        high     november</code></pre>
 <pre class="r"><code>#Find all the rows with the THC_content equals to very_high using all the columns
 kindergarten[kindergarten$THC_content==&quot;very_high&quot;,] </code></pre>
 <pre><code>##    age weight_kg combat_power THC_content sample_month
-## 2    8  16.90402     132.6678   very_high     february
-## 5    7  16.26644     190.9533   very_high     february
-## 8    7  22.58948     193.5704   very_high     november
-## 11   8  20.66348     162.1329   very_high     november</code></pre>
+## 2    6  20.90853     112.3149   very_high     february
+## 5    6  23.07814     107.4138   very_high     february
+## 8    5  23.64875     197.1517   very_high     november
+## 11   6  17.99305     117.5557   very_high     november</code></pre>
 <pre class="r"><code>#Find all the rows with sample_month equals to february only in column 2
 kindergarten[kindergarten$sample_month==&quot;february&quot;,2]</code></pre>
-<pre><code>## [1] 19.27263 16.90402 21.92653 18.88831 16.26644 20.96331</code></pre>
+<pre><code>## [1] 24.56045 20.90853 20.00506 21.71138 23.07814 20.26961</code></pre>
 </div>
 <div id="importing-exporting-data" class="section level2">
 <h2>4. Importing exporting data</h2>
@@ -373,8 +377,8 @@ str(xdata)</code></pre>
 ##  $ edad        : int  6 5 8 7 7 5 5 6 6 5 ...
 ##  $ weight_kg   : num  22.4 17.7 18.8 18.9 29.1 ...
 ##  $ combat_power: num  132 186 186 170 130 ...
-##  $ THC_content : Factor w/ 3 levels &quot;critical&quot;,&quot;high&quot;,..: 2 3 1 2 3 1 2 3 1 2 ...
-##  $ food_type   : Factor w/ 5 levels &quot;fritanga&quot;,&quot;Fritanga&quot;,..: 2 2 3 4 1 1 3 3 2 2 ...</code></pre>
+##  $ THC_content : chr  &quot;high&quot; &quot;very_high&quot; &quot;critical&quot; &quot;high&quot; ...
+##  $ food_type   : chr  &quot;Fritanga&quot; &quot;Fritanga&quot; &quot;salad&quot; &quot;SAlad&quot; ...</code></pre>
 <pre class="r"><code># Check the data
 View(xdata)</code></pre>
 <p>If you look close, you will find couple of troubles here:</p>
@@ -393,7 +397,7 @@ str(xdata) # Seems to work :)</code></pre>
 ##  $ edad        : int  6 5 8 7 7 5 5 6 6 5 ...
 ##  $ weight_kg   : num  22.4 17.7 18.8 18.9 29.1 ...
 ##  $ combat_power: num  132 186 186 170 130 ...
-##  $ THC_content : Factor w/ 3 levels &quot;critical&quot;,&quot;high&quot;,..: 2 3 1 2 3 1 2 3 1 2 ...
+##  $ THC_content : chr  &quot;high&quot; &quot;very_high&quot; &quot;critical&quot; &quot;high&quot; ...
 ##  $ food_type   : Factor w/ 2 levels &quot;fritanga&quot;,&quot;salad&quot;: 1 1 2 2 1 1 2 2 1 1 ...</code></pre>
 <pre class="r"><code># 2. Change the discordant column name
 
@@ -473,7 +477,7 @@ older6_xdata</code></pre>
 
     <div class="share">
         
-            <a class="icon-twitter" href="https://twitter.com/share?text=Tutorial%201%20-%20How%20R%20Works&url=%2fcourses%2f2020_stri_introR%2ftutorials%2fl1_howrworks%2f"
+            <a class="icon-twitter" href="https://twitter.com/share?text=Tutorial%201%20-%20How%20R%20Works&url=https%3a%2f%2ftauanacunha.com%2fcourses%2f2020_stri_introR%2ftutorials%2fl1_howrworks%2f"
                 onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                 <i class="fa fa-twitter"></i>
                 <span class="hidden">Twitter</span>
@@ -481,19 +485,13 @@ older6_xdata</code></pre>
         
 
         
-            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=%2fcourses%2f2020_stri_introR%2ftutorials%2fl1_howrworks%2f"
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftauanacunha.com%2fcourses%2f2020_stri_introR%2ftutorials%2fl1_howrworks%2f"
                 onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                 <i class="fa fa-facebook"></i>
                 <span class="hidden">Facebook</span>
             </a>
         
 
-        
-            <a class="icon-google-plus" href="https://plus.google.com/share?url=%2fcourses%2f2020_stri_introR%2ftutorials%2fl1_howrworks%2f"
-              onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-              <i class="fa fa-google-plus"></i>
-                <span class="hidden">Google+</span>
-            </a>
         
         
     </div>
@@ -508,7 +506,7 @@ older6_xdata</code></pre>
             <div class="container">
                 <div class="site-title-wrapper">
                     <h1 class="site-title">
-                        <a title="Tutorials" href="/courses/2020_stri_introR/">Tutorials</a>
+                        <a title="Tutorials" href="https://tauanacunha.com/courses/2020_stri_introR/">Tutorials</a>
                     </h1>
                     <a class="button-square button-jump-top js-jump-top" href="#">
                         <i class="fa fa-angle-up"></i>
@@ -525,9 +523,9 @@ older6_xdata</code></pre>
             </div>
         </footer>
 
-        <script src="/courses/2020_stri_introR/js/jquery-1.11.3.min.js"></script>
-        <script src="/courses/2020_stri_introR/js/jquery.fitvids.js"></script>
-        <script src="/courses/2020_stri_introR/js/scripts.js"></script>
+        <script src="https://tauanacunha.com/courses/2020_stri_introR/js/jquery-1.11.3.min.js"></script>
+        <script src="https://tauanacunha.com/courses/2020_stri_introR/js/jquery.fitvids.js"></script>
+        <script src="https://tauanacunha.com/courses/2020_stri_introR/js/scripts.js"></script>
     </body>
 </html>
 
