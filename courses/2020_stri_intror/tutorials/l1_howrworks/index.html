@@ -3,15 +3,15 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Tutorial 1 &middot; Tauana Cunha</title>
-        <meta name="description" content="Hello people! welcome to the introduction to R course 2020 organized by the STRI community. Some of you are already familiriazed with R and Rstudio, but for others this probably is one of the first times using it. So we will start from the beginning. Along the document you will find some examples, its highly recommended to try to run those examples in your computer. Thanks for joining and we hope this will be useful for your future projects :)">
+        <title>Tutorial 1 - How R Works &middot; Tauana Cunha</title>
+        <meta name="description" content="Hello people! Welcome to the Introduction to R course 2020 organized by the STRI community. Some of you are already familiriazed with R and Rstudio, but for others this probably is one of the first times using it. So we will start from the beginning. Along the document you will find some examples, it’s highly recommended to try to run those examples in your computer. Thanks for joining and we hope this will be useful for your future projects :)">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="generator" content="Hugo 0.69.0" />
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:title" content="Tutorial 1">
-<meta property="og:description" content="Hello people! welcome to the introduction to R course 2020 organized by the STRI community. Some of you are already familiriazed with R and Rstudio, but for others this probably is one of the first times using it. So we will start from the beginning. Along the document you will find some examples, its highly recommended to try to run those examples in your computer. Thanks for joining and we hope this will be useful for your future projects :)">
+        <meta property="og:title" content="Tutorial 1 - How R Works">
+<meta property="og:description" content="Hello people! Welcome to the Introduction to R course 2020 organized by the STRI community. Some of you are already familiriazed with R and Rstudio, but for others this probably is one of the first times using it. So we will start from the beginning. Along the document you will find some examples, it’s highly recommended to try to run those examples in your computer. Thanks for joining and we hope this will be useful for your future projects :)">
 <meta property="og:type" content="article">
 <meta property="og:url" content="/courses/2020_stri_introR/tutorials/l1_howrworks/">
         <link rel="stylesheet" href="/courses/2020_stri_introR/dist/site.css">
@@ -74,7 +74,7 @@
 <div class="container">
     <article class="post-container">
         <header class="post-header">
-    <h1 class="post-title">Tutorial 1</h1>
+    <h1 class="post-title">Tutorial 1 - How R Works</h1>
     
 </header>
 
@@ -84,7 +84,7 @@
     
 
 
-<p>Hello people! welcome to the introduction to R course 2020 organized by the STRI community. Some of you are already familiriazed with R and Rstudio, but for others this probably is one of the first times using it. So we will start from the beginning. Along the document you will find some examples, its highly recommended to try to run those examples in your computer. Thanks for joining and we hope this will be useful for your future projects :)</p>
+<p>Hello people! Welcome to the Introduction to R course 2020 organized by the STRI community. Some of you are already familiriazed with R and Rstudio, but for others this probably is one of the first times using it. So we will start from the beginning. Along the document you will find some examples, it’s highly recommended to try to run those examples in your computer. Thanks for joining and we hope this will be useful for your future projects :)</p>
 <div id="general-index" class="section level1">
 <h1>General index</h1>
 <ol style="list-style-type: decimal">
@@ -283,34 +283,34 @@ kindergarten&lt;-data.frame(age,weight_kg,combat_power,THC_content,sample_month)
 Try runnning this:</p>
 <pre class="r"><code>head(kindergarten) # Exploration of the first values of the data frame</code></pre>
 <pre><code>##   age weight_kg combat_power THC_content sample_month
-## 1   7  16.63899     124.1896        high     february
-## 2   8  17.23432     170.6294   very_high     february
-## 3   5  21.24199     121.1554    critical     february
-## 4   7  17.17156     121.8266        high     february
-## 5   7  14.86809     127.1126   very_high     february
-## 6   6  21.88647     129.9532    critical     february</code></pre>
+## 1   8  19.27263     187.3702        high     february
+## 2   8  16.90402     132.6678   very_high     february
+## 3   5  21.92653     153.8184    critical     february
+## 4   6  18.88831     110.6797        high     february
+## 5   7  16.26644     190.9533   very_high     february
+## 6   9  20.96331     193.6401    critical     february</code></pre>
 <pre class="r"><code>str(kindergarten)  # Structure of the data frame</code></pre>
 <pre><code>## &#39;data.frame&#39;:    12 obs. of  5 variables:
-##  $ age         : int  7 8 5 7 7 6 8 6 6 6 ...
-##  $ weight_kg   : num  16.6 17.2 21.2 17.2 14.9 ...
-##  $ combat_power: num  124 171 121 122 127 ...
+##  $ age         : int  8 8 5 6 7 9 7 7 6 7 ...
+##  $ weight_kg   : num  19.3 16.9 21.9 18.9 16.3 ...
+##  $ combat_power: num  187 133 154 111 191 ...
 ##  $ THC_content : Factor w/ 3 levels &quot;critical&quot;,&quot;high&quot;,..: 2 3 1 2 3 1 2 3 1 2 ...
 ##  $ sample_month: Factor w/ 2 levels &quot;february&quot;,&quot;november&quot;: 1 1 1 1 1 1 2 2 2 2 ...</code></pre>
 <pre class="r"><code>summary(kindergarten) # Some descriptive stats for each column</code></pre>
-<pre><code>##       age          weight_kg      combat_power      THC_content   sample_month
-##  Min.   :5.000   Min.   :14.87   Min.   :110.3   critical :4    february:6    
-##  1st Qu.:6.000   1st Qu.:16.42   1st Qu.:121.7   high     :4    november:6    
-##  Median :7.000   Median :17.55   Median :128.5   very_high:4                  
-##  Mean   :6.667   Mean   :18.64   Mean   :138.8                                
-##  3rd Qu.:7.000   3rd Qu.:21.40   3rd Qu.:147.4                                
-##  Max.   :8.000   Max.   :23.76   Max.   :197.5</code></pre>
+<pre><code>##       age      weight_kg      combat_power      THC_content   sample_month
+##  Min.   :5   Min.   :15.30   Min.   :110.7   critical :4    february:6    
+##  1st Qu.:6   1st Qu.:17.25   1st Qu.:120.9   high     :4    november:6    
+##  Median :7   Median :19.11   Median :143.2   very_high:4                  
+##  Mean   :7   Mean   :19.32   Mean   :150.3                                
+##  3rd Qu.:8   3rd Qu.:21.20   3rd Qu.:188.3                                
+##  Max.   :9   Max.   :22.73   Max.   :193.6</code></pre>
 <p>The output of <code>str(kindergarten)</code> gives a lot of information about the data frame. Starts in the top-left mentioning that is a data.frame object with 12 observations (rows) and and 5 variables (columns). Below that shows the name and the data type of each column. You will see in this example a new data type called <code>Factor</code>, which is a categorical variable with levels that correspond to each each of the categories.</p>
 <p>you can select individual columns using the dolar symbol (<code>$</code>). To use it, you have to write the name of the data frame object, add the dolar symbol, and write the name of the column. For example</p>
 <pre class="r"><code>kindergarten$age # Selecting the column called &quot;age&quot; from &quot;Kindergarten&quot;</code></pre>
-<pre><code>##  [1] 7 8 5 7 7 6 8 6 6 6 7 7</code></pre>
+<pre><code>##  [1] 8 8 5 6 7 9 7 7 6 7 8 6</code></pre>
 <p>Once you select an individual column, they behave pretty much like a vector. You can use functions on these columns or you can create new vector with the information of the column. Try this:</p>
 <pre class="r"><code>mean(kindergarten$age)</code></pre>
-<pre><code>## [1] 6.666667</code></pre>
+<pre><code>## [1] 7</code></pre>
 <pre class="r"><code>age_new=kindergarten$age # New vector object with the column data
 
 age_sqrt=sqrt(kindergarten$age) # New vector object with sqrt values of age</code></pre>
@@ -318,23 +318,24 @@ age_sqrt=sqrt(kindergarten$age) # New vector object with sqrt values of age</cod
 <pre class="r"><code>#Find the rows with age&gt;6 using all the columns
 kindergarten[kindergarten$age&gt;6,] </code></pre>
 <pre><code>##    age weight_kg combat_power THC_content sample_month
-## 1    7  16.63899     124.1896        high     february
-## 2    8  17.23432     170.6294   very_high     february
-## 4    7  17.17156     121.8266        high     february
-## 5    7  14.86809     127.1126   very_high     february
-## 7    8  15.46284     111.0886        high     november
-## 11   7  23.75614     197.5179   very_high     november
-## 12   7  18.34656     139.7188    critical     november</code></pre>
+## 1    8  19.27263     187.3702        high     february
+## 2    8  16.90402     132.6678   very_high     february
+## 5    7  16.26644     190.9533   very_high     february
+## 6    9  20.96331     193.6401    critical     february
+## 7    7  15.30454     123.4148        high     november
+## 8    7  22.58948     193.5704   very_high     november
+## 10   7  18.94301     121.3223        high     november
+## 11   8  20.66348     162.1329   very_high     november</code></pre>
 <pre class="r"><code>#Find all the rows with the THC_content equals to very_high using all the columns
 kindergarten[kindergarten$THC_content==&quot;very_high&quot;,] </code></pre>
 <pre><code>##    age weight_kg combat_power THC_content sample_month
-## 2    8  17.23432     170.6294   very_high     february
-## 5    7  14.86809     127.1126   very_high     february
-## 8    6  23.43474     110.3384   very_high     november
-## 11   7  23.75614     197.5179   very_high     november</code></pre>
+## 2    8  16.90402     132.6678   very_high     february
+## 5    7  16.26644     190.9533   very_high     february
+## 8    7  22.58948     193.5704   very_high     november
+## 11   8  20.66348     162.1329   very_high     november</code></pre>
 <pre class="r"><code>#Find all the rows with sample_month equals to february only in column 2
 kindergarten[kindergarten$sample_month==&quot;february&quot;,2]</code></pre>
-<pre><code>## [1] 16.63899 17.23432 21.24199 17.17156 14.86809 21.88647</code></pre>
+<pre><code>## [1] 19.27263 16.90402 21.92653 18.88831 16.26644 20.96331</code></pre>
 </div>
 <div id="importing-exporting-data" class="section level2">
 <h2>4. Importing exporting data</h2>
@@ -472,7 +473,7 @@ older6_xdata</code></pre>
 
     <div class="share">
         
-            <a class="icon-twitter" href="https://twitter.com/share?text=Tutorial%201&url=%2fcourses%2f2020_stri_introR%2ftutorials%2fl1_howrworks%2f"
+            <a class="icon-twitter" href="https://twitter.com/share?text=Tutorial%201%20-%20How%20R%20Works&url=%2fcourses%2f2020_stri_introR%2ftutorials%2fl1_howrworks%2f"
                 onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                 <i class="fa fa-twitter"></i>
                 <span class="hidden">Twitter</span>

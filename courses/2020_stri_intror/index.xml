@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>Tutorial 1</title>
+      <title>Tutorial 1 - How R Works</title>
       <link>/courses/2020_stri_introR/tutorials/l1_howrworks/</link>
       <pubDate>Wed, 29 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>/courses/2020_stri_introR/tutorials/l1_howrworks/</guid>
-      <description>Hello people! welcome to the introduction to R course 2020 organized by the STRI community. Some of you are already familiriazed with R and Rstudio, but for others this probably is one of the first times using it. So we will start from the beginning. Along the document you will find some examples, its highly recommended to try to run those examples in your computer. Thanks for joining and we hope this will be useful for your future projects :)</description>
+      <description>Hello people! Welcome to the Introduction to R course 2020 organized by the STRI community. Some of you are already familiriazed with R and Rstudio, but for others this probably is one of the first times using it. So we will start from the beginning. Along the document you will find some examples, it’s highly recommended to try to run those examples in your computer. Thanks for joining and we hope this will be useful for your future projects :)</description>
     </item>
     
     <item>
