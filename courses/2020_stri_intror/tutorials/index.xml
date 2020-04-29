@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tutorials</title>
+    <link>/courses/2020_stri_introR/tutorials/</link>
+    <description>Recent content on Tutorials</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/courses/2020_stri_introR/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tutorial 1</title>
+      <link>/courses/2020_stri_introR/tutorials/l1_howrworks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/courses/2020_stri_introR/tutorials/l1_howrworks/</guid>
+      <description>Hello people! welcome to the introduction to R course 2020 organized by the STRI community. Some of you are already familiriazed with R and Rstudio, but for others this probably is one of the first times using it. So we will start from the beginning. Along the document you will find some examples, its highly recommended to try to run those examples in your computer. Thanks for joining and we hope this will be useful for your future projects :)</description>
+    </item>
+    
+  </channel>
+</rss>

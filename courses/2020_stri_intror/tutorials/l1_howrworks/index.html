@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Tutorial 1 &middot; Tauana Cunha</title>
+        <meta name="description" content="Hello people! welcome to the introduction to R course 2020 organized by the STRI community. Some of you are already familiriazed with R and Rstudio, but for others this probably is one of the first times using it. So we will start from the beginning. Along the document you will find some examples, its highly recommended to try to run those examples in your computer. Thanks for joining and we hope this will be useful for your future projects :)">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.69.0" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="Tutorial 1">
+<meta property="og:description" content="Hello people! welcome to the introduction to R course 2020 organized by the STRI community. Some of you are already familiriazed with R and Rstudio, but for others this probably is one of the first times using it. So we will start from the beginning. Along the document you will find some examples, its highly recommended to try to run those examples in your computer. Thanks for joining and we hope this will be useful for your future projects :)">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/courses/2020_stri_introR/tutorials/l1_howrworks/">
+        <link rel="stylesheet" href="/courses/2020_stri_introR/dist/site.css">
+        <link rel="stylesheet" href="/courses/2020_stri_introR/dist/syntax.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        
+        
+        
+        
+    </head>
+    <body>
+        
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="Tutorials" href="/courses/2020_stri_introR/">Tutorials</a>
+                            </h1>
+                        
+                        <a class="button-square" href="/courses/2020_stri_introR/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a title="Home" href="/courses/2020_stri_introR/">Home</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Schedule" href="/courses/2020_stri_introR/page/schedule/">Schedule</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Resources" href="/courses/2020_stri_introR/page/resources/">Resources</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="" href=""></a>
+    </li>
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container">
+        <header class="post-header">
+    <h1 class="post-title">Tutorial 1</h1>
+    
+</header>
+
+        <div class="post-content clearfix">
+    
+
+    
+
+
+<p>Hello people! welcome to the introduction to R course 2020 organized by the STRI community. Some of you are already familiriazed with R and Rstudio, but for others this probably is one of the first times using it. So we will start from the beginning. Along the document you will find some examples, its highly recommended to try to run those examples in your computer. Thanks for joining and we hope this will be useful for your future projects :)</p>
+<div id="general-index" class="section level1">
+<h1>General index</h1>
+<ol style="list-style-type: decimal">
+<li>R and RStudio</li>
+<li>Scripts</li>
+<li>Objetcs and functions</li>
+<li>Importing and exporting data</li>
+<li>Manipulating data</li>
+</ol>
+<div id="r-and-rstudio" class="section level2">
+<h2>1. R and RStudio</h2>
+<p><code>R</code> is a computational system which consists of two main elements: a programming language, and an environment were you can program or visualize information. If you want to read more about history, legal aspect, and some basic definitions of <code>R</code>, you can take a look at the Frequently Asked Questions in the <code>R</code> webpage by clicking <a href="https://cran.r-project.org/doc/FAQ/R-FAQ.html"><code>here</code></a>.</p>
+<p>If this is your first time interacting with a command line or learning a computer language, <code>R</code> may look a bit scary, the learning curve may be steep. But do not worry. Like everything in life, getting exposed to something new multiple times and practicing will get you there! And trust us, it is rewarding! At the end of this introductory course, we hope you will be more comfortable writing basic commands, plotting some graphs, using basic stats in <code>R</code>, and especially, more comfortable to explore whatever you want or need to do in <code>R</code>.</p>
+<p>First, lets take a look at the <code>R</code> interface. Try opening <code>R</code> in your computer. Between operating systems and different <code>R</code> versions there could be some differences, but in general should look like Figure1. As you can see, the interface has little information about how to use it and its not very intuitive. Luckyly, there is a program called <code>RStudio</code>, which gives a nicer and more intuite interface. From now on we are going to be working exclusively in RStudio, considering that it has very handy extra options in comparison to plain <code>R</code>.</p>
+<div class="figure">
+<img src="/figures/fig1_r.png" alt="Figure 1. R interface." />
+<p class="caption">Figure 1. R interface.</p>
+</div>
+<div style="page-break-after: always;"></div>
+<p>The usual working display on the <code>RStudio</code> interface consist on a <code>Menu bar</code> located in the very top left part of the screen and the following four windows (Figure 2):</p>
+<ol style="list-style-type: decimal">
+<li><p>On the bottom left corner, you will find the Console window (Figure2, blue box). Here you can type commands and see the outputs of it.</p></li>
+<li><p>Code editor window (Figure 2, red box). Keeps record of your work and comments. You can run lines of code from here as if they were in the console.</p></li>
+<li><p>The Environment and history window (Figure 2, purple box) is located at the top-right corner. The <code>Environment</code> tab shows you a list of the stored elements that you have created and the data imported during your session. On the <code>History</code> tab you will see all the command lines previously runned.</p></li>
+<li><p>The Files, Plots, Packages, Help window (Figure 2, yellow box) is very versatile, you can make many different things in this window. On the <code>Files</code> tab you can create new folders, delete files and move through you computer folders. It also gives you the option to set your working directory from here. The <code>Plot</code> tab is were you are going to visualize your plots. It has some handy options as allowing you to move though your previous plots. The <code>Packages</code> tab allows you to install, update and load packages. The <code>Help</code> tab opens a page describing information and usage of some <code>R</code> elements.</p></li>
+</ol>
+<div class="figure">
+<img src="/figures/fig2_rstudio.png" alt="Figure 2. RStudio interface." />
+<p class="caption">Figure 2. RStudio interface.</p>
+</div>
+</div>
+<div id="scripts" class="section level2">
+<h2>2. Scripts</h2>
+<p>Using the command line in the console window to write your entire code can be inconvenient, especially if your code is long, needs constant edition, or you want to add notes. It is recomended to write your code in the code editor window instead. For this task, first you need to open a new file on it. There are different types of files, but there is one that is pretty standart and easy to use called script.
+A script file looks like a plain text file and is were you are going to write, modify and save your code and notes. To open a new script go the menu bar in the top-left part of the screen and click on the <code>New File</code> icon (it’s located below the <code>File</code> tab, and looks like a white paper sheet with a “+” symbol). Alternatively you can press <code>Ctrl+Shift+N</code> on Windows and Linux, or <code>Cmd+Shift+N</code> on Mac.</p>
+<p>Try writing this simple addition in your new script, like this:</p>
+<pre class="r"><code>1+1</code></pre>
+<p>Now you are ready to run a code line. First, in your script, click the line that you want to run. Second, press in your keyboard <code>Ctrl+enter</code> if you have Windows or Linux, or <code>Cmd+Return</code> if you have a Mac. As an alternative you can click on the <code>Run</code> button, located on the top-right of the script. Now if you look in your console, you will have the output, which is the result of 1+1 … 2.</p>
+<p>You can add comments in your script using the hashtag symbol (<code>#</code>), and then writing the comment. If you press run,<code>R</code> will read the selected line in your script. If it finds a hashtag, it does not add anything after the hashtag to your output results. So make sure your hashtag and comments are after your code if they are sharing the same line. Try running in your script the following aritmetic operations and comments:</p>
+<pre class="r"><code># This is a comment
+
+2.5*4 # Multiplication</code></pre>
+<pre><code>[1] 10</code></pre>
+<pre class="r"><code>9/3   # Division</code></pre>
+<pre><code>[1] 3</code></pre>
+<pre class="r"><code>3^2   # Exponentiation</code></pre>
+<pre><code>[1] 9</code></pre>
+<p>To avoid losing time and effort, make sure to save your script regularly (ProTip: RStudio sometimes crash, almighty pets may pee on laptops, zombie apocalypses may happen, etc).
+Save your script clicking in <code>Save current</code> icon (looks like a single floppy disk) located in the menu bar below the <code>View</code> tab. In case you have several scripts open, you can save them all at the same time clicking the <code>Save all open</code> (looks like two floppy disks) located next to the <code>Save current</code>. Alternatively you can explore saving options on the <code>File</code> tab on the menu bar.</p>
+</div>
+<div id="objects-and-functions" class="section level2">
+<h2>3. Objects and Functions</h2>
+<p>By definition <code>R</code> is an object orientated language. That means <code>R</code> stores and interprets data and their attibutes in a programming structure called object.</p>
+<p>The way to create a new object is writing the name of the new object and use the assignment operator (<code>&lt;-</code>) to assign a value. So lets save data into an object! Create an object called <code>a</code> and store the number <code>5.5</code> on it, as follows:</p>
+<pre class="r"><code>a &lt;- 5.5</code></pre>
+<p>Now, <code>R</code> recognizes <code>a</code> as an object, and knows the value <code>5.5</code> and other attributes are stored in <code>a</code>. To see the content of an object, you can write the name of the object in your script and run it. Try to do it:</p>
+<pre class="r"><code>a</code></pre>
+<pre><code>## [1] 5.5</code></pre>
+<p>Try creating these other objects:</p>
+<pre class="r"><code>b &lt;- 3L # The capital L next to a number, forces R to recognize the number as an integer
+
+c &lt;- &quot;remember to stay at home&quot; # R recognize quotation marks as characters.
+
+d &lt;- TRUE # R recognizes TRUE and FALSE as logical values. R is sensitive to capital letters.
+#Try writing and runing d&lt;-true and see what happens.</code></pre>
+<p>Now let’s use a function to see what type of data is within objects a,b,c and d. A function is a group of statements that perform a specific task. For this purpose we will use the function <code>class()</code>. First, we are going to write the function name in our script and we will write the object name inside the parentheses. Try the following with all the objects previously created:</p>
+<pre class="r"><code>class(a)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<pre class="r"><code>class(b)</code></pre>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<pre class="r"><code>class(c)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<pre class="r"><code>class(d)</code></pre>
+<pre><code>## [1] &quot;logical&quot;</code></pre>
+<p>Even though there are several data types in <code>R</code>, those four types in your output are the most common ones.</p>
+<p>It is very important to know what type of data you have, because <code>R</code> will not perform some actions using an object with the incorect data type. For example, using your previous objects <code>a</code> and <code>c</code> try making the following operations:</p>
+<pre class="r"><code># Adition:
+
+a+9 # Because a is a numeric object it will give you a numeric result as an output :)
+
+c+9 # It gives an error because object c is type character
+
+
+# Square root using the sqrt function:
+
+sqrt(a) # No problem
+
+sqrt(c) # Error again</code></pre>
+<p>So there are couple of very intuitive questions to ask at this point:</p>
+<ol style="list-style-type: decimal">
+<li>How do I know what kind of data type a function needs in order to run?</li>
+</ol>
+<p>Well, luckly there is a function called <code>help()</code> or <code>?</code>. Once you run this function, a help text will appear in the <code>Help</code> tab (bottom-right corner).
+In the help text you will find the description of the function (what the function does), the usage (what objects and arguments are needed and in which order to fill the funtion parentheses), the arguments (the definition of the elements described in the usage section). Also, you will find some examples and references.</p>
+<p>Try using the function <code>help</code> to open the help text of the functions <code>sum</code>, <code>sqrt</code> and <code>help</code> itself. take a look at the different help texts and explore how they are structured.</p>
+<pre class="r"><code>help(&quot;sum&quot;)
+?sum # As a short alternative you can use the question mark (same output)
+
+help(&quot;sqrt&quot;)
+
+help(&quot;help&quot;)</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>What about if somehow I have the incorrect data type for a function?</li>
+</ol>
+<p>No problem. You can change between data types with the functions <code>as.numeric()</code>, <code>as integer()</code>, <code>as.character()</code>, <code>as.logical()</code> (there are many other functions to change between data types). Now run the code below and compare the data type of both objects.</p>
+<pre class="r"><code>z &lt;- &quot;25&quot; # Create a new object. Because of the quotation, it is stored as a character.
+
+class(z) # Check what data type is </code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<pre class="r"><code>z_numeric &lt;- as.numeric(z) # Change it to numeric
+
+class(z_numeric) # Check what type of data it is now</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<p>So far we know that when we create an object, <code>R</code> understands that the object contains data, and some extra information as the type of data. But there is another piece of information that R knows, this is the data structure. R recognizes several data structures. Let’s start whith the most basic one, the vector. A vector is basically a group of elements of the same data type together. For example, all our previous objects were vectors with one element (this is also known as a scalar). To put together two or more elements into a vector we can use the <code>c()</code> (combine) function. Try creating the following vector objects typing manually different values separated with commas inside of the function paretheses:</p>
+<pre class="r"><code>n_insects &lt;-c(1,2,4,6,5,8,9)
+
+week &lt;- c(&quot;monday&quot;,&quot;tuesday&quot;,&quot;wednesday&quot;, &quot;thursday&quot;, &quot;friday&quot;)
+
+weekend &lt;- c(&quot;saturday&quot;,&quot;sunday&quot;)</code></pre>
+<p>If you look at the Environment window, you will find the new vector objects that you have created. In comparison to the previous objects (the example scalars), these new vectors display more information. The environment shows the data type of the elements of the vector, the number of elements inside, and the first observations of each vector.</p>
+<p>Also you can create vectors using tandem generated data. Try using the <code>runif()</code> function. This function will choose random values with a uniform distribution. In the following example we will request 9 randomly selected values, ranging from 1 to 10:</p>
+<pre class="r"><code>monkey_strenght = runif(9,1,10)</code></pre>
+<p>Well, at this point we have several vector objects created. Let’s select some elements from the vector. To explore inside the vector we use square brackets (<code>[ ]</code>). This method works well to make a quick subset from a vector. To use it, write the object name and add the brackets right after. Fill the brackets with the number or statement that you are looking for, for example:</p>
+<pre class="r"><code>n_insects &lt;-c(1,2,4,6,5,8,9) # Create the object n_insects again :)
+
+# n_insect has 7 values
+
+n_insects[3]      # Find the third value of the vector</code></pre>
+<pre><code>## [1] 4</code></pre>
+<pre class="r"><code>n_insects[c(3,7)] # Find the 3rd AND the 7th value</code></pre>
+<pre><code>## [1] 4 9</code></pre>
+<pre class="r"><code>n_insects[3:7]    # Find FROM the 3rd TO the 7th value </code></pre>
+<pre><code>## [1] 4 6 5 8 9</code></pre>
+<pre class="r"><code>n_insects[n_insects&gt;3] # values greater than 3</code></pre>
+<pre><code>## [1] 4 6 5 8 9</code></pre>
+<p>Mini homework!</p>
+<ol style="list-style-type: decimal">
+<li>Explore the <code>seq()</code>and <code>rep()</code> functions using <code>help()</code> and try to create some custom vectors. Try to play with the different options and arguments. For example:</li>
+</ol>
+<pre class="r"><code>sequence1 &lt;- seq(from=0, to=20, by=2)
+
+replicate1 &lt;- rep(c(2,5,7), times=3) # Numbers
+replicate2 &lt;- rep(c(&quot;balboa&quot;,&quot;panama&quot;,&quot;atlas&quot;),times=5) # Characters</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Use this space below to play and explore your new vector objects using these functions: <code>lenght()</code>, <code>mean()</code>, <code>sd()</code>, <code>sum()</code>, <code>table()</code>, <code>min()</code>, <code>max()</code>, <code>head</code>,<code>round</code> .</li>
+</ol>
+<p>The next data structure is a matrix. The definition of matrix is similar to a vector but in two dimensions, is a group of elements arranged in columns and rows.</p>
+<p>You can create a matrix with the <code>matrix ()</code> function. Fill the parentheses with a vector, followed by the number of rows and the number of columns. For matrices you have to make sure the number of elements of the vector make match with the total number of rows and columns.</p>
+<p>Try making your own matrices as follows and look at the output:</p>
+<pre class="r"><code>m &lt;- matrix(c(1,2,3,4,5,6,7,8,9,10,11,12), nrow= 3, ncol=4) # Type manual
+
+n&lt;-matrix(1:12, nrow = 3, ncol= 4) # Generate numbers
+
+twelve &lt;- runif(12,1,12) # Creating a vector object to fill a matrix
+  
+p&lt;-matrix(twelve, nrow = 3, ncol= 4) # Using values from another object</code></pre>
+<p>If you created those matrices, you will see them in the <code>Enviroment window</code>. Do you see something new? At the very right of the window you will find some white squares next to the matrices objects. Make click in any matrix object and automatically a new window will show-up displaying you data nicely. Alternatively you can do this with the <code>View()</code> function</p>
+<p>Similar to vectors, you can find elements contained in the matrix using the square brackets<code>[ ]</code>. The difference is, now we have two dimensions, so we have to fill the brackets with two pieces of information. First, a desired row and then a desired column. Let’s try to find some values</p>
+<pre class="r"><code>n&lt;-matrix(1:12, nrow = 3, ncol= 4) # Create a matrix
+n</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    1    4    7   10
+## [2,]    2    5    8   11
+## [3,]    3    6    9   12</code></pre>
+<pre class="r"><code>n[1,4] # Value on the 1st row and the 4th column</code></pre>
+<pre><code>## [1] 10</code></pre>
+<pre class="r"><code>n[3 ,1] # Value on the 3rd row and the 1st column</code></pre>
+<pre><code>## [1] 3</code></pre>
+<pre class="r"><code>n[1:2,4] # Values from the 1st TO the 2nd row in the 4th column</code></pre>
+<pre><code>## [1] 10 11</code></pre>
+<pre class="r"><code>n[2,2:4] # Values in the 2nd row FROM the 2nd to the 4th column</code></pre>
+<pre><code>## [1]  5  8 11</code></pre>
+<pre class="r"><code>n[2:3,2:4] # Values FROM the 2nd TO 3rd row in the 2nd TO 4rd column</code></pre>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    5    8   11
+## [2,]    6    9   12</code></pre>
+<pre class="r"><code>n[3,] # All the elements in the 3rd row since, column is not specified</code></pre>
+<pre><code>## [1]  3  6  9 12</code></pre>
+<pre class="r"><code>n[,2] # All the elements in the 2nd column, since row is not specified</code></pre>
+<pre><code>## [1] 4 5 6</code></pre>
+<pre class="r"><code># Try to play with all this options, rows and columns.</code></pre>
+<p>The next data structure is the Data Frame. Probably you have heard about this structure before, since is one of the most populars from people importing data from Excel. A data frame looks like a matrix, but usually each column represents a variable, and different variables may have different data types.</p>
+<p>So, let’s create a data data frame using the <code>dataframe()</code> function. But first we have to make some vectors to fill the data frame. Each vector is going to become a column in the data frame, so make sure the vectors are from the same lenght. Try the following:</p>
+<pre class="r"><code># Create new vectors (toy dataset)
+
+age&lt;-as.integer(rnorm(12,7,1))
+weight_kg&lt;- rnorm(12,20,3)
+combat_power&lt;-runif(12,100,200)
+THC_content&lt;-rep(c(&quot;high&quot;,&quot;very_high&quot;,&quot;critical&quot;),times=4)
+sample_month&lt;-rep(c(&quot;february&quot;,&quot;november&quot;),each=6)
+
+#put them together
+kindergarten&lt;-data.frame(age,weight_kg,combat_power,THC_content,sample_month)</code></pre>
+<p>*Disclaimer: I am using a couple of randon number generator functions as runif() and rnorm() to create the vectors (as above, in the last example). These functions generate new random numbers every time you run them. You most probably are going to have differet numbers than I in this example. But don’t worry, the output must be similar and everything should run and look very similar too.</p>
+<p>Now try to explore the data. Sometimes data frames have so many observations that are very long and visualise it all may be difficult. Use the function <code>head()</code> to have a “preview” of the first values of each column and the column names. We can get some extra information of the data frame object using the <code>str()</code> function.
+Try runnning this:</p>
+<pre class="r"><code>head(kindergarten) # Exploration of the first values of the data frame</code></pre>
+<pre><code>##   age weight_kg combat_power THC_content sample_month
+## 1   6  21.45186     186.2063        high     february
+## 2   7  22.78637     198.7127   very_high     february
+## 3   6  20.00904     102.6735    critical     february
+## 4   9  23.05487     130.8175        high     february
+## 5   9  22.83581     180.6350   very_high     february
+## 6   7  19.12589     115.5574    critical     february</code></pre>
+<pre class="r"><code>str(kindergarten)  # Structure of the data frame</code></pre>
+<pre><code>## &#39;data.frame&#39;:    12 obs. of  5 variables:
+##  $ age         : int  6 7 6 9 9 7 6 5 5 7 ...
+##  $ weight_kg   : num  21.5 22.8 20 23.1 22.8 ...
+##  $ combat_power: num  186 199 103 131 181 ...
+##  $ THC_content : Factor w/ 3 levels &quot;critical&quot;,&quot;high&quot;,..: 2 3 1 2 3 1 2 3 1 2 ...
+##  $ sample_month: Factor w/ 2 levels &quot;february&quot;,&quot;november&quot;: 1 1 1 1 1 1 2 2 2 2 ...</code></pre>
+<pre class="r"><code>summary(kindergarten) # Some descriptive stats for each column</code></pre>
+<pre><code>##       age          weight_kg      combat_power      THC_content   sample_month
+##  Min.   :5.000   Min.   :15.76   Min.   :102.7   critical :4    february:6    
+##  1st Qu.:6.000   1st Qu.:19.79   1st Qu.:121.4   high     :4    november:6    
+##  Median :6.500   Median :20.67   Median :151.5   very_high:4                  
+##  Mean   :6.833   Mean   :20.58   Mean   :150.5                                
+##  3rd Qu.:7.500   3rd Qu.:22.40   3rd Qu.:181.9                                
+##  Max.   :9.000   Max.   :23.05   Max.   :198.7</code></pre>
+<p>The output of <code>str(kindergarten)</code> gives a lot of information about the data frame. Starts in the top-left mentioning that is a data.frame object with 12 observations (rows) and and 5 variables (columns). Below that shows the name and the data type of each column. You will see in this example a new data type called <code>Factor</code>, which is a categorical variable with levels that correspond to each each of the categories.</p>
+<p>you can select individual columns using the dolar symbol (<code>$</code>). To use it, you have to write the name of the data frame object, add the dolar symbol, and write the name of the column. For example</p>
+<pre class="r"><code>kindergarten$age # Selecting the column called &quot;age&quot; from &quot;Kindergarten&quot;</code></pre>
+<pre><code>##  [1] 6 7 6 9 9 7 6 5 5 7 6 9</code></pre>
+<p>Once you select an individual column, they behave pretty much like a vector. You can use functions on these columns or you can create new vector with the information of the column. Try this:</p>
+<pre class="r"><code>mean(kindergarten$age)</code></pre>
+<pre><code>## [1] 6.833333</code></pre>
+<pre class="r"><code>age_new=kindergarten$age # New vector object with the column data
+
+age_sqrt=sqrt(kindergarten$age) # New vector object with sqrt values of age</code></pre>
+<p>As in matrices you can find specific values using square brackets. Try using the matrix examples on the <code>kindergarten</code> data frame. Also play using this condicional syntax (remember, inside of the braquet you have to specify row and column):</p>
+<pre class="r"><code>#Find the rows with age&gt;6 using all the columns
+kindergarten[kindergarten$age&gt;6,] </code></pre>
+<pre><code>##    age weight_kg combat_power THC_content sample_month
+## 2    7  22.78637     198.7127   very_high     february
+## 4    9  23.05487     130.8175        high     february
+## 5    9  22.83581     180.6350   very_high     february
+## 6    7  19.12589     115.5574    critical     february
+## 10   7  20.34103     146.4795        high     november
+## 12   9  17.93011     156.4886    critical     november</code></pre>
+<pre class="r"><code>#Find all the rows with the THC_content equals to very_high using all the columns
+kindergarten[kindergarten$THC_content==&quot;very_high&quot;,] </code></pre>
+<pre><code>##    age weight_kg combat_power THC_content sample_month
+## 2    7  22.78637     198.7127   very_high     february
+## 5    9  22.83581     180.6350   very_high     february
+## 8    5  20.55522     185.7907   very_high     november
+## 11   6  15.75518     117.4045   very_high     november</code></pre>
+<pre class="r"><code>#Find all the rows with sample_month equals to february only in column 2
+kindergarten[kindergarten$sample_month==&quot;february&quot;,2]</code></pre>
+<pre><code>## [1] 21.45186 22.78637 20.00904 23.05487 22.83581 19.12589</code></pre>
+</div>
+<div id="importing-exporting-data" class="section level2">
+<h2>4. Importing exporting data</h2>
+<p>One of the most convenient practices to do before importing or exporting data in R is to set a working directory. This will be a default path in your computer that R will use to find files to import and save your files generated.</p>
+<p>In your script you can select the working directory using the function <code>setwd()</code>. Fill the parenthesis of the function with the path of the folder that you to stablish as working directory and run that line. Just as an EXAMPLE, mine looks like this:</p>
+<pre><code>setwd(&quot;C:/Users/Ernesto/Desktop/R_course_2020/Tutorial1&quot;)</code></pre>
+<p>YOURS WILL BE A DIFFERENT PATH, depending on where in your computer you want to stablish your working directory. Just make sure to use quotation marks in the path and do not confuse slash with backslash.
+If you keep the code to set the working directory at the begining of yourscript it will be very easy to run it every time you use the script.</p>
+<p>Alternatively you can go to the menu bar, click on <code>Session</code> then click <code>Set Working Directory</code> and then click on <code>Choose Directory</code>. This will open a window that will allow you to choose a working directory folder in a more intuitive way.</p>
+<p>To open data in R first make sure the files you want to open in your working directory.</p>
+<p>There are several functions to open or read files. The function you have to choose depends on the format of the your file. Two very common formats to import data in R are <code>.csv</code> (comma separated values) and <code>.txt</code> (text file) so let’s use them as examples.</p>
+<p>If your file is in <code>.csv</code> format, you can use the function <code>read.csv()</code>. Fill the parenthesis with the name of the file. Remember to write the file name on quotation marks and add the extension <code>.csv</code> at the end. Try this:</p>
+<pre class="r"><code>plant_data1&lt;- read.csv(&quot;iris_example.csv&quot;)</code></pre>
+<p>If your file is in <code>.txt</code> format, you can use the function <code>read.table()</code>. Fill the parenthesis with the name of the file. Remember write the file name on quotation marks and add the extension <code>.txt</code> at the end. Try this:</p>
+<pre class="r"><code>plant_data2&lt;-read.table(&quot;iris_example.txt&quot;)</code></pre>
+<p>I recomment to take a look using of <code>read.csv</code> and <code>read.table</code> using the <code>help</code> function. There are couple of arguments that I think it worth to see.</p>
+<p>After you read both files it is suggested to check that there is nothing weird. As we did with the data frames from the previous chapter, try to use the functions <code>head()</code> or <code>View()</code>, and <code>str()</code>.</p>
+<p>If everything is fine with the data, you can save it. To save it on <code>.csv</code> you can use the function <code>write.csv()</code> and to save it <code>.txt</code> you can use the function <code>write.table()</code>. Fill the parentheses with the name of the data frame object that you want to save, and then add on quotation marks the name of the final file with the respective file extension. Check your working directory, the files should be there.</p>
+<pre class="r"><code># csv format
+write.csv(plant_data1, &quot;iris_example_plant_data.csv&quot;)
+
+# txt format
+write.table(plant_data2, &quot;iris_example_plant_data.txt&quot;)</code></pre>
+</div>
+<div id="manipulating-data" class="section level2">
+<h2>5. Manipulating Data</h2>
+<p>There any many functions to manipulate data in <code>R</code>. Several of them are not avialable as part of the default R functions, and they require to be downloaded. Since in this tutorial I am not covering R Packages, I will show you to use only R default functions.</p>
+<p>First, open de file <code>toy_dataset.csv</code> and look at it.</p>
+<pre class="r"><code># Open the dataset using read.csv(). Use help() and look to the &quot;sep&quot; argument 
+xdata&lt;-read.csv(&quot;toy_dataset.csv&quot;,sep=&quot;;&quot;)
+
+# Look at the object strucure
+str(xdata)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    12 obs. of  5 variables:
+##  $ edad        : int  6 5 8 7 7 5 5 6 6 5 ...
+##  $ weight_kg   : num  22.4 17.7 18.8 18.9 29.1 ...
+##  $ combat_power: num  132 186 186 170 130 ...
+##  $ THC_content : Factor w/ 3 levels &quot;critical&quot;,&quot;high&quot;,..: 2 3 1 2 3 1 2 3 1 2 ...
+##  $ food_type   : Factor w/ 5 levels &quot;fritanga&quot;,&quot;Fritanga&quot;,..: 2 2 3 4 1 1 3 3 2 2 ...</code></pre>
+<pre class="r"><code># Check the data
+View(xdata)</code></pre>
+<p>If you look close, you will find couple of troubles here:</p>
+<ol style="list-style-type: decimal">
+<li><p>The variable <code>food_type</code> has 2 categories, fritanga and salad. If you looked in the<code>xdata</code>structure, you will see that <code>food_type</code> has 5 levels or categories (use the function <code>levels()</code> on <code>xdata$food_type</code> to see all the posible categories of the variable food_type). It seems that someone mixed words in lower and upper case while typing the data. We need to fix that, changing all the values to lower case will work.</p></li>
+<li><p>The column name of the first variable seems to be in another language (spanish). Changing the name to english will make the data frame more homogeneous, and it will improve the workflow (Can you imagine each of the column names in a different language?).</p></li>
+</ol>
+<p>Try fixing the data frame following these steps:</p>
+<pre class="r"><code># 1. fix the column food_type
+xdata$food_type&lt;-tolower(xdata$food_type) # tolower() changes to lowercase 
+xdata$food_type&lt;-as.factor(xdata$food_type) # ake sure is a factor after
+
+#Look the structure again
+str(xdata) # Seems to work :)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    12 obs. of  5 variables:
+##  $ edad        : int  6 5 8 7 7 5 5 6 6 5 ...
+##  $ weight_kg   : num  22.4 17.7 18.8 18.9 29.1 ...
+##  $ combat_power: num  132 186 186 170 130 ...
+##  $ THC_content : Factor w/ 3 levels &quot;critical&quot;,&quot;high&quot;,..: 2 3 1 2 3 1 2 3 1 2 ...
+##  $ food_type   : Factor w/ 2 levels &quot;fritanga&quot;,&quot;salad&quot;: 1 1 2 2 1 1 2 2 1 1 ...</code></pre>
+<pre class="r"><code># 2. Change the discordant column name
+
+colnames(xdata) # gives you a vector with the column names your object data</code></pre>
+<pre><code>## [1] &quot;edad&quot;         &quot;weight_kg&quot;    &quot;combat_power&quot; &quot;THC_content&quot;  &quot;food_type&quot;</code></pre>
+<pre class="r"><code>colnames(xdata)[1] # gives you the 1st column name your object data</code></pre>
+<pre><code>## [1] &quot;edad&quot;</code></pre>
+<pre class="r"><code>colnames(xdata)[1]&lt;-&quot;age&quot; #assign new characters to the column name salected
+
+#Look the data
+head(xdata) # Also seems to work</code></pre>
+<pre><code>##   age weight_kg combat_power THC_content food_type
+## 1   6  22.39628     131.7923        high  fritanga
+## 2   5  17.69336     186.0856   very_high  fritanga
+## 3   8  18.84001     185.8586    critical     salad
+## 4   7  18.89893     170.1426        high     salad
+## 5   7  29.06381     129.7942   very_high  fritanga
+## 6   5  18.80187     196.4630    critical  fritanga</code></pre>
+<p>Super! Now our data frame looks better.</p>
+<p>Imagine that we need to create a new column which will be the ratio between the columns <code>combat_power</code> and <code>weight_kg</code>(which means ratio= values of combat_power/ values of weight_kg). Also, we need a column that would contain all the square root values for of each value from the <code>combat_power</code> column. Lets create those columns as follows:</p>
+<pre class="r"><code>#This take every value of a row for each of both columns and make the dvision
+xdata$ratio&lt;-xdata$combat_power/xdata$weight_kg
+
+# Square root for each value in the column combat_power
+xdata$sqrt_combat_power&lt;-sqrt(xdata$combat_power)
+
+#look the two new columns
+head(xdata)</code></pre>
+<pre><code>##   age weight_kg combat_power THC_content food_type     ratio sqrt_combat_power
+## 1   6  22.39628     131.7923        high  fritanga  5.884563          11.48008
+## 2   5  17.69336     186.0856   very_high  fritanga 10.517252          13.64132
+## 3   8  18.84001     185.8586    critical     salad  9.865098          13.63300
+## 4   7  18.89893     170.1426        high     salad  9.002763          13.04387
+## 5   7  29.06381     129.7942   very_high  fritanga  4.465835          11.39273
+## 6   5  18.80187     196.4630    critical  fritanga 10.449121          14.01653</code></pre>
+<p>There are many ways in <code>R</code> to add columns or rows. Use <code>help()</code> to take a look to the functions <code>cbind()</code> and <code>rbind()</code>. Try use those functions to modify a data frame.</p>
+<p>Now our data frame is getting bigger. Sometimes we do not need all the columns from our data set. Imagine you only need few of them. The function <code>subset()</code> help you to extract parts of your data frame.
+For example, imagine that we want a data frame with only the columns: age,THC_content, and food_type. In the function parenthesis first write your data frame object, followed by the subsetting arguments (using <code>help()</code> to see the different possible arguments for this function, and couple of handi examples). Try the following</p>
+<pre class="r"><code>sub_xdata&lt;-subset(xdata, select=c(&quot;age&quot;,&quot;THC_content&quot;,&quot;food_type&quot;)) 
+sub_xdata</code></pre>
+<pre><code>##    age THC_content food_type
+## 1    6        high  fritanga
+## 2    5   very_high  fritanga
+## 3    8    critical     salad
+## 4    7        high     salad
+## 5    7   very_high  fritanga
+## 6    5    critical  fritanga
+## 7    5        high     salad
+## 8    6   very_high     salad
+## 9    6    critical  fritanga
+## 10   5        high  fritanga
+## 11   6   very_high     salad
+## 12   6    critical     salad</code></pre>
+<p>Try with other options. For example only the part of the dataframe when the values on the column food_type are salad or only individuals with age greater than 6:</p>
+<pre class="r"><code>salad_xdata&lt;-subset(xdata,food_type==&quot;salad&quot;) 
+salad_xdata</code></pre>
+<pre><code>##    age weight_kg combat_power THC_content food_type    ratio sqrt_combat_power
+## 3    8  18.84001     185.8586    critical     salad 9.865098          13.63300
+## 4    7  18.89893     170.1426        high     salad 9.002763          13.04387
+## 7    5  22.17809     123.8727        high     salad 5.585364          11.12981
+## 8    6  15.92443     128.9611   very_high     salad 8.098319          11.35610
+## 11   6  18.74021     178.8402   very_high     salad 9.543124          13.37311
+## 12   6  18.09651     133.1754    critical     salad 7.359172          11.54016</code></pre>
+<pre class="r"><code>older6_xdata&lt;-subset(xdata,age&gt;6) 
+older6_xdata</code></pre>
+<pre><code>##   age weight_kg combat_power THC_content food_type    ratio sqrt_combat_power
+## 3   8  18.84001     185.8586    critical     salad 9.865098          13.63300
+## 4   7  18.89893     170.1426        high     salad 9.002763          13.04387
+## 5   7  29.06381     129.7942   very_high  fritanga 4.465835          11.39273</code></pre>
+</div>
+</div>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+
+    <div class="share">
+        
+            <a class="icon-twitter" href="https://twitter.com/share?text=Tutorial%201&url=%2fcourses%2f2020_stri_introR%2ftutorials%2fl1_howrworks%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fa fa-twitter"></i>
+                <span class="hidden">Twitter</span>
+            </a>
+        
+
+        
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=%2fcourses%2f2020_stri_introR%2ftutorials%2fl1_howrworks%2f"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <i class="fa fa-facebook"></i>
+                <span class="hidden">Facebook</span>
+            </a>
+        
+
+        
+            <a class="icon-google-plus" href="https://plus.google.com/share?url=%2fcourses%2f2020_stri_introR%2ftutorials%2fl1_howrworks%2f"
+              onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+              <i class="fa fa-google-plus"></i>
+                <span class="hidden">Google+</span>
+            </a>
+        
+        
+    </div>
+</footer>
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a title="Tutorials" href="/courses/2020_stri_introR/">Tutorials</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2020 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="/courses/2020_stri_introR/js/jquery-1.11.3.min.js"></script>
+        <script src="/courses/2020_stri_introR/js/jquery.fitvids.js"></script>
+        <script src="/courses/2020_stri_introR/js/scripts.js"></script>
+    </body>
+</html>
+
