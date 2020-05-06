@@ -3,37 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://tauanacunha.com/courses/2020_stri_introR/tutorials/l1_howrworks/</loc>
+    <loc>/courses/2020_stri_introR/tutorials/l2_flowcontrol/</loc>
+    <lastmod>2020-05-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/courses/2020_stri_introR/tutorials/</loc>
+    <lastmod>2020-05-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/courses/2020_stri_introR/</loc>
+    <lastmod>2020-05-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/courses/2020_stri_introR/tutorials/l1_howrworks/</loc>
     <lastmod>2020-04-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/courses/2020_stri_introR/tutorials/</loc>
-    <lastmod>2020-04-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tauanacunha.com/courses/2020_stri_introR/</loc>
-    <lastmod>2020-04-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tauanacunha.com/courses/2020_stri_introR/page/resources/</loc>
+    <loc>/courses/2020_stri_introR/page/resources/</loc>
     <lastmod>2020-04-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/courses/2020_stri_introR/page/</loc>
+    <loc>/courses/2020_stri_introR/page/</loc>
     <lastmod>2020-04-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/courses/2020_stri_introR/page/schedule/</loc>
+    <loc>/courses/2020_stri_introR/page/schedule/</loc>
     <lastmod>2020-04-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/courses/2020_stri_introR/tags/</loc>
+    <loc>/courses/2020_stri_introR/tags/</loc>
   </url>
   
 </urlset>

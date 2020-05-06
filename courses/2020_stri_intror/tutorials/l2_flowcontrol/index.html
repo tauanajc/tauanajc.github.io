@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Tutorial 2 - Flow Control &middot; Tauana Cunha</title>
+        <meta name="description" content="Functions, loops, and if/else statements  Getting started Remember everything in a line after the # sign is comments that will not be run. Look in these comments for practice exercises for the tutorial, which will be marked #Practice
+Always begin by setting the working directory (the folder on your computer where R will read and write data files) I like to start by asking R for the current working directory to remind me of the correct formatting">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.69.0" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="Tutorial 2 - Flow Control">
+<meta property="og:description" content="Functions, loops, and if/else statements  Getting started Remember everything in a line after the # sign is comments that will not be run. Look in these comments for practice exercises for the tutorial, which will be marked #Practice
+Always begin by setting the working directory (the folder on your computer where R will read and write data files) I like to start by asking R for the current working directory to remind me of the correct formatting">
+<meta property="og:type" content="article">
+<meta property="og:url" content="/courses/2020_stri_introR/tutorials/l2_flowcontrol/">
+        <link rel="stylesheet" href="/courses/2020_stri_introR/dist/site.css">
+        <link rel="stylesheet" href="/courses/2020_stri_introR/dist/syntax.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        
+        
+        
+        
+    </head>
+    <body>
+        
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <h1 class="site-title">
+                                <a title="Tutorials" href="/courses/2020_stri_introR/">Tutorials</a>
+                            </h1>
+                        
+                        <a class="button-square" href="/courses/2020_stri_introR/index.xml"><i class="fa fa-rss"></i></a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a title="Home" href="/courses/2020_stri_introR/">Home</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Schedule" href="/courses/2020_stri_introR/page/schedule/">Schedule</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Resources" href="/courses/2020_stri_introR/page/resources/">Resources</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="" href=""></a>
+    </li>
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container">
+        <header class="post-header">
+    <h1 class="post-title">Tutorial 2 - Flow Control</h1>
+    
+</header>
+
+        <div class="post-content clearfix">
+    
+
+    
+
+
+<div id="functions-loops-and-ifelse-statements" class="section level1">
+<h1>Functions, loops, and if/else statements</h1>
+</div>
+<div id="getting-started" class="section level1">
+<h1>Getting started</h1>
+<p>Remember everything in a line after the # sign is comments that will not be run.
+Look in these comments for practice exercises for the tutorial, which will be marked #Practice</p>
+<p>Always begin by setting the working directory (the folder on your computer where R will read and write data files)
+I like to start by asking R for the current working directory to remind me of the correct formatting</p>
+<pre class="r"><code>getwd()</code></pre>
+<p>Now set the desired working directory. Your code will look different from mine here.</p>
+<pre class="r"><code>setwd(&quot;/Users/leedietterich/Dropbox/STRI R course/Lecture 20200506 LD&quot;)</code></pre>
+<p>Practice: set your own working directory</p>
+<p>Read in a data table. This is an abbreviated dataset from Dietterich et al. 2017 Ecological Applications. In brief, I collected leaves, roots, and soils from many individuals of five plant species growing throughout a site contaminated with zinc, lead, and cadmium. I sought to understand the relationships between soil metal concentrations, root colonization by arbuscular mycorrhizal fungi (AMF), and leaf metal concentrations. The provided dataset gives AMF colonization (percent of root length colonized), and pollutant concentrations of leaves and soils in mg/kg.</p>
+<pre class="r"><code>mydata &lt;- read.csv(&quot;Dietterich et al 2017 data for R course.csv&quot;)
+#Use the structure command to make sure R is interpreting the data frame correctly
+str(mydata)
+#Convert the Species column to a factor
+mydata$Species &lt;- as.factor(mydata$Species)
+#Convert the AMF column from proportion to percent
+mydata$AMF &lt;- mydata$AMF*100</code></pre>
+<p>Let’s make a table of the averages ± standard errors of AMF colonization and all of the metal concentrations for each species.</p>
+<p>Recall how the mean function works, and experiment with how it handles NA values (we’ll see why soon). Make two vectors which are identical except that one has a couple NA values, and test the mean function on both of them.</p>
+<pre class="r"><code>x.test &lt;- 1:10
+x.test.with.nas &lt;- c(1:3, NA, NA, 4:8, NA, 9, 10)
+mean(x.test)</code></pre>
+<pre><code>## [1] 5.5</code></pre>
+<pre class="r"><code>mean(x.test.with.nas)</code></pre>
+<pre><code>## [1] NA</code></pre>
+<p>Here are two ways of removing NA values before calculating the mean.
+First, using the na.rm argument within the mean function</p>
+<pre class="r"><code>mean(x.test.with.nas, na.rm=T)</code></pre>
+<pre><code>## [1] 5.5</code></pre>
+<p>Second, using the na.omit function</p>
+<pre class="r"><code>na.omit(x.test.with.nas)</code></pre>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10
+## attr(,&quot;na.action&quot;)
+## [1]  4  5 11
+## attr(,&quot;class&quot;)
+## [1] &quot;omit&quot;</code></pre>
+<pre class="r"><code>mean(na.omit(x.test.with.nas))</code></pre>
+<pre><code>## [1] 5.5</code></pre>
+</div>
+<div id="writing-functions" class="section level1">
+<h1>Writing functions</h1>
+<p>The aggregate function is very useful for doing calculations on multiple treatment groups at once. As an example, we’ll calculate the average AMF colonization of each species in the experiment.</p>
+<pre class="r"><code>agg.amf &lt;- with(mydata, aggregate(AMF, by=list(Species), FUN=mean))
+agg.amf</code></pre>
+<pre><code>##   Group.1  x
+## 1      AA NA
+## 2      AP NA
+## 3      DF NA
+## 4      ES NA
+## 5      MP NA</code></pre>
+<p>This returns all NA values because the mean function’s default does not handle NAs the way we want. We’ll need to write a function that calculates averages but omits NA values.<br />
+First, an introduction to function notation.</p>
+<pre class="r"><code>xplustwo &lt;- function(x) x+2</code></pre>
+<p>For simple functions like this, the curly brackets are optional, but you will need them for more complicated functions so I will use them consistently.</p>
+<pre class="r"><code>xcubed &lt;- function(x) {
+  x^3
+}</code></pre>
+<p>Let’s test our new functions.</p>
+<pre class="r"><code>xplustwo(5)</code></pre>
+<pre><code>## [1] 7</code></pre>
+<pre class="r"><code>xcubed(8)</code></pre>
+<pre><code>## [1] 512</code></pre>
+<pre class="r"><code>x.test</code></pre>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+<pre class="r"><code>xplustwo(x.test)</code></pre>
+<pre><code>##  [1]  3  4  5  6  7  8  9 10 11 12</code></pre>
+<pre class="r"><code>xcubed(x.test)</code></pre>
+<pre><code>##  [1]    1    8   27   64  125  216  343  512  729 1000</code></pre>
+<p>Now, the function we want to calculate the average of all NA values in a vector x.</p>
+<pre class="r"><code>avg &lt;- function(x) {
+  mean(na.omit(x))
+}</code></pre>
+<p>While we’re at it, let’s write a similar function to calculate standard error. Recall that the standard error of a vector is the standard deviation divided by the square root of the sample size.</p>
+<pre class="r"><code>se &lt;- function(x) {
+  sd(na.omit(x))/sqrt(length(na.omit(x)))
+}</code></pre>
+<p>For more complicated functions, it can be helpful to define variables inside the function. Here’s another way of writing the se function above.</p>
+<pre class="r"><code>se2 &lt;- function(x) {
+    y &lt;- na.omit(x)
+    return(sd(y)/sqrt(length(y)))
+}</code></pre>
+<p>Let’s test these functions on the same vector, with and without NA values, and make sure they give the same answer.</p>
+<pre class="r"><code>x.test &lt;- 1:10
+x.test.with.nas &lt;- c(1:3, NA, NA, 4:8, NA, 9, 10)
+
+mean(x.test)</code></pre>
+<pre><code>## [1] 5.5</code></pre>
+<pre class="r"><code>avg(x.test)</code></pre>
+<pre><code>## [1] 5.5</code></pre>
+<pre class="r"><code>mean(x.test.with.nas)</code></pre>
+<pre><code>## [1] NA</code></pre>
+<pre class="r"><code>avg(x.test.with.nas)</code></pre>
+<pre><code>## [1] 5.5</code></pre>
+<pre class="r"><code>sd(x.test)/sqrt(length(x.test))</code></pre>
+<pre><code>## [1] 0.9574271</code></pre>
+<pre class="r"><code>se(x.test)</code></pre>
+<pre><code>## [1] 0.9574271</code></pre>
+<pre class="r"><code>se2(x.test)</code></pre>
+<pre><code>## [1] 0.9574271</code></pre>
+<pre class="r"><code>sd(x.test.with.nas)/sqrt(length(x.test.with.nas))</code></pre>
+<pre><code>## [1] NA</code></pre>
+<pre class="r"><code>se(x.test.with.nas)</code></pre>
+<pre><code>## [1] 0.9574271</code></pre>
+<pre class="r"><code>se2(x.test.with.nas)</code></pre>
+<pre><code>## [1] 0.9574271</code></pre>
+<p>Practice: write a function takes the average of a vector of numbers without using the mean function. Check that it works. Bonus if it works on vectors with NA values too!</p>
+<p>Practice: write a function that takes the log+1 transform of a vector of numbers. That is, for each number in the vector, add one and then take the logarithm, base 10. Check that it works. Bonus if it works on vectors with NA values too!</p>
+<p>Let’s get back to the table we started in line 31. We’ll start with just AMF colonization as an example.</p>
+<pre class="r"><code>agg.amf2 &lt;- with(mydata, aggregate(AMF, by=list(Species), FUN=avg))
+agg.amf2</code></pre>
+<pre><code>##   Group.1         x
+## 1      AA  9.166572
+## 2      AP  2.428819
+## 3      DF  5.964999
+## 4      ES 13.400351
+## 5      MP  1.080950</code></pre>
+<pre class="r"><code>#Notice that aggregate doesn&#39;t preserve column names.  Let&#39;s correct that.
+names(agg.amf2) &lt;- c(&quot;Species&quot;, &quot;Average AMF colonization&quot;)
+agg.amf2</code></pre>
+<pre><code>##   Species Average AMF colonization
+## 1      AA                 9.166572
+## 2      AP                 2.428819
+## 3      DF                 5.964999
+## 4      ES                13.400351
+## 5      MP                 1.080950</code></pre>
+<p>We can make our table much more efficiently by using aggregate on many columns at once.</p>
+<pre class="r"><code>#Look at the column names of mydata to see which column numbers we want to aggregate
+names(mydata)</code></pre>
+<pre><code>## [1] &quot;Sample.id&quot; &quot;Species&quot;   &quot;AMF&quot;       &quot;Cd.leaf&quot;   &quot;Pb.leaf&quot;   &quot;Zn.leaf&quot;  
+## [7] &quot;Cd.soil&quot;   &quot;Pb.soil&quot;   &quot;Zn.soil&quot;</code></pre>
+<pre class="r"><code>#Run the aggregate
+agg.avg &lt;- with(mydata, aggregate(mydata[,3:9], by=list(Species), FUN=avg))
+#Look at the results
+agg.avg</code></pre>
+<pre><code>##   Group.1       AMF   Cd.leaf   Pb.leaf   Zn.leaf   Cd.soil   Pb.soil   Zn.soil
+## 1      AA  9.166572 16.550551 62.883543 1217.2924  51.28371  650.0625  5140.286
+## 2      AP  2.428819  9.552666 23.731515 1195.8129  90.49262 1027.4266  6923.761
+## 3      DF  5.964999  4.116137 10.794596  376.2118  43.73006 1186.7936  2942.489
+## 4      ES 13.400351 34.452875 41.123450 1533.0363  70.74253  475.6594  6650.177
+## 5      MP  1.080950 52.731918  7.612877 6450.6295 441.23633 2380.3515 35435.358</code></pre>
+<pre class="r"><code>#Here only the first column needs to be renamed
+names(agg.avg)[1] &lt;- &quot;Species&quot;
+agg.avg</code></pre>
+<pre><code>##   Species       AMF   Cd.leaf   Pb.leaf   Zn.leaf   Cd.soil   Pb.soil   Zn.soil
+## 1      AA  9.166572 16.550551 62.883543 1217.2924  51.28371  650.0625  5140.286
+## 2      AP  2.428819  9.552666 23.731515 1195.8129  90.49262 1027.4266  6923.761
+## 3      DF  5.964999  4.116137 10.794596  376.2118  43.73006 1186.7936  2942.489
+## 4      ES 13.400351 34.452875 41.123450 1533.0363  70.74253  475.6594  6650.177
+## 5      MP  1.080950 52.731918  7.612877 6450.6295 441.23633 2380.3515 35435.358</code></pre>
+<p>Generate standard errors by the same technique</p>
+<pre class="r"><code>agg.se &lt;- with(mydata, aggregate(mydata[,3:9], by=list(Species), FUN=se))
+names(agg.se)[1] &lt;- &quot;Species&quot;
+agg.se</code></pre>
+<p>Let’s round all of the entries in both of these dataframes to three significant figures to make the table look pretty.</p>
+<pre class="r"><code>?round</code></pre>
+<p>Test the signif command on one column</p>
+<pre class="r"><code>round.test1 &lt;- signif(agg.avg$AMF, 3)
+round.test1</code></pre>
+<pre><code>## [1]  9.17  2.43  5.96 13.40  1.08</code></pre>
+<pre class="r"><code>#Can signif handle multiple columns at once?
+round.test2 &lt;- signif(agg.avg[,2:8], 3)
+round.test2</code></pre>
+<pre><code>##     AMF Cd.leaf Pb.leaf Zn.leaf Cd.soil Pb.soil Zn.soil
+## 1  9.17   16.60   62.90    1220    51.3     650    5140
+## 2  2.43    9.55   23.70    1200    90.5    1030    6920
+## 3  5.96    4.12   10.80     376    43.7    1190    2940
+## 4 13.40   34.50   41.10    1530    70.7     476    6650
+## 5  1.08   52.70    7.61    6450   441.0    2380   35400</code></pre>
+<pre class="r"><code>#Yes it can!</code></pre>
+<p>Make a table of all of our pretty averages</p>
+<pre class="r"><code>round.avg &lt;- with(agg.avg, cbind(Species, signif(agg.avg[,2:8], 3)))
+round.avg</code></pre>
+<pre><code>##   Species   AMF Cd.leaf Pb.leaf Zn.leaf Cd.soil Pb.soil Zn.soil
+## 1      AA  9.17   16.60   62.90    1220    51.3     650    5140
+## 2      AP  2.43    9.55   23.70    1200    90.5    1030    6920
+## 3      DF  5.96    4.12   10.80     376    43.7    1190    2940
+## 4      ES 13.40   34.50   41.10    1530    70.7     476    6650
+## 5      MP  1.08   52.70    7.61    6450   441.0    2380   35400</code></pre>
+<p>Make a table of pretty SEs by the same technique</p>
+<pre class="r"><code>round.se &lt;- with(agg.avg, cbind(Species, signif(agg.se[,2:8], 3)))
+round.se</code></pre>
+<pre><code>##   Species   AMF Cd.leaf Pb.leaf Zn.leaf Cd.soil Pb.soil Zn.soil
+## 1      AA 1.460   2.130  11.900   208.0   13.10   162.0    1090
+## 2      AP 0.717   0.770   2.500   133.0   12.20   102.0    1080
+## 3      DF 2.070   0.315   1.800    51.1    9.96   162.0     414
+## 4      ES 2.550   4.250   5.950   137.0   13.20    87.7    1260
+## 5      MP 0.534   5.760   0.564   591.0   71.50   359.0    6020</code></pre>
+<p>To finish our table, we want each cell of columns 2 through 8 to display our rounded average, the character ±, and then our rounded SE. We will use a technique called a “for loop” to do this one cell at a time.</p>
+</div>
+<div id="loops" class="section level1">
+<h1>Loops</h1>
+<p>Here is a simple for loop to demonstrate the technique.</p>
+<pre class="r"><code>for(ii in 1:5){
+  print(ii^2)
+}</code></pre>
+<pre><code>## [1] 1
+## [1] 4
+## [1] 9
+## [1] 16
+## [1] 25</code></pre>
+<p>It can be convenient to embed loops inside functions. As an example, we’ll calculate the sum of squared deviations from a sample average. That is, for a vector x, we will find the average, calculate the difference of each element of x from that average, square that difference, and sum those differences for all elements of x.</p>
+<pre class="r"><code>sum.of.squares &lt;- function(x){
+    #Make an empty vector of the correct length where we will fill in our values
+    sq.diffs &lt;- rep(NA, length(x))
+    for(ii in 1:length(x)){
+        #Define each element of sq.diffs as the squared difference we want
+        sq.diffs[ii] &lt;- (x[ii]-mean(x))^2
+        }
+    #Return the sum of the entries in sq.diffs
+    return(sum(sq.diffs))
+}</code></pre>
+<p>Test this function</p>
+<pre class="r"><code>x.test</code></pre>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+<pre class="r"><code>sum.of.squares(x.test)</code></pre>
+<pre><code>## [1] 82.5</code></pre>
+<p>Note that this function can also be done without a for loop.</p>
+<pre class="r"><code>sum((x.test-mean(x.test))^2)</code></pre>
+<pre><code>## [1] 82.5</code></pre>
+<p>Let’s get back to our table. We’ll start with an empty destination table again as we did with the sum of squares function, but we’ll leave the Species column as it is because it doesn’t need anything new done to it.</p>
+<p>The following code defines variables ii and jj and uses them to cycle through the rows and columns, respectively, of mytable. Then it defines entry [ii,jj] of mytable by concatenating the corresponding values of round.avg and round.se, separated by the character string &quot; ± &quot;.</p>
+<pre class="r"><code>mytable &lt;- round.avg
+for(ii in 1:5){
+    for(jj in 2:8){
+        mytable[ii,jj] &lt;- paste(round.avg[ii,jj], round.se[ii,jj], sep=&quot; ± &quot;) 
+    }
+}
+mytable</code></pre>
+<pre><code>##   Species          AMF      Cd.leaf      Pb.leaf    Zn.leaf     Cd.soil
+## 1      AA  9.17 ± 1.46  16.6 ± 2.13  62.9 ± 11.9 1220 ± 208 51.3 ± 13.1
+## 2      AP 2.43 ± 0.717  9.55 ± 0.77   23.7 ± 2.5 1200 ± 133 90.5 ± 12.2
+## 3      DF  5.96 ± 2.07 4.12 ± 0.315   10.8 ± 1.8 376 ± 51.1 43.7 ± 9.96
+## 4      ES  13.4 ± 2.55  34.5 ± 4.25  41.1 ± 5.95 1530 ± 137 70.7 ± 13.2
+## 5      MP 1.08 ± 0.534  52.7 ± 5.76 7.61 ± 0.564 6450 ± 591  441 ± 71.5
+##      Pb.soil      Zn.soil
+## 1  650 ± 162  5140 ± 1090
+## 2 1030 ± 102  6920 ± 1080
+## 3 1190 ± 162   2940 ± 414
+## 4 476 ± 87.7  6650 ± 1260
+## 5 2380 ± 359 35400 ± 6020</code></pre>
+<p>Save mytable as a csv.</p>
+<pre class="r"><code>write.csv(mytable, file=&quot;My pretty table.csv&quot;)</code></pre>
+<p>For some reason when I open this resulting file in Excel, I get the symbol Â before each ±, which seems to be a problem of text encoding between R and Excel but easy to fix in find/change. Interestingly when I read it back into R it displays correctly again:</p>
+<pre class="r"><code>mypretty &lt;- read.csv(file=&quot;My pretty table.csv&quot;)
+mypretty</code></pre>
+<pre><code>##   X Species          AMF      Cd.leaf      Pb.leaf    Zn.leaf     Cd.soil
+## 1 1      AA  9.17 ± 1.46  16.6 ± 2.13  62.9 ± 11.9 1220 ± 208 51.3 ± 13.1
+## 2 2      AP 2.43 ± 0.717  9.55 ± 0.77   23.7 ± 2.5 1200 ± 133 90.5 ± 12.2
+## 3 3      DF  5.96 ± 2.07 4.12 ± 0.315   10.8 ± 1.8 376 ± 51.1 43.7 ± 9.96
+## 4 4      ES  13.4 ± 2.55  34.5 ± 4.25  41.1 ± 5.95 1530 ± 137 70.7 ± 13.2
+## 5 5      MP 1.08 ± 0.534  52.7 ± 5.76 7.61 ± 0.564 6450 ± 591  441 ± 71.5
+##      Pb.soil      Zn.soil
+## 1  650 ± 162  5140 ± 1090
+## 2 1030 ± 102  6920 ± 1080
+## 3 1190 ± 162   2940 ± 414
+## 4 476 ± 87.7  6650 ± 1260
+## 5 2380 ± 359 35400 ± 6020</code></pre>
+<p>Practice with indexing: recreate mytable but with the columns in the following order: Cd.soil, Cd.leaf, Pb.soil, Pb.leaf, Zn.soil, Zn.leaf, AMF</p>
+<p>Practice (more complicated): make a table in the style of mytable, but instead of presenting mean ± SE, present the lower and upper bounds of an approximate 95% confidence interval: mean ± 2*SD.<br />
+Hint: there are many ways to organize this. I suggest using aggregate with perhaps one or more homemade functions to calculate the numbers you want to put in the table, and then using a loop as above to arrange the numbers correctly into the table.<br />
+Note: if you’re actually trying to publish a 95% confidence interval you will want to use a more statistically rigorous version!</p>
+</div>
+<div id="moving-toward-ifelse-statements" class="section level1">
+<h1>Moving toward if/else statements</h1>
+<p>Suppose we are interested in the relationships between plant and soil metal concentrations for each species: for instance, is the amount of Zn in the soil under species AA related to the amount of Zn in the leaves of AA? Let’s make a table where, for each plant species and each metal studied, we report whether the relationship between plant and soil metal concentrations is positive, negative, or not significant.</p>
+</div>
+<div id="statistical-background-linear-regression" class="section level1">
+<h1>Statistical background: linear regression</h1>
+<p>This technique asks whether there is a significant linear relationship between two continuous variables. For example, let’s look at Zn in species AP</p>
+<p>For the rows of mydata in which Species is AP, run a linear model of Zn.leaf as predicted by Zn.soil</p>
+<pre class="r"><code>AP.Zn.model &lt;- with(mydata[mydata$Species==&quot;AP&quot;,], lm(Zn.leaf~Zn.soil))
+#View model summary
+summary(AP.Zn.model)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = Zn.leaf ~ Zn.soil)
+## 
+## Residuals:
+##    Min     1Q Median     3Q    Max 
+## -950.6 -199.1 -104.3  187.1 1182.0 
+## 
+## Coefficients:
+##              Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) 443.86803  116.61543   3.806 0.000705 ***
+## Zn.soil       0.08760    0.01264   6.931 1.55e-07 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 417 on 28 degrees of freedom
+##   (8 observations deleted due to missingness)
+## Multiple R-squared:  0.6318, Adjusted R-squared:  0.6186 
+## F-statistic: 48.04 on 1 and 28 DF,  p-value: 1.555e-07</code></pre>
+<p>Regression assumes residuals are normally distributed - here are two ways of checking that.
+A histogram of the residuals should approximate a bell curve</p>
+<pre class="r"><code>hist(AP.Zn.model$residuals)</code></pre>
+<p><img src="/courses/2020_stri_introR/tutorials/L2_FlowControl_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
+<p>A normal quantile-quantile plot should approximate a 1:1 line.</p>
+<pre class="r"><code>qqnorm(AP.Zn.model$residuals)</code></pre>
+<p><img src="/courses/2020_stri_introR/tutorials/L2_FlowControl_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
+<p>Does log-transformation help?</p>
+<pre class="r"><code>apznlog &lt;- with(mydata[mydata$Species==&quot;AP&quot;,], lm(log10(Zn.leaf)~log10(Zn.soil)))
+summary(apznlog)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = log10(Zn.leaf) ~ log10(Zn.soil))
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -0.45167 -0.07118  0.00576  0.08498  0.45617 
+## 
+## Coefficients:
+##                Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)     0.47971    0.34666   1.384    0.177    
+## log10(Zn.soil)  0.66314    0.09322   7.114 9.69e-08 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.1749 on 28 degrees of freedom
+##   (8 observations deleted due to missingness)
+## Multiple R-squared:  0.6438, Adjusted R-squared:  0.6311 
+## F-statistic: 50.61 on 1 and 28 DF,  p-value: 9.689e-08</code></pre>
+<pre class="r"><code>hist(apznlog$residuals)</code></pre>
+<p><img src="/courses/2020_stri_introR/tutorials/L2_FlowControl_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
+<pre class="r"><code>qqnorm(apznlog$residuals)</code></pre>
+<p><img src="/courses/2020_stri_introR/tutorials/L2_FlowControl_files/figure-html/unnamed-chunk-32-2.png" width="672" /></p>
+<pre class="r"><code>#Yes, somewhat.  </code></pre>
+<p>Moving back toward our table… From the model summary, we want to pull the parameter estimate (slope of the relationship) to determine whether the relationship is positive or negative, and the P-value to determine whether it is statistically significant. Let’s figure out how to call them.</p>
+<pre class="r"><code>#Give the summary a shorter, easier name
+sz &lt;- summary(apznlog)
+#Display the summary
+sz</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = log10(Zn.leaf) ~ log10(Zn.soil))
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -0.45167 -0.07118  0.00576  0.08498  0.45617 
+## 
+## Coefficients:
+##                Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)     0.47971    0.34666   1.384    0.177    
+## log10(Zn.soil)  0.66314    0.09322   7.114 9.69e-08 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.1749 on 28 degrees of freedom
+##   (8 observations deleted due to missingness)
+## Multiple R-squared:  0.6438, Adjusted R-squared:  0.6311 
+## F-statistic: 50.61 on 1 and 28 DF,  p-value: 9.689e-08</code></pre>
+<pre class="r"><code>#Find the parameter estimate
+sz$coefficients[2,1]</code></pre>
+<pre><code>## [1] 0.6631386</code></pre>
+<pre class="r"><code>#Find the P-value 
+sz$coefficients[2,4]</code></pre>
+<pre><code>## [1] 9.688803e-08</code></pre>
+<p>When we make our table, we’ll make the models for each species and metal, extract parameter estimate and P-value from each, and fill in the table based on the results. Since we are running many models, we will need to correct for multiple comparisons. I’ll use the Dunn-Sidak correction here but there are many possibilities.</p>
+<p>Find the corrected P-value according to the Dunn-Sidak correction. We’ll make a function to calculate the corrected p-value for n tests at significance level alpha.</p>
+<pre class="r"><code>dunn.sidak &lt;- function(alpha, n) 1-(1-alpha)^(1/n)
+p.corr &lt;- dunn.sidak(0.05, 15)
+p.corr</code></pre>
+<pre><code>## [1] 0.003413713</code></pre>
+<p>Practice: Write a function and use it to find the corrected P-value according to a different correction of your choice, such as Bonferroni.</p>
+</div>
+<div id="ifelse-statements" class="section level1">
+<h1>If/else statements</h1>
+<p>Now that we know how to pull these values out of a summary.lm object, let’s write a function that produces the entry we want in a given cell in our table: “NS” if the relationship is not statistically significant, and “Positive” or “Negative” for statistically significant relationships based on the parameter estimate.</p>
+<p>Example of if/else syntax</p>
+<pre class="r"><code>x &lt;- 5
+if(x &gt; 0){
+  print(&quot;Positive number&quot;)
+} else {
+  print(&quot;Not a positive number&quot;)
+}</code></pre>
+<pre><code>## [1] &quot;Positive number&quot;</code></pre>
+<p>If/else statements can also be useful in functions</p>
+<pre class="r"><code>myfun1 &lt;- function(p){
+    if(p&gt;=p.corr){
+        return(&quot;NS&quot;)
+    } else {
+        return(&quot;SIG&quot;)
+    }
+}
+myfun1(0.001)</code></pre>
+<pre><code>## [1] &quot;SIG&quot;</code></pre>
+<pre class="r"><code>myfun1(0.003)</code></pre>
+<pre><code>## [1] &quot;SIG&quot;</code></pre>
+<pre class="r"><code>myfun1(0.004)</code></pre>
+<pre><code>## [1] &quot;NS&quot;</code></pre>
+<pre class="r"><code>myfun1(0.05)</code></pre>
+<pre><code>## [1] &quot;NS&quot;</code></pre>
+<pre class="r"><code>myfun1(0.8)</code></pre>
+<pre><code>## [1] &quot;NS&quot;</code></pre>
+<pre class="r"><code>myfun1(-10)</code></pre>
+<pre><code>## [1] &quot;SIG&quot;</code></pre>
+<pre class="r"><code>myfun1(200)</code></pre>
+<pre><code>## [1] &quot;NS&quot;</code></pre>
+<p>Here’s the function we want for the table. It takes input values p (assumed to be a p-value) and q (assumed to be a parameter estimate). If p is greater than or equal to the corrected P-value we calculated above (p.corr), it returns “NS” for not significant. If p is less than p.corr, then: if q is positive, it returns “Positive” to indicate a positive relationship, otherwise it returns “Negative” to indicate a negative relationship.</p>
+<pre class="r"><code>myfun2 &lt;- function(p, q){
+    if(p&gt;=p.corr){
+        return(&quot;NS&quot;)
+    } else {
+        if(q&gt;0){
+            return(&quot;Positive&quot;)
+        } else {return(&quot;Negative&quot;)}
+    }
+}</code></pre>
+<p>Let’s test our function in several scenarios.</p>
+<pre class="r"><code>myfun2(1,-1)</code></pre>
+<pre><code>## [1] &quot;NS&quot;</code></pre>
+<pre class="r"><code>myfun2(1,0.04)</code></pre>
+<pre><code>## [1] &quot;NS&quot;</code></pre>
+<pre class="r"><code>myfun2(1, 100)</code></pre>
+<pre><code>## [1] &quot;NS&quot;</code></pre>
+<pre class="r"><code>myfun2(0,-1)</code></pre>
+<pre><code>## [1] &quot;Negative&quot;</code></pre>
+<pre class="r"><code>myfun2(0,0.05)</code></pre>
+<pre><code>## [1] &quot;Positive&quot;</code></pre>
+<pre class="r"><code>myfun2(0,100)</code></pre>
+<pre><code>## [1] &quot;Positive&quot;</code></pre>
+<pre class="r"><code>myfun2(0.04, 0.04)</code></pre>
+<pre><code>## [1] &quot;NS&quot;</code></pre>
+<p>Practice: what does myfun2 do if p&lt;p.corr and q=0? How would you handle this situation more sensibly? Would you ever expect this situation to happen in real life?</p>
+</div>
+<div id="were-getting-to-the-table-i-promise" class="section level1">
+<h1>We’re getting to the table, I promise!</h1>
+<p>Make an empty destination table to store our values</p>
+<pre class="r"><code>Sp &lt;- c(&quot;AA&quot;, &quot;AP&quot;, &quot;DF&quot;, &quot;ES&quot;, &quot;MP&quot;)
+Cd &lt;- rep(NA, 5)
+Pb &lt;- rep(NA, 5)
+Zn &lt;- rep(NA, 5)
+out &lt;- as.data.frame(cbind(Sp, Cd, Pb, Zn))
+out</code></pre>
+<pre><code>##   Sp   Cd   Pb   Zn
+## 1 AA &lt;NA&gt; &lt;NA&gt; &lt;NA&gt;
+## 2 AP &lt;NA&gt; &lt;NA&gt; &lt;NA&gt;
+## 3 DF &lt;NA&gt; &lt;NA&gt; &lt;NA&gt;
+## 4 ES &lt;NA&gt; &lt;NA&gt; &lt;NA&gt;
+## 5 MP &lt;NA&gt; &lt;NA&gt; &lt;NA&gt;</code></pre>
+<p>Get the names of mydata to remind us which numbered columns we need
+names(mydata)
+The actual table</p>
+<pre class="r"><code>out</code></pre>
+<pre><code>##   Sp   Cd   Pb   Zn
+## 1 AA &lt;NA&gt; &lt;NA&gt; &lt;NA&gt;
+## 2 AP &lt;NA&gt; &lt;NA&gt; &lt;NA&gt;
+## 3 DF &lt;NA&gt; &lt;NA&gt; &lt;NA&gt;
+## 4 ES &lt;NA&gt; &lt;NA&gt; &lt;NA&gt;
+## 5 MP &lt;NA&gt; &lt;NA&gt; &lt;NA&gt;</code></pre>
+<pre class="r"><code>for(ii in 1:5){ #Loop through the five species
+    for(jj in 1:3){ #Loop through the three metals
+        model.data &lt;- mydata[mydata$Species==Sp[ii],] #Define dataframe model.data as the rows of mydata where Species is equal to the iith entry of our Sp vector.
+        model &lt;- with(model.data, lm(log10(model.data[,jj+3])~log10(model.data[,jj+6]))) #Define the regression model, including log-transformation
+        param &lt;- summary(model)$coefficients[2,1] #Extract the parameter estimate from the model summary
+        p.val &lt;- summary(model)$coefficients[2,4] #Extract the P-value from the model summary
+        out[ii,jj+1] &lt;- myfun2(p.val, param) #Use our function myfun2 to determine the correct entry for cell [ii, jj+1] of out.        
+    }
+}
+out</code></pre>
+<pre><code>##   Sp       Cd       Pb       Zn
+## 1 AA       NS Positive Positive
+## 2 AP       NS       NS Positive
+## 3 DF       NS       NS       NS
+## 4 ES Positive       NS Positive
+## 5 MP       NS       NS       NS</code></pre>
+<p>The same code without annotation</p>
+<pre class="r"><code>out
+for(ii in 1:5){
+    for(jj in 1:3){
+        model.data &lt;- mydata[mydata$Species==Sp[ii],]
+        model &lt;- with(model.data, lm(log10(model.data[,jj+3])~log10(model.data[,jj+6])))
+        param &lt;- summary(model)$coefficients[2,1]
+        p.val &lt;- summary(model)$coefficients[2,4]
+        out[ii,jj+1] &lt;- myfun2(p.val, param)        
+    }
+}
+out</code></pre>
+<p>Spot-check: do individual model outputs match their entries in the table?</p>
+<pre class="r"><code>aacd &lt;- with(mydata[mydata$Species==&quot;AA&quot;,], lm(log10(Cd.leaf)~log10(Cd.soil)))
+summary(aacd)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = log10(Cd.leaf) ~ log10(Cd.soil))
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -0.45880 -0.21812  0.06296  0.20826  0.31249 
+## 
+## Coefficients:
+##                Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)      0.9322     0.1878   4.965 0.000141 ***
+## log10(Cd.soil)   0.1654     0.1183   1.398 0.181114    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.2494 on 16 degrees of freedom
+##   (5 observations deleted due to missingness)
+## Multiple R-squared:  0.1089, Adjusted R-squared:  0.0532 
+## F-statistic: 1.955 on 1 and 16 DF,  p-value: 0.1811</code></pre>
+<pre class="r"><code>dfpb &lt;- with(mydata[mydata$Species==&quot;DF&quot;,], lm(log10(Pb.leaf)~log10(Pb.soil)))
+summary(dfpb)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = log10(Pb.leaf) ~ log10(Pb.soil))
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -0.39174 -0.19209  0.09309  0.18684  0.32930 
+## 
+## Coefficients:
+##                Estimate Std. Error t value Pr(&gt;|t|)
+## (Intercept)     -0.2839     0.8272  -0.343    0.739
+## log10(Pb.soil)   0.3940     0.2738   1.439    0.181
+## 
+## Residual standard error: 0.2512 on 10 degrees of freedom
+##   (6 observations deleted due to missingness)
+## Multiple R-squared:  0.1716, Adjusted R-squared:  0.08871 
+## F-statistic: 2.071 on 1 and 10 DF,  p-value: 0.1807</code></pre>
+<pre class="r"><code>eszn &lt;- with(mydata[mydata$Species==&quot;ES&quot;,], lm(log10(Zn.leaf)~log10(Zn.soil)))
+summary(eszn)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = log10(Zn.leaf) ~ log10(Zn.soil))
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -0.29230 -0.04965  0.05243  0.09096  0.19372 
+## 
+## Coefficients:
+##                Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)     1.67121    0.31221   5.353 4.35e-05 ***
+## log10(Zn.soil)  0.40196    0.08462   4.750  0.00016 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.1474 on 18 degrees of freedom
+##   (1 observation deleted due to missingness)
+## Multiple R-squared:  0.5562, Adjusted R-squared:  0.5316 
+## F-statistic: 22.56 on 1 and 18 DF,  p-value: 0.00016</code></pre>
+<p>One way of testing the loop: add a line to print one or more values of interest with each iteration of the loop. This is also useful to check the progress of loops that may be slow to run.</p>
+<pre class="r"><code>for(ii in 1:5){
+    for(jj in 1:3){
+        model.data &lt;- mydata[mydata$Species==Sp[ii],]
+        model &lt;- with(model.data, lm(log10(model.data[,jj+3])~log10(model.data[,jj+6])))
+        param &lt;- summary(model)$coefficients[2,1]
+        p.val &lt;- summary(model)$coefficients[2,4]
+        out[ii,jj+1] &lt;- myfun2(p.val, param)
+        print(c(ii, jj, p.val, myfun2(p.val, param)))
+    }
+}</code></pre>
+<pre><code>## [1] &quot;1&quot;                 &quot;1&quot;                 &quot;0.181114382568599&quot;
+## [4] &quot;NS&quot;               
+## [1] &quot;1&quot;                   &quot;2&quot;                   &quot;0.00148698582414258&quot;
+## [4] &quot;Positive&quot;           
+## [1] &quot;1&quot;                   &quot;3&quot;                   &quot;0.00324182977349798&quot;
+## [4] &quot;Positive&quot;           
+## [1] &quot;2&quot;                  &quot;1&quot;                  &quot;0.0172017389841376&quot;
+## [4] &quot;NS&quot;                
+## [1] &quot;2&quot;                 &quot;2&quot;                 &quot;0.421834656757258&quot;
+## [4] &quot;NS&quot;               
+## [1] &quot;2&quot;                    &quot;3&quot;                    &quot;9.68880334416056e-08&quot;
+## [4] &quot;Positive&quot;            
+## [1] &quot;3&quot;                 &quot;1&quot;                 &quot;0.311749392929456&quot;
+## [4] &quot;NS&quot;               
+## [1] &quot;3&quot;                 &quot;2&quot;                 &quot;0.180700457147639&quot;
+## [4] &quot;NS&quot;               
+## [1] &quot;3&quot;                 &quot;3&quot;                 &quot;0.645117518799968&quot;
+## [4] &quot;NS&quot;               
+## [1] &quot;4&quot;                   &quot;1&quot;                   &quot;0.00305551203149827&quot;
+## [4] &quot;Positive&quot;           
+## [1] &quot;4&quot;                 &quot;2&quot;                 &quot;0.229989700967829&quot;
+## [4] &quot;NS&quot;               
+## [1] &quot;4&quot;                    &quot;3&quot;                    &quot;0.000159957854141786&quot;
+## [4] &quot;Positive&quot;            
+## [1] &quot;5&quot;                 &quot;1&quot;                 &quot;0.797476793109707&quot;
+## [4] &quot;NS&quot;               
+## [1] &quot;5&quot;                 &quot;2&quot;                 &quot;0.981483007204014&quot;
+## [4] &quot;NS&quot;               
+## [1] &quot;5&quot;                 &quot;3&quot;                 &quot;0.371930357679382&quot;
+## [4] &quot;NS&quot;</code></pre>
+<pre class="r"><code>out</code></pre>
+<pre><code>##   Sp       Cd       Pb       Zn
+## 1 AA       NS Positive Positive
+## 2 AP       NS       NS Positive
+## 3 DF       NS       NS       NS
+## 4 ES Positive       NS Positive
+## 5 MP       NS       NS       NS</code></pre>
+<p>Practice: follow the workflow above to make a table reporting, for each species and each metal, the significance and sign of the relationship between leaf metal concentration and root AMF colonization.</p>
+</div>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+
+    <div class="share">
+        
+            <a class="icon-twitter" href="https://twitter.com/share?text=Tutorial%202%20-%20Flow%20Control&url=%2fcourses%2f2020_stri_introR%2ftutorials%2fl2_flowcontrol%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fa fa-twitter"></i>
+                <span class="hidden">Twitter</span>
+            </a>
+        
+
+        
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=%2fcourses%2f2020_stri_introR%2ftutorials%2fl2_flowcontrol%2f"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <i class="fa fa-facebook"></i>
+                <span class="hidden">Facebook</span>
+            </a>
+        
+
+        
+        
+    </div>
+</footer>
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a title="Tutorials" href="/courses/2020_stri_introR/">Tutorials</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    <span>&copy; 2020 / Powered by <a href="https://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="/courses/2020_stri_introR/js/jquery-1.11.3.min.js"></script>
+        <script src="/courses/2020_stri_introR/js/jquery.fitvids.js"></script>
+        <script src="/courses/2020_stri_introR/js/scripts.js"></script>
+    </body>
+</html>
+

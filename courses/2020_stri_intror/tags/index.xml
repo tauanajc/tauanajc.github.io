@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Tutorials</title>
-    <link>https://tauanacunha.com/courses/2020_stri_introR/tags/</link>
+    <link>/courses/2020_stri_introR/tags/</link>
     <description>Recent content in Tags on Tutorials</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://tauanacunha.com/courses/2020_stri_introR/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/courses/2020_stri_introR/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
