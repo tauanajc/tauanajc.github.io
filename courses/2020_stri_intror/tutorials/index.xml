@@ -6,10 +6,20 @@
     <description>Recent content on Tutorials</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 06 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 13 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/courses/2020_stri_introR/tutorials/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Tutorial 3 - Graphs</title>
+      <link>/courses/2020_stri_introR/tutorials/l3_graphs/</link>
+      <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/courses/2020_stri_introR/tutorials/l3_graphs/</guid>
+      <description>Plots are important tools in data exploration, when you are first looking at your dataset and checking how data is distributed. It is also critical at a later stage, when you carefully design and customize figures to present your work in a talk or manuscript.
+Today we will go over two sets of tools available for plotting in R: basic built-in functions, and a specific graphical package, ggplot2 (we will talk about packages in a minute).</description>
+    </item>
     
     <item>
       <title>Tutorial 2 - Flow Control</title>

@@ -3,17 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/courses/2020_stri_introR/tutorials/l2_flowcontrol/</loc>
-    <lastmod>2020-05-06T00:00:00+00:00</lastmod>
+    <loc>/courses/2020_stri_introR/tutorials/l3_graphs/</loc>
+    <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/courses/2020_stri_introR/tutorials/</loc>
-    <lastmod>2020-05-06T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/courses/2020_stri_introR/</loc>
+    <lastmod>2020-05-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/courses/2020_stri_introR/tutorials/l2_flowcontrol/</loc>
     <lastmod>2020-05-06T00:00:00+00:00</lastmod>
   </url>
   
