@@ -283,27 +283,27 @@ kindergarten&lt;-data.frame(age,weight_kg,combat_power,THC_content,sample_month)
 Try runnning this:</p>
 <pre class="r"><code>head(kindergarten) # Exploration of the first values of the data frame</code></pre>
 <pre><code>##   age weight_kg combat_power THC_content sample_month
-## 1   5  17.37343     101.7645        high     february
-## 2   6  21.23497     122.4753   very_high     february
-## 3   7  22.08819     129.5630    critical     february
-## 4   8  17.30827     120.9281        high     february
-## 5   6  22.87771     180.7595   very_high     february
-## 6   7  18.77317     161.7455    critical     february</code></pre>
+## 1   6  19.45295     124.8223        high     february
+## 2   6  16.80543     184.7134   very_high     february
+## 3   8  22.70335     104.7925    critical     february
+## 4   7  21.97957     195.8530        high     february
+## 5   7  19.43828     163.2110   very_high     february
+## 6   8  21.42746     189.2488    critical     february</code></pre>
 <pre class="r"><code>str(kindergarten)  # Structure of the data frame</code></pre>
 <pre><code>## &#39;data.frame&#39;:    12 obs. of  5 variables:
-##  $ age         : int  5 6 7 8 6 7 7 5 7 6 ...
-##  $ weight_kg   : num  17.4 21.2 22.1 17.3 22.9 ...
-##  $ combat_power: num  102 122 130 121 181 ...
+##  $ age         : int  6 6 8 7 7 8 5 6 6 5 ...
+##  $ weight_kg   : num  19.5 16.8 22.7 22 19.4 ...
+##  $ combat_power: num  125 185 105 196 163 ...
 ##  $ THC_content : chr  &quot;high&quot; &quot;very_high&quot; &quot;critical&quot; &quot;high&quot; ...
 ##  $ sample_month: chr  &quot;february&quot; &quot;february&quot; &quot;february&quot; &quot;february&quot; ...</code></pre>
 <pre class="r"><code>summary(kindergarten) # Some descriptive stats for each column</code></pre>
-<pre><code>##       age          weight_kg      combat_power   THC_content       
-##  Min.   :5.000   Min.   :14.04   Min.   :101.8   Length:12         
-##  1st Qu.:5.750   1st Qu.:17.36   1st Qu.:122.1   Class :character  
-##  Median :6.500   Median :19.61   Median :137.8   Mode  :character  
-##  Mean   :6.333   Mean   :19.66   Mean   :140.7                     
-##  3rd Qu.:7.000   3rd Qu.:22.14   3rd Qu.:151.3                     
-##  Max.   :8.000   Max.   :24.82   Max.   :198.1                     
+<pre><code>##       age         weight_kg      combat_power   THC_content       
+##  Min.   :5.00   Min.   :16.81   Min.   :104.8   Length:12         
+##  1st Qu.:6.00   1st Qu.:19.45   1st Qu.:158.2   Class :character  
+##  Median :6.00   Median :22.34   Median :177.3   Mode  :character  
+##  Mean   :6.50   Mean   :21.52   Mean   :167.4                     
+##  3rd Qu.:7.25   3rd Qu.:22.92   3rd Qu.:187.4                     
+##  Max.   :8.00   Max.   :25.68   Max.   :195.9                     
 ##  sample_month      
 ##  Length:12         
 ##  Class :character  
@@ -314,10 +314,10 @@ Try runnning this:</p>
 <p>The output of <code>str(kindergarten)</code> gives a lot of information about the data frame. Starts in the top-left mentioning that is a data.frame object with 12 observations (rows) and and 5 variables (columns). Below that shows the name and the data type of each column. You will see in this example a new data type called <code>Factor</code>, which is a categorical variable with levels that correspond to each each of the categories.</p>
 <p>you can select individual columns using the dolar symbol (<code>$</code>). To use it, you have to write the name of the data frame object, add the dolar symbol, and write the name of the column. For example</p>
 <pre class="r"><code>kindergarten$age # Selecting the column called &quot;age&quot; from &quot;Kindergarten&quot;</code></pre>
-<pre><code>##  [1] 5 6 7 8 6 7 7 5 7 6 5 7</code></pre>
+<pre><code>##  [1] 6 6 8 7 7 8 5 6 6 5 8 6</code></pre>
 <p>Once you select an individual column, they behave pretty much like a vector. You can use functions on these columns or you can create new vector with the information of the column. Try this:</p>
 <pre class="r"><code>mean(kindergarten$age)</code></pre>
-<pre><code>## [1] 6.333333</code></pre>
+<pre><code>## [1] 6.5</code></pre>
 <pre class="r"><code>age_new=kindergarten$age # New vector object with the column data
 
 age_sqrt=sqrt(kindergarten$age) # New vector object with sqrt values of age</code></pre>
@@ -325,22 +325,21 @@ age_sqrt=sqrt(kindergarten$age) # New vector object with sqrt values of age</cod
 <pre class="r"><code>#Find the rows with age&gt;6 using all the columns
 kindergarten[kindergarten$age&gt;6,] </code></pre>
 <pre><code>##    age weight_kg combat_power THC_content sample_month
-## 3    7  22.08819     129.5630    critical     february
-## 4    8  17.30827     120.9281        high     february
-## 6    7  18.77317     161.7455    critical     february
-## 7    7  15.85947     198.1018        high     november
-## 9    7  14.03872     140.5095    critical     november
-## 12   7  19.02890     142.7136    critical     november</code></pre>
+## 3    8  22.70335     104.7925    critical     february
+## 4    7  21.97957     195.8530        high     february
+## 5    7  19.43828     163.2110   very_high     february
+## 6    8  21.42746     189.2488    critical     february
+## 11   8  25.67641     179.7146   very_high     november</code></pre>
 <pre class="r"><code>#Find all the rows with the THC_content equals to very_high using all the columns
 kindergarten[kindergarten$THC_content==&quot;very_high&quot;,] </code></pre>
 <pre><code>##    age weight_kg combat_power THC_content sample_month
-## 2    6  21.23497     122.4753   very_high     february
-## 5    6  22.87771     180.7595   very_high     february
-## 8    5  22.31213     147.8026   very_high     november
-## 11   5  20.18738     106.4737   very_high     november</code></pre>
+## 2    6  16.80543     184.7134   very_high     february
+## 5    7  19.43828     163.2110   very_high     february
+## 8    6  18.80532     143.2318   very_high     november
+## 11   8  25.67641     179.7146   very_high     november</code></pre>
 <pre class="r"><code>#Find all the rows with sample_month equals to february only in column 2
 kindergarten[kindergarten$sample_month==&quot;february&quot;,2]</code></pre>
-<pre><code>## [1] 17.37343 21.23497 22.08819 17.30827 22.87771 18.77317</code></pre>
+<pre><code>## [1] 19.45295 16.80543 22.70335 21.97957 19.43828 21.42746</code></pre>
 </div>
 <div id="importing-exporting-data" class="section level2">
 <h2>4. Importing exporting data</h2>

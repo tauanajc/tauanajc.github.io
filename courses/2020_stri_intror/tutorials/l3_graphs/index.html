@@ -92,7 +92,7 @@ Today we will go over two sets of tools available for plotting in R: basic built
 <div id="setup" class="section level1">
 <h1>Setup</h1>
 <p>First set your working directory:</p>
-<pre class="r"><code>setwd(&quot;/Users/tauanajc/TEACHING/2020_STRI_introR/L3_Graphs&quot;) # Path to your project folder</code></pre>
+<pre class="r"><code>setwd(&quot;/Users/tauanajc/TEACHING/2020_STRI_introR/L3_Graphs&quot;) # Type the path to your project folder</code></pre>
 </div>
 <div id="packages" class="section level1">
 <h1>Install and load packages</h1>
@@ -111,10 +111,7 @@ Today we will go over two sets of tools available for plotting in R: basic built
 <div id="read-data" class="section level2">
 <h2>Read data</h2>
 <pre class="r"><code>heavy_metals &lt;- read.csv(file = &quot;Dietterich et al 2017 data for R course.csv&quot;)</code></pre>
-<p>Let’s look at the column names, the first few rows of this dataset and also its structure:</p>
-<pre class="r"><code>colnames(heavy_metals)</code></pre>
-<pre><code>## [1] &quot;Sample.id&quot; &quot;Species&quot;   &quot;AMF&quot;       &quot;Cd.leaf&quot;   &quot;Pb.leaf&quot;   &quot;Zn.leaf&quot;  
-## [7] &quot;Cd.soil&quot;   &quot;Pb.soil&quot;   &quot;Zn.soil&quot;</code></pre>
+<p>Let’s look at the first few rows of this dataset and also its structure:</p>
 <pre class="r"><code>head(heavy_metals)</code></pre>
 <pre><code>##   Sample.id Species        AMF    Cd.leaf    Pb.leaf  Zn.leaf   Cd.soil
 ## 1     AA57A      AA 0.23157895  0.7783835   3.196124 123.6436        NA
@@ -144,17 +141,27 @@ Today we will go over two sets of tools available for plotting in R: basic built
 </div>
 <div id="change-labels-and-codes" class="section level2">
 <h2>Change labels and codes</h2>
-<p>To make things more clear for us, let’s change the column names:</p>
+<p>To make things more clear for us, let’s change the column names:<br />
+(Did you notice that, in the original version of this tutorial, two of the labels were accidentally misplaced? That has a tremendous impact on what you see in the analyses and plots, so always double check that labels are correct when replacing information!)</p>
 <pre class="r"><code>colnames(heavy_metals) &lt;- c(&quot;SampleID&quot;, &quot;Species&quot;, &quot;Mycorrhizal_Colonization&quot;,
-                            &quot;Leaves_Cadmium&quot;, &quot;Leaves_Zinc&quot;, &quot;Leaves_Lead&quot;,
+                            &quot;Leaves_Cadmium&quot;, &quot;Leaves_Lead&quot;, &quot;Leaves_Zinc&quot;,
                             &quot;Soil_Cadmium&quot;, &quot;Soil_Lead&quot;, &quot;Soil_Zinc&quot;)</code></pre>
 <p>Check how they are now:</p>
-<pre class="r"><code>colnames(heavy_metals)</code></pre>
-<pre><code>## [1] &quot;SampleID&quot;                 &quot;Species&quot;                 
-## [3] &quot;Mycorrhizal_Colonization&quot; &quot;Leaves_Cadmium&quot;          
-## [5] &quot;Leaves_Zinc&quot;              &quot;Leaves_Lead&quot;             
-## [7] &quot;Soil_Cadmium&quot;             &quot;Soil_Lead&quot;               
-## [9] &quot;Soil_Zinc&quot;</code></pre>
+<pre class="r"><code>head(heavy_metals)</code></pre>
+<pre><code>##   SampleID Species Mycorrhizal_Colonization Leaves_Cadmium Leaves_Lead
+## 1    AA57A      AA               0.23157895      0.7783835    3.196124
+## 2    AA57B      AA               0.13402062      6.5385033   11.485826
+## 3    AA64A      AA               0.13483146      7.2124048   24.175478
+## 4    AA64B      AA               0.18705036      8.7516034   85.286755
+## 5    AA65A      AA               0.03370786     15.7864765   47.114983
+## 6    AA65B      AA               0.04000000     29.9806136  227.177291
+##   Leaves_Zinc Soil_Cadmium  Soil_Lead Soil_Zinc
+## 1    123.6436           NA   54.66782  987.7696
+## 2    415.3090     28.79344  344.56057 2637.6816
+## 3    283.9810           NA         NA        NA
+## 4    427.9493     36.38013 1966.49775 3022.5225
+## 5    899.6245    238.45015  931.60630 7681.7866
+## 6    802.0886     88.95300 2997.54140 5212.4895</code></pre>
 <p>Let’s also change the species codes, replacing them with the genus name:</p>
 <pre class="r"><code># Create a vector with the genus names
 genera &lt;- c(&quot;Ageratina&quot;, &quot;Deschampsia&quot;, &quot;Eupatorium&quot;, &quot;Minuartia&quot;, &quot;Agrostis&quot;)
@@ -223,7 +230,7 @@ genera[heavy_metals$Species] # We get a new vector of all the genera names accor
 heavy_metals$Species &lt;- genera[heavy_metals$Species]</code></pre>
 <p>Check that this worked by looking at some random lines of the dataset. Use indexing to select just a few lines, and the first 5 columns:</p>
 <pre class="r"><code>heavy_metals[c(1,30,50,75,90), 1:5]</code></pre>
-<pre><code>##    SampleID     Species Mycorrhizal_Colonization Leaves_Cadmium Leaves_Zinc
+<pre><code>##    SampleID     Species Mycorrhizal_Colonization Leaves_Cadmium Leaves_Lead
 ## 1     AA57A   Ageratina                0.2315789      0.7783835    3.196124
 ## 30    DF57A Deschampsia                       NA      4.1212228   25.720846
 ## 50     H72B  Eupatorium                0.1200000     67.3486260  119.868176
@@ -237,8 +244,8 @@ str(heavy_metals)</code></pre>
 ##  $ Species                 : Factor w/ 5 levels &quot;Ageratina&quot;,&quot;Agrostis&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...
 ##  $ Mycorrhizal_Colonization: num  0.2316 0.134 0.1348 0.1871 0.0337 ...
 ##  $ Leaves_Cadmium          : num  0.778 6.539 7.212 8.752 15.786 ...
-##  $ Leaves_Zinc             : num  3.2 11.5 24.2 85.3 47.1 ...
-##  $ Leaves_Lead             : num  124 415 284 428 900 ...
+##  $ Leaves_Lead             : num  3.2 11.5 24.2 85.3 47.1 ...
+##  $ Leaves_Zinc             : num  124 415 284 428 900 ...
 ##  $ Soil_Cadmium            : num  NA 28.8 NA 36.4 238.5 ...
 ##  $ Soil_Lead               : num  54.7 344.6 NA 1966.5 931.6 ...
 ##  $ Soil_Zinc               : num  988 2638 NA 3023 7682 ...</code></pre>
@@ -252,16 +259,18 @@ str(heavy_metals)</code></pre>
 <h2>Histogram</h2>
 <p>This is a very standard type of plot, in which you can see the frequencies of values in your data. It automatically bins the data in ranges, but you can also customize the number of bins. To plot a histogram with base R we use the <strong>hist</strong> command.</p>
 <p>Let’s look at the distribution of the zinc concentrations in the leaves of all plant species:</p>
-<pre class="r"><code>hist(heavy_metals$Leaves_Zinc)</code></pre>
+<pre class="r"><code>hist(x = heavy_metals$Leaves_Zinc)</code></pre>
 <p><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
 <p>With more bins, we can better see the distribution of zinc concentrations, take a look below.</p>
 <p>And you probably noticed that the names of the axis look terrible! You should always change them to informative names. Same goes for the title. Any of those can also be left blank.</p>
-<pre class="r"><code>hist(heavy_metals$Leaves_Zinc, breaks = 20, # Specify number of bins
+<pre class="r"><code>hist(x = heavy_metals$Leaves_Zinc,
+     breaks = 20, # Specify number of bins
      main = &quot;&quot;, # Plot title
      xlab = &quot;Zinc concentration in plant leaves (mg/kg)&quot;, # Axes labels
      ylab = &quot;Frequency&quot;)</code></pre>
 <p><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
-<p>Much better! Remember to use the help function whenever you want to see the other arguments and options for any command:</p>
+<p>Much better!<br />
+Remember to use the help function whenever you want to see the other arguments and options for any command:</p>
 <pre class="r"><code>help(hist)
 ?hist</code></pre>
 </div>
@@ -269,7 +278,7 @@ str(heavy_metals)</code></pre>
 <h2>Boxplot</h2>
 <p>The boxplot summarizes the data, without having all data points in the graph. The lines of the box correspond to the median, quartiles, minimum and maximum values of the dataset. The spacing between the parts of the box reflect the amount of spread and skewness in the data. If present, outliers are usually plotted as dots/circles. The command here is easy to remember: <strong>boxplot</strong>.</p>
 <p>Let’s get a boxplot for the exact same zinc concentrations that we used in the histogram:</p>
-<pre class="r"><code>boxplot(heavy_metals$Leaves_Zinc,
+<pre class="r"><code>boxplot(x = heavy_metals$Leaves_Zinc,
         ylab = &quot;Zinc concentration in leaves (mg/kg)&quot;)</code></pre>
 <p><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
 <p>A bit more information on how to interpret boxplots:</p>
@@ -281,45 +290,99 @@ str(heavy_metals)</code></pre>
 <li>minimum: smallest number of the set (excluding outliers)</li>
 <li>outliers: if present, these are values that are below Q1 or above Q3 by at least 1.5 times the interval between these two quartiles (interquantile range)</li>
 </ul>
-<p>It would be more interesting to look at the distribution of zinc concentrations for each one of the individual plant species. The boxplot allows you to plot a separate box for each level of a factor:</p>
-<pre class="r"><code>boxplot(formula = Leaves_Zinc ~ Species, data = heavy_metals,
+<p>It would be more interesting to look at the distribution of zinc concentrations for each one of the individual plant species. The boxplot allows you to plot a separate box for each level of a factor - note that the arguments to specify the data are different:</p>
+<pre class="r"><code>boxplot(formula = Leaves_Zinc ~ Species,
+        data = heavy_metals,
         ylab = &quot;Zinc concentration in leaves (mg/kg)&quot;,
         xlab = &quot;&quot;)</code></pre>
 <p><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
 </div>
 <div id="scatter-plot" class="section level2">
 <h2>Scatter plot</h2>
-<p>Scatter plots are used to visualize the relationship between two variables. The command is simply <strong>plot</strong>.</p>
-<p>Let’s try a scatter plot with our soil and leaf concentrations of lead:</p>
-<pre class="r"><code>plot(formula = Leaves_Lead ~ Soil_Lead, data = heavy_metals,
-     ylab = &quot;Lead concentration in leaves (mg/kg)&quot;,
-     xlab = &quot;Lead concentration in soil (mg/kg)&quot;)</code></pre>
+<p>Scatter plots are used to visualize the relationship between two variables. The command is <strong>plot</strong>.</p>
+<p>Let’s try a scatter plot with our soil and leaf concentrations of zinc:</p>
+<pre class="r"><code>plot(formula = Leaves_Zinc ~ Soil_Zinc,
+     data = heavy_metals,
+     ylab = &quot;Zinc concentration in leaves (mg/kg)&quot;,
+     xlab = &quot;Zinc concentration in soil (mg/kg)&quot;)</code></pre>
 <p><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
-<p>There seems to be a positive relationship betwen soil and leaf concentrations of lead. What if we look at individual plant species? Let’s use a <strong>for loop</strong> to get a scatter plot for each of the plants:</p>
+<p>There seems to be a positive relationship betwen soil and leaf concentrations of zinc. What if we look at individual plant species? Let’s use a <strong>for loop</strong> to get a scatter plot for each of the plants:</p>
 <pre class="r"><code>for(i in 1:5){ # 5 species of plant
-  each_plant = subset(heavy_metals, Species == levels(heavy_metals$Species)[i]) # subset for each species
-  plot(formula = Leaves_Lead ~ Soil_Lead, data = each_plant, # plot variables
+  each_plant = subset(x = heavy_metals,
+                      subset = Species == levels(heavy_metals$Species)[i]) # subset for each species
+  plot(formula = Leaves_Zinc ~ Soil_Zinc,
+       data = each_plant, # plot variables for specific subset
        main = levels(heavy_metals$Species)[i], # title indexed to get species name
-       ylab = &quot;Lead concentration in leaves (mg/kg)&quot;,
-       xlab = &quot;Lead concentration in soil (mg/kg)&quot;)}</code></pre>
+       ylab = &quot;Zinc concentration in leaves (mg/kg)&quot;,
+       xlab = &quot;Zinc concentration in soil (mg/kg)&quot;)}</code></pre>
 <p><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-19-1.png" width="672" /><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-19-2.png" width="672" /><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-19-3.png" width="672" /><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-19-4.png" width="672" /><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-19-5.png" width="672" /></p>
 <p>With that we see that each plant species has a somewhat different relationship between soil and leaf concentrations of metal. <strong>Remember that this is a small sample dataset, and not the complete dataset from Lee’s paper, so our plots are merely illustrative and do not necessarily reflect real results.</strong></p>
 </div>
+<div id="barplot" class="section level2">
+<h2>Barplot</h2>
+<p>Barplots show only the mean of a variable and an error bar, so they are not the most informative type of graph. Most often they can be completely replaced by a boxplot, which is way more informative. Still, barplots are common out there and you might want to know how to plot it in R, so here goes an example.</p>
+<p>First, you need to summarize the information of your dataset to get the mean and the standard error, and then you will use this new data frame to plot.</p>
+<p>Create a function to calculate the standard error - this is the same as we did last week:</p>
+<pre class="r"><code>se &lt;- function(x) {
+  sd(x)/sqrt(length(x))}</code></pre>
+<p>Calculate the mean and standard error of zinc concentrations for each species, and save that into a new data frame:</p>
+<pre class="r"><code>for_barplot &lt;- with(data = heavy_metals,
+                    aggregate(formula = Leaves_Zinc ~ Species,
+                              FUN = mean)) # Summarize mean by Species
+
+colnames(for_barplot) &lt;- c(&quot;Species&quot;, &quot;Mean_Zinc&quot;) # Change name of columns
+
+for_barplot$SE_Zinc &lt;- with(data = heavy_metals,
+                            aggregate(formula = Leaves_Zinc ~ Species,
+                                      FUN = se))[,2] # Summarize SE
+
+for_barplot</code></pre>
+<pre><code>##       Species Mean_Zinc   SE_Zinc
+## 1   Ageratina 1217.2924 207.96135
+## 2    Agrostis 1195.8129 132.61932
+## 3 Deschampsia  376.2118  51.12984
+## 4  Eupatorium 1533.0363 137.28854
+## 5   Minuartia 6450.6295 591.22250</code></pre>
+<p>Now we can use the command <strong>barplot</strong>:</p>
+<pre class="r"><code>barplot(formula = Mean_Zinc ~ Species,
+        data = for_barplot,
+        ylab = &quot;Zinc concentration in leaves (mg/kg)&quot;,
+        xlab = &quot;&quot;,
+        ylim = c(0,8000)) # Extend y axis to higher values to fit the error bar</code></pre>
+<p><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<p>You can see the error bars are not there. In base R, you have to improvise with the <strong>arrows</strong> function. After plotting the core graph, you overlay arrows in the plot, while making the arrow head horizontal instead of pointy:</p>
+<pre class="r"><code>barplot(formula = Mean_Zinc ~ Species,
+        data = for_barplot,
+        ylab = &quot;Zinc concentration in leaves (mg/kg)&quot;,
+        xlab = &quot;&quot;,
+        ylim = c(0,8000))
+
+arrows(y0 = for_barplot$Mean_Zinc-for_barplot$SE_Zinc, # y0 and y1 are the mean minus or plus the SE
+       y1 = for_barplot$Mean_Zinc+for_barplot$SE_Zinc,
+       x0 = c(0.7,1.9,3.1,4.3,5.5), # Position in x would usually be 1:5 because 5 categories
+       x1 = c(0.7,1.9,3.1,4.3,5.5), # but barplot is weird and moves the x labels a bit
+       angle = 90, # Angle of the arrow head
+       code = 3, # Arrow head in one side (1), other side (2), or both sides (3)
+       length = 0.1) # Length of the horizontal bar</code></pre>
+<p><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+</div>
 <div id="customization-with-base-r" class="section level2">
 <h2>Customization with base R</h2>
-<p>There are many other types of plots available in base R, and many more options for customization, for example colors, margins and panels with multiple plots. Below is one panel example with multiple plots and customizations. Use the help function to explore each command that is not yet familiar to you.</p>
+<p>There are many other types of plots available in base R, and many more options for customization, for example colors, margins and panels with multiple plots. Below is one panel example with multiple plots and customizations.</p>
 <p>For more examples and details on customization of base R graphs, check the help page of the command <strong>par</strong> and also <a href="https://rstudio-pubs-static.s3.amazonaws.com/84527_6b8334fd3d9348579681b24d156e7e9d.html">this</a> and <a href="https://flowingdata.com/2012/12/17/getting-started-with-charts-in-r/">this</a> websites as starting points. Help pages and google are your best friends to customize R plots.</p>
 <pre class="r"><code># output omitted to keep tutorial clean
 colors() # existing colors in base R
-?points # symbols</code></pre>
+?points # symbols
+?par # graphic paremeters</code></pre>
 <pre class="r"><code>palette.pals() # several new palettes added as of R v4.0.0</code></pre>
 <pre><code>##  [1] &quot;R3&quot;              &quot;R4&quot;              &quot;ggplot2&quot;         &quot;Okabe-Ito&quot;      
 ##  [5] &quot;Accent&quot;          &quot;Dark 2&quot;          &quot;Paired&quot;          &quot;Pastel 1&quot;       
 ##  [9] &quot;Pastel 2&quot;        &quot;Set 1&quot;           &quot;Set 2&quot;           &quot;Set 3&quot;          
 ## [13] &quot;Tableau 10&quot;      &quot;Classic Tableau&quot; &quot;Polychrome 36&quot;   &quot;Alphabet&quot;</code></pre>
-<p>Other objects needed to create a barplot that will be used below:</p>
-<pre class="r"><code># data frame for the colors you want for each species
-plant_colors &lt;- data.frame(Species = factor(levels(heavy_metals$Species)),
+<div id="multiple-customized-plots" class="section level3">
+<h3>Multiple customized plots</h3>
+<p>Create a data frame to hold colors and symbols for each species:</p>
+<pre class="r"><code>plant_colors &lt;- data.frame(Species = factor(levels(heavy_metals$Species)),
                            Color = c(&quot;darkgreen&quot;, &quot;darkorange&quot;,
                                      &quot;deepskyblue&quot;, &quot;firebrick&quot;, &quot;darkviolet&quot;),
                            Symbol = c(7,19,24,0,8))
@@ -330,46 +393,25 @@ plant_colors</code></pre>
 ## 3 Deschampsia deepskyblue     24
 ## 4  Eupatorium   firebrick      0
 ## 5   Minuartia  darkviolet      8</code></pre>
-<pre class="r"><code># Creating a function to calculate the standard error - same as last week
-se &lt;- function(x) {
-  sd(x)/sqrt(length(x))}</code></pre>
-<pre class="r"><code># Calculate mean and standard error of zinc concentrations for each species
-for_barplot &lt;- with(data = heavy_metals,
-                    aggregate(formula = Leaves_Zinc ~ Species, FUN = mean))
-
-colnames(for_barplot) &lt;- c(&quot;Species&quot;, &quot;Mean_Zinc&quot;)
-
-for_barplot$SE_Zinc &lt;- with(data = heavy_metals,
-                            aggregate(formula = Leaves_Zinc ~ Species, FUN = se))[,2]
-
-for_barplot</code></pre>
-<pre><code>##       Species Mean_Zinc    SE_Zinc
-## 1   Ageratina 62.883543 11.8650922
-## 2    Agrostis 23.731515  2.5032906
-## 3 Deschampsia 10.794596  1.8038057
-## 4  Eupatorium 41.123450  5.9537711
-## 5   Minuartia  7.612877  0.5639889</code></pre>
-<div id="multiple-customized-plots" class="section level3">
-<h3>Multiple customized plots</h3>
-<pre class="r"><code>#pdf(file = &quot;baseRpanel.pdf&quot;, width = 8, height = 8) # Explained below
-
-# par = graphical parameters 
-par(mfrow = c(2,2)) # mfrow: panel of 2x2 plots, ordered by row
+<p>Let’s make a 2x2 panel and fill the slots with the same graphs we created above, a histogram, a boxplot, a scatter plot and a barplot. Use the help function to explore each command that is not yet familiar to you:</p>
+<pre class="r"><code>par(mfrow = c(2,2)) # mfrow: panel of 2x2 plots, ordered by row
 
 # Histogram
-hist(heavy_metals$Soil_Zinc, breaks = 20,
+hist(heavy_metals$Soil_Zinc,
+     breaks = 20,
      main = &quot;&quot;,
      xlab = &quot;Zinc concentration in soil (mg/kg)&quot;)
 
 # Boxplot
-boxplot(formula = Leaves_Zinc ~ Species, data = heavy_metals,
+boxplot(formula = Leaves_Zinc ~ Species,
+        data = heavy_metals,
         col = plant_colors$Color,
         xaxt = &quot;n&quot;, # Suppress the x axis completely
         ylab = &quot;Zinc concentration in leaves (mg/kg)&quot;,
         xlab = &quot;&quot;,
         main = &quot;Boxplots are better than barplots:&quot;)
 
-text(x = 1:5, y = -23, # Position to add labels in x axis
+text(x = 1:5, y = -1200, # Position to add labels in x axis
      labels = for_barplot$Species, # Text to add
      xpd = TRUE, # Enable text outside the plot region
      srt = 15) # Angle
@@ -402,10 +444,10 @@ barplot(formula = Mean_Zinc ~ Species,
         xaxt = &quot;n&quot;,
         ylab = &quot;Zinc concentration in leaves (mg/kg)&quot;,
         xlab = &quot;&quot;,
-        ylim = c(0,80))
+        ylim = c(0,8000))
 
 text(x = c(0.7,1.9,3.1,4.3,5.5),
-     y = -5,
+     y = -500,
      labels = for_barplot$Species,
      xpd=TRUE,
      srt=15)
@@ -422,24 +464,27 @@ mtext(text = &quot;BAD INFO/INK RATIO&quot;,
       side = 3,
       col = &quot;firebrick&quot;,
       cex = .8)</code></pre>
-<p><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-25-1.png" width="768" /></p>
-<pre class="r"><code>par(mfrow = c(1,1)) # Set graphic device back to 1 plot only
-
-#dev.off() # Explained below</code></pre>
+<p><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-27-1.png" width="768" /></p>
+<p>Remember to set your graphic device back to 1x1, otherwise all of your next plots will be shown in the smaller slots of your previous 2x2 device:</p>
+<pre class="r"><code>par(mfrow = c(1,1)) # Set graphic device back to 1 plot only</code></pre>
 </div>
 </div>
 <div id="save-basic-plots-to-file" class="section level2">
 <h2>Save basic plots to file</h2>
 <p>Basic graphs can be saved with functions like <strong>pdf</strong>, <strong>png</strong>, <strong>tiff</strong> or <strong>jpeg</strong>, which open an external graphics device to save your figure. The graph will not show on your RStudio window, but it will be automatically saved in your working directory. After the <strong>pdf</strong> command, you list your plotting commands, followed by closing the device with <strong>dev.off</strong>:</p>
-<pre class="r"><code>pdf(file = &quot;baseRhist.pdf&quot;, width = 5, height = 5) # Open device
+<pre class="r"><code>pdf(file = &quot;baseRhist.pdf&quot;, # Open pdf device
+    width = 5,
+    height = 5) # Size of figure in inches
 
-hist(heavy_metals$Soil_Zinc, breaks = 20,
-     main = &quot;Zinc concentrations (mg/kg)&quot;, xlab= &quot;Soil&quot;)
+hist(heavy_metals$Soil_Zinc,
+     breaks = 20,
+     main = &quot;Zinc concentrations (mg/kg)&quot;,
+     xlab= &quot;Soil&quot;)
 
 dev.off() # Close device</code></pre>
 <pre><code>## quartz_off_screen 
 ##                 2</code></pre>
-<p>The above was a short example with a simple graph. Now use the <strong>pdf</strong> and <strong>dev.off</strong> commands on the 4-plot panel above.</p>
+<p>The above was a short example with only one histogram, but you can have many plots in between the <strong>pdf</strong> and the <strong>dev.off</strong> commands. Now go back and use these two commands on the 4-plot panel above (remember that anything needed for the plot, including the <strong>par</strong> command, needs to be contained in between <strong>pdf</strong> and <strong>dev.off</strong>). Suggested arguments for opening your pdf device: <code>file = &quot;baseRpanel.pdf&quot;, width = 8, height = 8</code></p>
 </div>
 </div>
 <div id="ggplot2" class="section level1">
@@ -454,52 +499,63 @@ dev.off() # Close device</code></pre>
 <div id="histogram-1" class="section level2">
 <h2>Histogram</h2>
 <p>Step by step, let’s see what the parts do:</p>
-<pre class="r"><code>ggplot(heavy_metals) # Just an empty plot, but holds the data to be used</code></pre>
-<p><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
-<p>Now we specify the set of aesthetics that will be used throughout the following layers (the information is said to be <em>inherited</em> by the next commands). Aesthetic (aes) are mappings of a visual element to a specific variable, for example: the position of the data (on the x and y axes), a color pattern that follows the factor levels of another variable.</p>
-<pre class="r"><code>ggplot(heavy_metals, aes(x = Leaves_Zinc)) + # Dataset and variable specified to the x axis
+<pre class="r"><code>ggplot(data = heavy_metals) # Just an empty plot, but holds the data to be used</code></pre>
+<p><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
+<div id="aesthetics" class="section level3">
+<h3>Aesthetics</h3>
+<p>Now we specify the set of aesthetics that will be used throughout the following layers (the information is said to be <em>inherited</em> by the next commands). Aesthetic (aes) are mappings of a visual element to a specific variable, for example: the position of the data (on the x and y axes), a color pattern that follows the factor levels of a variable.</p>
+<pre class="r"><code>ggplot(data = heavy_metals, #  Dataset
+       aes(x = Leaves_Zinc)) + # Variable specified to the x axis
   geom_histogram(bins = 20, na.rm = TRUE) # Specify histogram type of plot</code></pre>
-<p><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+<p><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
+</div>
 <div id="default-themes" class="section level3">
 <h3>Default themes</h3>
 <p>The <strong>theme_</strong> command has several default, nice-looking themes to change background colors and patterns. Also use the function <strong>labs</strong> to change the names of the axes:</p>
-<pre class="r"><code>gghist &lt;- ggplot(heavy_metals, aes(x = Leaves_Zinc)) +
+<pre class="r"><code>gghist &lt;- ggplot(data = heavy_metals,
+                 aes(x = Leaves_Zinc)) +
   geom_histogram(bins = 20, na.rm = TRUE) +
   theme_minimal() + # Various default themes
-  labs(x = &quot;Zinc concentration in plant leaves (mg/kg)&quot;, y = &quot;Frequency&quot;) # Titles
+  labs(x = &quot;Zinc concentration in plant leaves (mg/kg)&quot;,
+       y = &quot;Frequency&quot;) # Titles
 
 gghist</code></pre>
-<p><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
+<p><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
 </div>
 </div>
 <div id="boxplot-1" class="section level2">
 <h2>Boxplot</h2>
 <p>Here we add the y aesthetics, so that we can specify both the zinc concentration and the species as variables. You can also add aesthetics not on the ggplot command, but on the <strong>geom_</strong> function of the specific type of plot, in which case the aesthetics are not inherited by other layers. For this particular boxplot, not inheriting the data does not matter, because none of the following layers need the data itself.</p>
-<pre class="r"><code>ggplot(heavy_metals) +
-  geom_boxplot(aes(y = Leaves_Zinc, x = Species), na.rm = TRUE) + # boxplot with variables in aesthetics
+<pre class="r"><code>ggplot(data = heavy_metals) +
+  geom_boxplot(aes(y = Leaves_Zinc, # Boxplot with variables in aesthetics
+                   x = Species), na.rm = TRUE) +
   theme_minimal() +
   labs(x = &quot;&quot;, y = &quot;Zinc concentration in plant leaves (mg/kg)&quot;)</code></pre>
-<p><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
+<p><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-34-1.png" width="672" /></p>
 <div id="mapping-color-aesthetics" class="section level3">
 <h3>Mapping color aesthetics</h3>
 <p>Add color to the border and fillings of the boxes according to a variable (in this case, the Species):</p>
-<pre class="r"><code>ggplot(heavy_metals) +
-  geom_boxplot(aes(y = Leaves_Zinc, x = Species,
-                   col = Species, fill = Species), na.rm = TRUE) + # new color aesthetics
+<pre class="r"><code>ggplot(data = heavy_metals) +
+  geom_boxplot(aes(y = Leaves_Zinc,
+                   x = Species,
+                   col = Species, # New color aesthetics (outline and filling)
+                   fill = Species), na.rm = TRUE) +
   theme_minimal() +
   labs(x = &quot;&quot;, y = &quot;Zinc concentration in plant leaves (mg/kg)&quot;)</code></pre>
-<p><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
-<p>But the fill hides the value of the median. We can make the fill color transparent in the <strong>geom_</strong> function (fixed visual attributes are set outside of <strong>aes</strong>). We can also change color schemes with <strong>scale_</strong> functions:</p>
-<pre class="r"><code>ggplot(heavy_metals) +
-  geom_boxplot(aes(y = Leaves_Zinc, x = Species,
-                   col = Species, fill = Species),
+<p><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-35-1.png" width="672" /></p>
+<p>But the fill hides the value of the median. We can make the fill color transparent in the <strong>geom_</strong> function (visual attributes with a fixed value are set outside of the <strong>aes</strong> command because they do not follow a variable). We can also change the color scheme with <strong>scale_</strong> functions:</p>
+<pre class="r"><code>ggplot(data = heavy_metals) +
+  geom_boxplot(aes(y = Leaves_Zinc,
+                   x = Species,
+                   col = Species,
+                   fill = Species),
                na.rm = TRUE,
-               alpha = 0.3) + # Transparency
+               alpha = 0.5) + # Transparency
   theme_minimal() +
   labs(x = &quot;&quot;, y = &quot;Zinc concentration in plant leaves (mg/kg)&quot;) +
   scale_fill_brewer(palette = &quot;Dark2&quot;) + # Color palette for the fill
   scale_color_brewer(palette = &quot;Dark2&quot;) # and for the borders</code></pre>
-<p><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
+<p><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-36-1.png" width="672" /></p>
 </div>
 <div id="color-brewer" class="section level3">
 <h3>Color Brewer</h3>
@@ -517,11 +573,13 @@ gghist</code></pre>
 <li>background</li>
 </ul>
 <p>In this graph, we don’t need the legend, so we can remove it. It would also be nice to italicize the names of the genera, and make them fit better to the graph by setting the words at an angle.</p>
-<pre class="r"><code>ggbox &lt;- ggplot(heavy_metals) +
-  geom_boxplot(aes(y = Leaves_Zinc, x = Species,
-                   col = Species, fill = Species),
+<pre class="r"><code>ggbox &lt;- ggplot(data = heavy_metals) +
+  geom_boxplot(aes(y = Leaves_Zinc,
+                   x = Species,
+                   col = Species,
+                   fill = Species),
                na.rm = TRUE,
-               alpha = 0.6) +
+               alpha = 0.5) +
   theme_minimal() +
   labs(x = &quot;&quot;, y = &quot;Zinc concentration in plant leaves (mg/kg)&quot;) +
   scale_fill_brewer(palette = &quot;Dark2&quot;) +
@@ -532,43 +590,46 @@ gghist</code></pre>
                                    angle = 15)) # Angle of x labels
 
 ggbox</code></pre>
-<p><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-35-1.png" width="672" /></p>
+<p><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-38-1.png" width="672" /></p>
 </div>
 </div>
 <div id="scatter-plot-1" class="section level2">
 <h2>Scatter plot</h2>
-<p>Below we recreate the scatter plot of how lead concentration of leaves relates to concentration in the soil. With base R, we used a <strong>for loop</strong> to create one plot per species. Let’s use the aesthetics of <strong>ggplot2</strong> to differentiate the points of each Species by color, in the same plot. We are also going to label specific points of interest with <strong>geom_text</strong>, and explore more arguments of the <strong>theme</strong> function:</p>
-<pre class="r"><code>ggpoint &lt;- ggplot(heavy_metals, aes(x = Soil_Lead, y = Leaves_Lead)) +
-  geom_point(aes(col = Species, fill = Species), # aestethics for geom_points
-             na.rm = TRUE, pch = 22, size = 3) + # attributes for points
+<p>Below we recreate the scatter plot of how zinc concentration of leaves relates to concentration in the soil. With base R, we used a <strong>for loop</strong> to create one plot per species. Let’s use the aesthetics of <strong>ggplot2</strong> to differentiate the points of each Species by color, in the same plot. We are also going to explore more arguments of the <strong>theme</strong> function:</p>
+<pre class="r"><code>ggpoint &lt;- ggplot(data = heavy_metals,
+                  aes(x = Soil_Zinc, y = Leaves_Zinc)) + # Aesthetics for x and y
+  geom_point(aes(col = Species, # Color aestethics for the points
+                 fill = Species),
+             na.rm = TRUE,
+             pch = 22, # Symbol to be used (see ?points)
+             size = 3) + # Size of points
   theme_minimal() +
-  theme(axis.title = element_text(size = 11),
+  theme(axis.title = element_text(size = 11), # Title of both axes
         legend.text = element_text(face = &quot;italic&quot;, size = 11), # Italics in the legend
-        #legend.position = &quot;top&quot;, # Position of legend
-        legend.position = &quot;none&quot;, # Position of legend
+        legend.position = &quot;top&quot;, # Legend on top of graph
         legend.title = element_blank()) + # Remove title of legend
   scale_fill_brewer(palette = &quot;Dark2&quot;) +
   scale_color_brewer(palette = &quot;Dark2&quot;) +
-  geom_text(aes(label = SampleID), data = subset(heavy_metals, Leaves_Lead &gt; 10000)) + # Label subset of points
-  labs(x = &quot;Lead concentration in soil (mg/kg)&quot;,
-       y = &quot;Lead concentration in leaves (mg/kg)&quot;)
+  labs(x = &quot;Zinc concentration in soil (mg/kg)&quot;,
+       y = &quot;Zinc concentration in leaves (mg/kg)&quot;)
 
 ggpoint</code></pre>
-<p><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-36-1.png" width="672" /></p>
-<div id="ggrepel-and-geom_jitter" class="section level3">
-<h3>ggrepel and geom_jitter</h3>
-<p>In the graph above, the labels are on top of our data points, which does not look very nice. For how to move the labels away from the points, check out the package <strong>ggrepel</strong> and its function <strong>geom_text_repel</strong>. You do not need to do this now, just keep this information as a reference for the future.</p>
-<p>In other plots where points themselves overlap, you might also want to force a tiny distance between them to improve visualization. <strong>ggplot2</strong> can do that with <strong>geom_jitter</strong>, which adds a small random variation to the actual position of your data. Look it up whenever you need it.</p>
+<p><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-39-1.png" width="672" /></p>
 </div>
-</div>
-<div id="barplot" class="section level2">
+<div id="barplot-1" class="section level2">
 <h2>Barplot</h2>
 <p>We already saw how barplots are little informative compared to other types of plots, but for the sake of the comparison with base R, let’s create a barplot with <strong>ggplot2</strong> as well.</p>
-<pre class="r"><code>ggbar &lt;- ggplot(heavy_metals, aes(y = Leaves_Zinc, x = Species,
-                         col = Species, fill = Species)) +
-  geom_bar(stat = &quot;summary&quot;, fun = &quot;mean&quot;, na.rm = TRUE) + # Barplot with mean as summary statistics
-  stat_summary(fun.data = mean_se, geom = &quot;errorbar&quot;, na.rm = TRUE, # Add SE bars
-               width = .5, col = &quot;black&quot;) +
+<pre class="r"><code>ggbar &lt;- ggplot(data = heavy_metals,
+                aes(y = Leaves_Zinc, x = Species,
+                    col = Species, fill = Species)) +
+  geom_bar(stat = &quot;summary&quot;, # Barplot with mean as summary statistics
+           fun = &quot;mean&quot;,
+           na.rm = TRUE) +
+  stat_summary(fun.data = mean_se, # Add SE bars
+               geom = &quot;errorbar&quot;,
+               na.rm = TRUE,
+               width = .5,
+               col = &quot;black&quot;) +
   theme_minimal() +
   theme(axis.title.x = element_blank(),
         axis.text.x = element_text(size = 12, face = &quot;italic&quot;, angle = 15),
@@ -579,45 +640,45 @@ ggpoint</code></pre>
   labs(x = &quot;&quot;, y = &quot;Zinc concentration in leaves (mg/kg)&quot;)
 
 ggbar</code></pre>
-<p><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-37-1.png" width="672" /></p>
+<p><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-40-1.png" width="672" /></p>
 </div>
 <div id="assign-ggplots-to-objects" class="section level2">
 <h2>Assign ggplots to objects</h2>
-<p>Plots made with <strong>ggplot2</strong> can be assigned to new objects, which you can use as a shortcut to keep editting the plot:</p>
-<pre class="r"><code>zinc_box &lt;- ggplot(heavy_metals) +
-  geom_boxplot(aes(y = Leaves_Zinc, x = Species), na.rm = TRUE)</code></pre>
-<pre class="r"><code>zinc_box</code></pre>
-<p><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-39-1.png" width="672" /></p>
-<pre class="r"><code>zinc_box +
-  theme_minimal() +
-  labs(x = &quot;&quot;, y = &quot;Zinc concentration in plant leaves (mg/kg)&quot;)</code></pre>
-<p><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-40-1.png" width="672" /></p>
+<p>Plots made with <strong>ggplot2</strong> can be assigned to new objects, as you might have noticed in the examples above where we created gghist, ggbox, ggpoint and ggbar. You can use the object as a shortcut to keep editing the plot with new layers. To exemplify this, let’s add a layer with the command <strong>geom_text</strong> to label specific points of interest:</p>
+<pre class="r"><code># Here we chose to label just a few points
+# But you could delete the data argument to label all points in the graph
+ggpoint +
+  geom_text(aes(label = SampleID), # Aesthetics for the variable containing the text to be added
+            data = subset(heavy_metals, Leaves_Zinc &gt; 10000)) # Label subset of points</code></pre>
+<p><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-41-1.png" width="672" /></p>
+<p>You can update the plot saved in the object at anytime by assigning the new code to the same object name. Let’s save the labels that we just created in the original ggpoint object:</p>
+<pre class="r"><code>ggpoint &lt;- ggpoint +
+  geom_text(aes(label = SampleID),
+            data = subset(heavy_metals, Leaves_Zinc &gt; 10000)) +
+  theme(legend.position = &quot;none&quot;) # Also removing the legend</code></pre>
+<div id="ggrepel-and-geom_jitter" class="section level3">
+<h3>ggrepel and geom_jitter</h3>
+<p>In the graph above, the labels are on top of our data points, which does not look very nice. For how to move the labels away from the points, check out the package <strong>ggrepel</strong> and its function <strong>geom_text_repel</strong>. You do not need to do this now, just keep this information as a reference for the future.</p>
+<p>In other plots where points themselves overlap, you might also want to force a tiny distance between them to improve visualization. <strong>ggplot2</strong> can do that with <strong>geom_jitter</strong>, which adds a small random variation to the actual position of your data. Look it up whenever you need it.</p>
+</div>
 </div>
 <div id="facet-plots" class="section level2">
 <h2>Facet plots</h2>
-<p><strong>ggplot2</strong> uses facets to easily display several plots of the same kind, each representing a specific level of a categorical variable. Let’s take the zinc data we used in the scatter plot and produce one plot per Species, all in the same figure:</p>
-<pre class="r"><code>ggplot(heavy_metals) +
-  geom_point(aes(x = Soil_Lead, y = Leaves_Lead, fill = Species),
-             na.rm = TRUE, pch = 22, size = 3) +
-  theme_minimal() +
-  facet_wrap(~ Species, nrow = 3) + # Wrap plots by Species
-  theme(axis.title = element_text(size = 12),
-        legend.position = &quot;none&quot;,
-        strip.text = element_text(size = 12, face = &quot;italic&quot;)) +
-  scale_fill_brewer(palette = &quot;Dark2&quot;) +
-  labs(x = &quot;Lead concentration in leaves (mg/kg)&quot;,
-       y = &quot;Lead concentration in soil (mg/kg)&quot;)</code></pre>
-<p><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-41-1.png" width="480" /></p>
+<p><strong>ggplot2</strong> uses facets to easily display several plots of the same kind, each representing a specific level of a categorical variable. Let’s keep working on the zinc data from the scatter plot. We will break it in 5 small windows, one per Species, all in the same figure. To avoid repeating the entire code for the scatter plot, let’s use the ggpoint object again:</p>
+<pre class="r"><code>ggpoint +
+  facet_wrap(~ Species, nrow = 3) + # Wrap plots by Species in 3 rows
+  theme(strip.text = element_text(size = 12, face = &quot;italic&quot;)) # Title of each small plot</code></pre>
+<p><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-43-1.png" width="480" /></p>
 </div>
 <div id="grid-of-independent-plots" class="section level2">
 <h2>Grid of independent plots</h2>
 <p>The easiest way to combine multiple plots on a page is the <strong>plot_grid</strong> function from the package <strong>cowplot</strong>. For more detail and many more elaborate options, check this <a href="https://wilkelab.org/cowplot/articles/plot_grid.html">website</a>.</p>
-<p>First, go back to the four plots we produced with <strong>ggplot2</strong> and assign them to object names - use gghist, ggbox, ggpoint, ggbar for the names.</p>
+<p>First, go back to the four plots we produced with <strong>ggplot2</strong> and make sure you assigned them to object names - use gghist, ggbox, ggpoint, ggbar for the names.</p>
 <p><strong>As an exercise, practice installing and loading a new package:</strong>
 (Hint: go back to the <a href="#packages">section on packages</a> of the tutorial)</p>
 <pre class="r"><code># GIVE IT A TRY:</code></pre>
 <p>Now that you have new functions from <strong>cowplot</strong> available, let’s combine all plots into one panel:</p>
-<pre class="r"><code>metal_plots &lt;- plot_grid(gghist, ggbox, ggpoint, ggbar,
+<pre class="r"><code>metal_plots &lt;- plot_grid(gghist, ggbox, ggpoint, ggbar, # All plots
           nrow = 2, # Plots distributed in two rows
           align = &quot;h&quot;, # Align plots horizontally
           axis = &quot;l&quot;, # Side on which to align
@@ -625,13 +686,17 @@ ggbar</code></pre>
           scale = 0.88) # Scale down the size of plots to increase white space in between
 
 metal_plots</code></pre>
-<p><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-44-1.png" width="768" /></p>
+<p><img src="/courses/2020_stri_introR/tutorials/L3_Graphs_files/figure-html/unnamed-chunk-46-1.png" width="768" /></p>
 </div>
 <div id="save-ggplots-to-file" class="section level2">
 <h2>Save ggplots to file</h2>
 <p>To save a plot to a file in your computer, use the function <strong>ggsave</strong> and the name of your plot object:</p>
-<pre class="r"><code>ggsave(filename = &quot;ggplot2panel.pdf&quot;, plot = metal_plots,
-       device = &quot;pdf&quot;, width = 8, height = 8, units = &quot;in&quot;)</code></pre>
+<pre class="r"><code>ggsave(filename = &quot;ggplot2panel.pdf&quot;,
+       plot = metal_plots,
+       device = &quot;pdf&quot;,
+       width = 8,
+       height = 8,
+       units = &quot;in&quot;)</code></pre>
 </div>
 </div>
 <div id="exercises" class="section level1">
