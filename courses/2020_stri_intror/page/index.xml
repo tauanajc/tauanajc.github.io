@@ -33,7 +33,7 @@
       
       <guid>/courses/2020_stri_introR/page/schedule/</guid>
       <description>We meet every Wednesday @10am for one-hour sessions listed below. Tutorials will contain extra exercises to practice on your own time. Besides formal meeting times, each of the instructors will hold weekly office hours in Zoom in which they will be available to help with the tutorials or other R questions you may have. Keep an eye out on Slack for a link to Zoom meetings.
-Sections    Topic Content summary By Date     How R works R/RStudio, objects, manipulate data Ernesto Bonadies April 29   Flow control loops, if/else, functions Lee Dietterich May 6   Graphics packages, baseR, gpplot2 Tauana Cunha May 13   Statistical analysis anova, linear models, ordination Bruno de Medeiros May 20    Office Hours Lee Dietterich - every Monday @3pm</description>
+Sections    Topic Content summary By Date     How R works R/RStudio, objects, manipulate data Ernesto Bonadies April 29   Flow control loops, if/else, functions Lee Dietterich May 6   Graphics packages, baseR, gpplot2 Tauana Cunha May 13   Statistical analyses anova, linear models, ordination Bruno de Medeiros May 20    Office Hours Lee Dietterich - every Monday @3pm</description>
     </item>
     
   </channel>

@@ -1,0 +1,148 @@
+"","world_region","country_name","C1_School.closing","C1_Flag","C2_Workplace.closing","C3_Cancel.public.events","C3_Flag","C4_Restrictions.on.gatherings","C5_Close.public.transport","C6_Stay.at.home.requirements","C7_Restrictions.on.internal.movement","C8_International.travel.controls","E1_Income.support","E2_Debt.contract.relief","H1_Public.information.campaigns","H1_Flag","H2_Testing.policy","H3_Contact.tracing","H4_Emergency.investment.in.healthcare","H5_Investment.in.vaccines"
+"1","Latin America and the Caribbean","Aruba",3,1,3,2,1,4,0,2,2,3,0,2,2,1,1,0,0,0
+"2","Asia and the Pacific","Afghanistan",3,1,3,2,1,4,2,2,2,1,0,0,2,1,1,1,0,0
+"3","Africa","Angola",3,1,2,2,1,4,1,2,2,4,0,2,1,1,2,0,0,0
+"4","Europe","Albania",3,1,2,2,1,4,2,2,2,4,2,1,2,1,2,1,0,0
+"5","Europe","Andorra",3,1,2,1,1,0,1,1,0,3,2,0,2,1,3,1,0,0
+"6","West Asia","United Arab Emirates",3,1,2,2,1,4,1,2,1,4,0,2,2,1,3,2,0,0
+"7","Latin America and the Caribbean","Argentina",3,1,2,2,1,4,2,2,2,4,1,2,2,1,1,2,0,0
+"8","Asia and the Pacific","Australia",2,0,2,2,1,4,0,2,2,4,1,2,2,1,1,1,0,0
+"9","Europe","Austria",3,1,2,2,1,4,0,1,1,2,2,2,2,1,2,2,0,0
+"10","Europe","Azerbaijan",3,1,3,2,1,4,0,3,2,4,2,0,2,1,2,1,0,0
+"12","Europe","Belgium",2,1,3,2,1,4,0,2,2,4,2,2,2,1,1,1,0,0
+"13","Africa","Benin",3,1,0,2,1,4,1,0,2,2,0,0,2,1,2,2,0,0
+"14","Africa","Burkina Faso",3,1,2,2,1,1,2,2,2,4,0,0,2,1,1,2,0,0
+"15","Asia and the Pacific","Bangladesh",3,1,2,2,1,4,2,2,2,3,0,0,2,1,2,1,0,0
+"16","Europe","Bulgaria",3,1,1,2,1,4,0,2,2,3,2,2,2,1,1,0,0,0
+"17","West Asia","Bahrain",3,1,2,2,1,4,1,2,1,4,2,2,2,1,2,2,0,0
+"18","Europe","Bosnia and Herz.",3,1,3,2,1,4,2,2,2,3,1,2,2,1,2,0,0,0
+"19","Latin America and the Caribbean","Belize",3,1,3,2,1,3,0,0,0,4,1,0,2,1,1,2,0,0
+"20","Latin America and the Caribbean","Bermuda",3,1,3,2,1,4,2,2,2,4,0,0,2,1,1,2,0,0
+"21","Latin America and the Caribbean","Bolivia",3,1,3,2,1,4,2,2,2,4,1,1,2,1,0,1,0,0
+"22","Latin America and the Caribbean","Brazil",3,0,3,2,0,4,2,1,2,4,1,1,2,1,1,0,0,0
+"23","Latin America and the Caribbean","Barbados",3,1,3,2,1,4,1,3,2,2,1,1,2,1,2,2,0,0
+"24","Asia and the Pacific","Brunei",3,1,0,2,1,3,0,0,1,4,1,0,2,1,2,1,0,0
+"25","Asia and the Pacific","Bhutan",3,1,2,1,1,4,1,1,2,4,1,2,2,1,1,2,0,0
+"26","Africa","Botswana",3,1,3,2,1,4,1,2,2,4,1,2,2,1,1,1,0,0
+"28","North America","Canada",3,1,3,2,0,4,0,2,2,4,2,1,2,1,3,1,0,0
+"29","Europe","Switzerland",3,1,2,2,1,4,0,1,1,3,2,1,2,1,1,1,0,0
+"30","Latin America and the Caribbean","Chile",3,1,2,2,1,3,0,2,2,3,1,1,2,1,2,2,0,0
+"31","Asia and the Pacific","China",3,0,2,2,0,4,0,1,1,3,0,0,2,1,3,2,0,0
+"32","Africa","Ivory Coast",3,1,2,2,1,3,1,1,2,4,0,1,2,1,2,1,0,0
+"33","Africa","Cameroon",3,1,2,2,1,3,1,0,1,4,0,0,2,1,2,0,0,0
+"34","Africa","Congo (Kinshasa)",3,1,2,2,1,3,2,2,2,4,0,2,2,1,1,1,0,0
+"35","Africa","Congo (Brazzaville)",3,1,3,2,1,3,2,3,2,4,1,2,2,1,1,1,0,0
+"36","Latin America and the Caribbean","Colombia",3,1,2,2,1,4,1,2,2,4,1,2,2,1,2,2,0,0
+"37","Africa","Cape Verde",2,1,3,2,1,0,1,2,2,4,1,2,2,1,2,1,0,0
+"38","Latin America and the Caribbean","Costa Rica",3,1,3,2,1,3,0,1,2,4,1,1,2,1,2,2,0,0
+"39","Latin America and the Caribbean","Cuba",3,1,3,2,1,0,2,2,2,4,1,2,2,1,2,1,0,0
+"40","Europe","Cyprus",3,1,3,2,1,4,2,2,2,4,2,2,2,1,3,2,0,0
+"41","Europe","Czech Rep.",3,1,2,2,1,3,0,1,0,2,2,2,2,1,2,2,0,0
+"42","Europe","Germany",3,1,1,2,1,4,0,2,2,4,2,2,2,1,1,1,0,0
+"43","Africa","Djibouti",3,1,3,2,1,4,2,3,2,4,0,0,2,1,3,2,0,0
+"44","Latin America and the Caribbean","Dominica",3,1,3,2,1,4,0,2,2,4,0,0,2,1,3,2,0,0
+"45","Europe","Denmark",2,1,2,2,1,4,1,1,1,4,2,2,2,1,2,2,0,0
+"46","Latin America and the Caribbean","Dominican Rep.",3,1,3,2,1,3,2,3,2,4,1,0,2,1,2,1,0,0
+"47","Africa","Algeria",3,1,2,2,1,4,2,2,2,3,0,1,2,1,0,0,0,0
+"48","Latin America and the Caribbean","Ecuador",3,1,3,2,1,3,2,2,2,4,1,2,2,1,3,1,0,0
+"49","Africa","Egypt",3,1,2,2,1,1,2,2,2,4,0,0,2,1,1,2,0,0
+"50","Europe","Spain",3,1,3,2,1,4,1,2,1,4,2,2,2,1,1,1,0,0
+"51","Europe","Estonia",3,1,3,2,1,4,0,2,0,2,0,2,2,1,2,0,0,0
+"52","Africa","Ethiopia",3,1,2,2,1,4,1,1,2,2,0,0,2,1,1,2,0,0
+"53","Europe","Finland",2,1,2,2,1,2,1,1,1,4,1,0,2,1,1,1,0,0
+"54","Europe","France",3,1,3,2,1,4,1,2,2,4,2,2,2,1,1,1,0,0
+"55","Africa","Gabon",3,1,3,2,0,4,1,2,2,4,0,2,1,1,2,2,0,0
+"56","Europe","United Kingdom",3,1,2,2,1,4,1,2,2,0,2,2,2,1,1,0,0,0
+"57","Europe","Georgia",3,1,2,2,1,4,2,3,2,4,1,1,2,1,2,2,0,0
+"58","Africa","Ghana",3,1,1,2,1,3,1,0,0,4,0,2,2,1,3,2,0,0
+"59","Africa","Gambia",3,1,3,2,1,3,1,1,1,4,0,0,2,1,1,1,0,0
+"60","Europe","Greece",3,1,2,2,1,4,1,2,2,3,1,1,2,1,2,0,0,0
+"61","Europe","Greenland",3,0,2,2,1,2,2,1,1,4,0,0,2,1,3,2,0,0
+"62","Latin America and the Caribbean","Guatemala",3,1,3,2,1,4,2,2,2,4,1,2,2,1,2,2,0,0
+"63","Asia and the Pacific","Guam",3,1,3,2,1,4,2,1,0,3,1,0,2,1,2,1,0,0
+"65","Latin America and the Caribbean","Honduras",3,1,3,2,1,4,2,3,2,4,2,2,2,1,1,1,0,0
+"66","Europe","Croatia",3,1,2,2,1,4,2,2,2,4,2,2,2,1,2,2,0,0
+"67","Europe","Hungary",3,1,2,2,1,1,1,2,2,4,0,2,2,1,1,2,0,0
+"68","Asia and the Pacific","Indonesia",3,1,2,2,0,4,1,2,1,4,0,0,2,1,1,2,0,0
+"69","Asia and the Pacific","India",3,1,2,2,1,4,2,3,2,4,0,2,2,1,3,2,0,0
+"70","Europe","Ireland",3,1,3,2,1,4,2,2,1,2,2,2,2,1,1,1,0,0
+"71","Asia and the Pacific","Iran",3,1,2,2,1,1,2,1,2,0,1,1,1,1,0,0,0,0
+"72","West Asia","Iraq",3,1,2,2,1,4,1,2,2,4,0,0,2,1,2,0,0,0
+"73","Europe","Iceland",2,1,2,2,1,3,0,0,0,3,2,2,2,1,3,2,0,0
+"74","Europe","Israel",3,1,2,2,1,4,1,2,2,4,1,2,2,1,1,2,0,0
+"75","Europe","Italy",3,1,3,2,1,4,2,2,2,3,1,1,2,1,2,2,0,0
+"76","Latin America and the Caribbean","Jamaica",3,1,1,2,1,4,1,2,2,3,1,1,2,1,1,1,0,0
+"77","West Asia","Jordan",3,1,2,2,1,4,2,2,2,4,1,1,2,1,2,1,0,0
+"78","Asia and the Pacific","Japan",3,0,1,1,1,0,0,1,1,3,1,0,2,1,1,1,0,0
+"79","Asia and the Pacific","Kazakhstan",3,1,3,2,1,4,2,3,2,4,1,1,2,1,1,2,0,0
+"80","Africa","Kenya",3,1,2,2,1,4,2,3,2,4,1,1,2,1,1,1,0,0
+"81","Asia and the Pacific","Kyrgyzstan",3,1,2,2,1,4,2,3,2,4,1,1,2,1,1,1,0,0
+"82","Asia and the Pacific","S. Korea",3,1,2,1,1,0,0,0,0,3,1,1,2,1,3,2,0,0
+"83","West Asia","Kuwait",3,1,3,2,1,4,2,2,2,4,1,0,2,1,2,2,0,0
+"85","West Asia","Lebanon",3,1,3,2,1,4,1,2,1,4,0,1,2,1,1,1,0,0
+"87","Africa","Libya",2,0,3,2,1,4,2,3,2,4,0,0,2,1,1,1,0,0
+"88","Asia and the Pacific","Sri Lanka",3,1,2,2,1,0,1,3,2,4,0,0,2,1,2,2,0,0
+"90","Europe","Luxembourg",3,1,3,2,1,4,1,1,1,0,2,2,2,1,1,2,0,0
+"91","Africa","Morocco",3,1,3,2,1,2,2,2,2,4,1,2,2,1,2,2,0,0
+"92","Europe","Moldova",3,1,2,2,1,4,2,1,2,4,1,1,1,1,1,1,0,0
+"93","Africa","Madagascar",0,1,1,2,1,3,1,1,2,4,0,0,2,1,1,1,0,0
+"94","Latin America and the Caribbean","Mexico",3,1,3,2,1,3,1,2,2,3,0,0,2,1,1,1,0,0
+"95","Africa","Mali",3,1,0,2,1,3,2,1,2,3,1,1,2,1,1,2,0,0
+"96","Asia and the Pacific","Myanmar",3,1,3,2,0,4,2,2,2,3,0,0,2,1,2,1,0,0
+"97","Asia and the Pacific","Mongolia",3,1,2,2,1,4,1,2,0,4,0,2,2,1,1,2,0,0
+"98","Africa","Mozambique",3,1,0,2,1,3,0,1,0,2,0,0,2,1,1,2,0,0
+"99","Africa","Mauritania",3,1,1,2,1,4,0,2,2,4,1,1,2,1,0,2,0,0
+"100","Africa","Mauritius",3,1,3,2,1,3,1,2,1,4,1,1,2,1,1,1,0,0
+"101","Africa","Malawi",3,1,0,2,1,3,0,1,0,3,1,0,2,1,1,2,0,0
+"102","Asia and the Pacific","Malaysia",3,1,3,2,1,2,0,0,2,3,1,2,2,1,3,2,0,0
+"103","Africa","Namibia",3,1,1,2,1,3,0,2,2,4,2,1,2,1,1,2,0,0
+"104","Africa","Niger",3,1,0,2,1,3,0,0,2,4,0,1,2,1,1,1,0,0
+"105","Africa","Nigeria",3,1,3,2,0,4,2,2,2,4,0,0,2,1,1,2,0,0
+"107","Europe","Netherlands",3,1,3,2,1,3,1,2,1,3,2,1,2,1,1,1,0,0
+"108","Europe","Norway",2,1,1,2,1,2,1,0,1,4,0,2,2,1,1,1,0,0
+"109","Asia and the Pacific","Nepal",3,1,3,2,1,3,2,3,2,3,1,2,2,1,1,2,0,0
+"110","Asia and the Pacific","New Zealand",3,1,2,2,1,4,2,2,2,4,2,1,2,1,2,2,0,0
+"111","West Asia","Oman",3,1,2,2,1,4,2,2,2,4,2,0,2,1,2,2,0,0
+"112","Asia and the Pacific","Pakistan",3,1,2,2,0,4,2,2,2,4,1,0,2,1,2,1,0,0
+"113","Latin America and the Caribbean","Panama",2,1,3,2,1,4,0,2,2,4,0,0,2,1,2,1,0,0
+"114","Latin America and the Caribbean","Peru",3,1,3,2,1,4,1,3,2,4,1,2,2,1,2,1,0,0
+"115","Asia and the Pacific","Philippines",3,1,3,2,1,4,2,3,2,3,0,0,2,1,2,2,0,0
+"116","Asia and the Pacific","Papua New Guinea",3,1,3,2,1,2,0,2,1,4,0,0,2,1,2,2,0,0
+"117","Europe","Poland",3,1,2,2,1,4,1,1,2,4,1,1,2,1,1,0,0,0
+"118","Latin America and the Caribbean","Puerto Rico",3,1,3,2,1,4,2,3,2,4,0,2,2,1,1,2,0,0
+"119","Europe","Portugal",3,1,3,2,1,4,1,2,1,3,1,2,2,1,3,1,0,0
+"120","Latin America and the Caribbean","Paraguay",3,1,3,2,1,4,1,3,2,4,1,2,2,1,2,1,0,0
+"121","Europe","West Bank",3,1,3,2,1,4,2,2,2,4,0,2,2,1,1,1,0,0
+"122","West Asia","Qatar",3,1,2,2,1,4,2,2,1,4,2,0,2,1,1,2,0,0
+"123","Europe","Romania",3,1,2,2,1,4,2,2,2,4,2,2,2,1,3,1,0,0
+"124","Europe","Russia",3,1,3,2,1,4,1,3,2,4,0,2,2,1,3,2,0,0
+"125","Africa","Rwanda",3,1,3,2,1,4,2,3,2,4,0,1,2,1,3,2,0,0
+"126","West Asia","Saudi Arabia",3,1,2,2,1,4,2,3,2,4,2,1,2,1,2,0,0,0
+"127","Africa","Sudan",3,1,1,2,1,3,2,2,2,4,0,0,2,1,2,1,0,0
+"129","Asia and the Pacific","Singapore",3,1,3,2,1,4,1,2,2,2,1,2,2,1,2,2,0,0
+"130","Africa","Sierra Leone",3,1,0,2,1,3,1,1,2,4,0,0,2,1,2,2,0,0
+"131","Latin America and the Caribbean","El Salvador",3,1,3,2,1,4,1,3,2,4,1,1,2,1,3,0,0,0
+"132","Europe","San Marino",3,1,1,2,1,4,2,2,2,4,1,1,2,1,2,2,0,0
+"133","Africa","Somalia",3,1,0,2,1,3,0,1,0,4,0,0,2,1,1,0,0,0
+"134","Europe","Serbia",3,1,2,2,1,4,2,3,2,4,1,1,2,1,1,2,0,0
+"135","Africa","S. Sudan",3,1,3,2,1,4,1,2,2,4,0,0,2,1,2,1,0,0
+"136","Latin America and the Caribbean","Suriname",3,1,0,2,1,4,2,2,2,4,0,0,2,1,1,1,0,0
+"138","Europe","Slovenia",3,1,2,2,1,4,2,1,2,3,1,2,2,1,2,1,0,0
+"140","Africa","Swaziland",3,1,0,2,1,3,2,2,2,3,0,0,2,1,3,1,0,0
+"141","Africa","Seychelles",3,1,3,2,1,4,2,2,2,3,0,0,2,1,2,2,0,0
+"143","Africa","Chad",3,1,3,2,1,1,2,2,2,4,0,2,2,1,1,0,0,0
+"144","Asia and the Pacific","Thailand",3,1,3,2,1,3,2,1,2,4,2,2,2,1,1,2,0,0
+"145","Latin America and the Caribbean","Trinidad and Tobago",3,1,3,2,1,4,1,2,0,4,0,2,2,1,2,2,0,0
+"146","Africa","Tunisia",3,1,3,2,1,4,1,2,2,3,1,2,2,1,1,1,0,0
+"147","Europe","Turkey",3,1,2,2,1,0,2,2,2,4,2,1,2,1,2,2,0,0
+"149","Africa","Tanzania",3,1,0,2,0,3,0,0,0,4,0,0,2,1,0,1,0,0
+"150","Africa","Uganda",3,1,3,2,1,3,2,2,2,3,0,0,2,1,1,1,0,0
+"151","Europe","Ukraine",3,1,2,2,1,4,2,1,2,4,1,1,2,1,1,1,0,0
+"152","Latin America and the Caribbean","Uruguay",3,0,1,2,1,0,1,1,2,4,1,2,2,1,1,1,0,0
+"153","North America","United States",3,0,3,2,0,4,1,2,2,3,2,1,2,1,3,1,0,0
+"154","Asia and the Pacific","Uzbekistan",3,1,3,2,1,4,2,2,2,4,2,2,2,1,1,2,0,0
+"155","Latin America and the Caribbean","Venezuela",3,1,3,2,1,3,0,2,2,4,0,2,2,1,1,0,0,0
+"156","Asia and the Pacific","Vietnam",3,0,2,2,1,3,1,0,2,4,1,0,2,1,3,2,0,0
+"157","West Asia","Yemen",3,1,0,2,1,0,0,0,0,4,0,0,1,1,0,0,0,0
+"158","Africa","South Africa",3,1,3,2,1,3,1,2,2,4,1,0,2,1,2,2,0,0
+"159","Africa","Zambia",3,1,0,2,0,4,0,2,2,4,0,1,2,1,1,2,0,0

@@ -6,10 +6,20 @@
     <description>Recent content on Tutorials</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/courses/2020_stri_introR/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Tutorial 4 - Statistical Modeling</title>
+      <link>/courses/2020_stri_introR/tutorials/l4_stats/</link>
+      <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/courses/2020_stri_introR/tutorials/l4_stats/</guid>
+      <description>In this tutorial, we will learn the basics of how statistical modeling in R works, and then briefly overview methods of ordination.
+To do this, we will use a dataset about covid19 put together by Our World in Data, joined to another dataset obtained in the same place that includes country responses (school closings, etc). The main goal here is to learn about modelling in R, but we also include in the end the steps taken to clean the data and merge tables as we need here.</description>
+    </item>
     
     <item>
       <title>Tutorial 3 - Graphs</title>
@@ -62,7 +72,7 @@ Always begin by setting the working directory (the folder on your computer where
       
       <guid>/courses/2020_stri_introR/page/schedule/</guid>
       <description>We meet every Wednesday @10am for one-hour sessions listed below. Tutorials will contain extra exercises to practice on your own time. Besides formal meeting times, each of the instructors will hold weekly office hours in Zoom in which they will be available to help with the tutorials or other R questions you may have. Keep an eye out on Slack for a link to Zoom meetings.
-Sections    Topic Content summary By Date     How R works R/RStudio, objects, manipulate data Ernesto Bonadies April 29   Flow control loops, if/else, functions Lee Dietterich May 6   Graphics packages, baseR, gpplot2 Tauana Cunha May 13   Statistical analysis anova, linear models, ordination Bruno de Medeiros May 20    Office Hours Lee Dietterich - every Monday @3pm</description>
+Sections    Topic Content summary By Date     How R works R/RStudio, objects, manipulate data Ernesto Bonadies April 29   Flow control loops, if/else, functions Lee Dietterich May 6   Graphics packages, baseR, gpplot2 Tauana Cunha May 13   Statistical analyses anova, linear models, ordination Bruno de Medeiros May 20    Office Hours Lee Dietterich - every Monday @3pm</description>
     </item>
     
   </channel>
