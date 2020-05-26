@@ -594,10 +594,11 @@ ggplot(Africa_only) +
 <li><p>The first graph shows our fitted values (i. e., model predictions) against residuals. It seems the dispersion of residuals is increasing with increased fitted values. The average trend (red line) is decreasing. In a good model, there should be no trend and the variance should be constant.</p></li>
 <li><p>The second graph is a Q-Q plot and compares our residuals to what would be expected if they were normally distributed. For a good model, it should be a straight line with slope of 1. This is far from what we are observing</p></li>
 <li><p>The third graph is similar to the first one, but the y axis is the square root of residuals, with sign removed. Again, it indicates that the variation in residuals is increasing with higher predicted response</p></li>
-<li><p>the fourth graphs helps to identify outliers, which are the labelled points farthest from the dashed region, and happen to be data points 22, 28 and 153. Which countries are these?</p></li>
+<li><p>the fourth graphs helps to identify outliers, which are the labelled points farthest from the dashed region, and happen to be data points 22, 28 and 153. Which countries are these? These labels are the <strong>row names</strong>, not <strong>row numbers</strong>, so we need to provide a character vector to index them:</p></li>
 </ol>
-<pre class="r"><code>covid_data$country_name[c(22,28,153)]</code></pre>
-<pre><code>## [1] &quot;Brazil&quot;        &quot;Canada&quot;        &quot;United States&quot;</code></pre>
+<pre class="r"><code>covid_small$country_name[c(&#39;22&#39;,&#39;28&#39;,&#39;153&#39;)]</code></pre>
+<pre><code>## [1] &lt;NA&gt; &lt;NA&gt; &lt;NA&gt;
+## 160 Levels: Afghanistan Albania Algeria Andorra Angola Argentina ... Zimbabwe</code></pre>
 <p>This is saying that these three data points are the ones that are most influencing the model. we might consider removing them if we can’t build a good model at all.</p>
 <p>But before doing that, it seems we can improve our model by log-transforming the response variable. When variation in residuals increases with fitted values, this can often help.</p>
 <p>Let’s try this.</p>
@@ -985,9 +986,9 @@ data_plus_pred[data_plus_pred$country_name %in% countries, c(&#39;lwr&#39;,&#39;
 <pre class="r"><code>summary(covid_small$income_support)</code></pre>
 <pre><code>##          none less than 50% more than 50% 
 ##            60            56            32</code></pre>
-<pre class="r"><code>summary(covid_data$past_cases)</code></pre>
-<pre><code>##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
-##     0.00     3.35    22.10   464.30   142.95 27620.80</code></pre>
+<pre class="r"><code>summary(covid_small$past_cases)</code></pre>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##     0.0     3.9    28.0   501.0   161.6 27620.8</code></pre>
 <pre class="r"><code>summary(covid_small$gdp_per_capita)</code></pre>
 <pre><code>##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
 ##    702.2   5288.6  13567.3  20588.0  31654.4 116935.6</code></pre>
@@ -1175,33 +1176,31 @@ head(covid_interventions)</code></pre>
 <p>The function to do NMDS is <code>metaMDS</code>:</p>
 <pre class="r"><code>mds &lt;- metaMDS(intervention_differences)</code></pre>
 <pre><code>## Run 0 stress 0.2121924 
-## Run 1 stress 0.2128717 
-## Run 2 stress 0.2182853 
-## Run 3 stress 0.2164718 
-## Run 4 stress 0.2111796 
+## Run 1 stress 0.2108269 
 ## ... New best solution
-## ... Procrustes: rmse 0.02298241  max resid 0.1757584 
-## Run 5 stress 0.210662 
+## ... Procrustes: rmse 0.02365216  max resid 0.2587511 
+## Run 2 stress 0.2111373 
+## ... Procrustes: rmse 0.03826848  max resid 0.3671035 
+## Run 3 stress 0.2303788 
+## Run 4 stress 0.2186277 
+## Run 5 stress 0.2104019 
 ## ... New best solution
-## ... Procrustes: rmse 0.03721197  max resid 0.3706403 
-## Run 6 stress 0.2167819 
-## Run 7 stress 0.2109473 
-## ... Procrustes: rmse 0.02313811  max resid 0.1577838 
-## Run 8 stress 0.2115015 
-## Run 9 stress 0.210451 
-## ... New best solution
-## ... Procrustes: rmse 0.01093924  max resid 0.1020617 
-## Run 10 stress 0.2354846 
-## Run 11 stress 0.2238848 
-## Run 12 stress 0.228683 
-## Run 13 stress 0.2147721 
-## Run 14 stress 0.2250958 
-## Run 15 stress 0.2238534 
-## Run 16 stress 0.2157464 
-## Run 17 stress 0.2157478 
-## Run 18 stress 0.2114778 
-## Run 19 stress 0.2322342 
-## Run 20 stress 0.212637 
+## ... Procrustes: rmse 0.04125284  max resid 0.3850763 
+## Run 6 stress 0.2126274 
+## Run 7 stress 0.2126199 
+## Run 8 stress 0.211299 
+## Run 9 stress 0.2126195 
+## Run 10 stress 0.2211411 
+## Run 11 stress 0.2115133 
+## Run 12 stress 0.2126201 
+## Run 13 stress 0.2167959 
+## Run 14 stress 0.2126322 
+## Run 15 stress 0.2167862 
+## Run 16 stress 0.2126338 
+## Run 17 stress 0.212686 
+## Run 18 stress 0.2113348 
+## Run 19 stress 0.2122625 
+## Run 20 stress 0.2115375 
 ## *** No convergence -- monoMDS stopping criteria:
 ##      1: no. of iterations &gt;= maxit
 ##     19: stress ratio &gt; sratmax</code></pre>
@@ -1214,12 +1213,12 @@ head(covid_interventions)</code></pre>
 
 head(mds_result)</code></pre>
 <pre><code>##         MDS1       MDS2                    world_region         country_name
-## 1 -1.2013210 -0.9683227 Latin America and the Caribbean                Aruba
-## 2 -2.1418728 -1.1837977            Asia and the Pacific          Afghanistan
-## 3 -0.7842482 -0.4874265                          Africa               Angola
-## 4 -0.6125153  0.1598650                          Europe              Albania
-## 5  3.6096526  1.6024753                          Europe              Andorra
-## 6 -0.1814183  0.2206343                       West Asia United Arab Emirates
+## 1 -1.2509728  0.7370459 Latin America and the Caribbean                Aruba
+## 2 -1.1768616 -1.8959121            Asia and the Pacific          Afghanistan
+## 3 -0.7618385  0.3276026                          Africa               Angola
+## 4 -0.5532353 -0.1306257                          Europe              Albania
+## 5  3.5360182 -0.7589061                          Europe              Andorra
+## 6 -0.5299589  0.6126979                       West Asia United Arab Emirates
 ##   C1_School.closing C1_Flag C2_Workplace.closing C3_Cancel.public.events
 ## 1                 3       1                    3                       2
 ## 2                 3       1                    3                       2
@@ -1328,48 +1327,48 @@ head(country_covid)</code></pre>
 ## 4                 159.227                46.831                        0
 ## 5                 177.959                18.733                        0
 ## 6                 262.256                84.296                        0
-##   new_deaths_per_million total_tests new_tests new_tests_smoothed
-## 1                      0          NA        NA                 NA
-## 2                      0          NA        NA                 NA
-## 3                      0          NA        NA                 NA
-## 4                      0          NA        NA                 NA
-## 5                      0          NA        NA                 NA
-## 6                      0          NA        NA                 NA
-##   total_tests_per_thousand new_tests_per_thousand
-## 1                       NA                     NA
-## 2                       NA                     NA
-## 3                       NA                     NA
-## 4                       NA                     NA
-## 5                       NA                     NA
-## 6                       NA                     NA
-##   new_tests_smoothed_per_thousand tests_units stringency_index population
-## 1                              NA                         0.00     106766
-## 2                              NA                        30.56     106766
-## 3                              NA                        44.84     106766
-## 4                              NA                        44.84     106766
-## 5                              NA                        44.84     106766
-## 6                              NA                        44.84     106766
-##   population_density median_age aged_65_older aged_70_older gdp_per_capita
-## 1              584.8       41.2        13.085         7.452       35973.78
-## 2              584.8       41.2        13.085         7.452       35973.78
-## 3              584.8       41.2        13.085         7.452       35973.78
-## 4              584.8       41.2        13.085         7.452       35973.78
-## 5              584.8       41.2        13.085         7.452       35973.78
-## 6              584.8       41.2        13.085         7.452       35973.78
-##   extreme_poverty cvd_death_rate diabetes_prevalence female_smokers
-## 1              NA             NA               11.62             NA
-## 2              NA             NA               11.62             NA
-## 3              NA             NA               11.62             NA
-## 4              NA             NA               11.62             NA
-## 5              NA             NA               11.62             NA
-## 6              NA             NA               11.62             NA
-##   male_smokers handwashing_facilities hospital_beds_per_100k
-## 1           NA                     NA                     NA
-## 2           NA                     NA                     NA
-## 3           NA                     NA                     NA
-## 4           NA                     NA                     NA
-## 5           NA                     NA                     NA
-## 6           NA                     NA                     NA</code></pre>
+##   new_deaths_per_million total_tests new_tests total_tests_per_thousand
+## 1                      0          NA        NA                       NA
+## 2                      0          NA        NA                       NA
+## 3                      0          NA        NA                       NA
+## 4                      0          NA        NA                       NA
+## 5                      0          NA        NA                       NA
+## 6                      0          NA        NA                       NA
+##   new_tests_per_thousand new_tests_smoothed new_tests_smoothed_per_thousand
+## 1                     NA                 NA                              NA
+## 2                     NA                 NA                              NA
+## 3                     NA                 NA                              NA
+## 4                     NA                 NA                              NA
+## 5                     NA                 NA                              NA
+## 6                     NA                 NA                              NA
+##   tests_units stringency_index population population_density median_age
+## 1                         0.00     106766              584.8       41.2
+## 2                        30.56     106766              584.8       41.2
+## 3                        41.67     106766              584.8       41.2
+## 4                        41.67     106766              584.8       41.2
+## 5                        41.67     106766              584.8       41.2
+## 6                        41.67     106766              584.8       41.2
+##   aged_65_older aged_70_older gdp_per_capita extreme_poverty cvd_death_rate
+## 1        13.085         7.452       35973.78              NA             NA
+## 2        13.085         7.452       35973.78              NA             NA
+## 3        13.085         7.452       35973.78              NA             NA
+## 4        13.085         7.452       35973.78              NA             NA
+## 5        13.085         7.452       35973.78              NA             NA
+## 6        13.085         7.452       35973.78              NA             NA
+##   diabetes_prevalence female_smokers male_smokers handwashing_facilities
+## 1               11.62             NA           NA                     NA
+## 2               11.62             NA           NA                     NA
+## 3               11.62             NA           NA                     NA
+## 4               11.62             NA           NA                     NA
+## 5               11.62             NA           NA                     NA
+## 6               11.62             NA           NA                     NA
+##   hospital_beds_per_100k
+## 1                     NA
+## 2                     NA
+## 3                     NA
+## 4                     NA
+## 5                     NA
+## 6                     NA</code></pre>
 <p>This dataset records, for each country and each date, a series of statistics on covid19 as well together with several other statistics about the country (such as population, age structure, etc). A full explanation of the dataset can be found in <a href="https://github.com/owid/covid-19-data/tree/master/public/data">this github repository</a> and an explanation of the fields included can be found <a href="https://github.com/owid/covid-19-data/blob/master/public/data/owid-covid-data-codebook.md">here</a>, which is copied below:</p>
 <table>
 <colgroup>
@@ -1599,13 +1598,34 @@ head(country_response)</code></pre>
 ## 4             NA              NA               0                         0
 ## 5             NA              NA               0                         0
 ## 6             NA              NA               0                         0
-##   LegacyStringencyIndex LegacyStringencyIndexForDisplay
-## 1                     0                               0
-## 2                     0                               0
-## 3                     0                               0
-## 4                     0                               0
-## 5                     0                               0
-## 6                     0                               0</code></pre>
+##   StringencyLegacyIndex StringencyLegacyIndexForDisplay GovernmentResponseIndex
+## 1                     0                               0                       0
+## 2                     0                               0                       0
+## 3                     0                               0                       0
+## 4                     0                               0                       0
+## 5                     0                               0                       0
+## 6                     0                               0                       0
+##   GovernmentResponseIndexForDisplay ContainmentHealthIndex
+## 1                                 0                      0
+## 2                                 0                      0
+## 3                                 0                      0
+## 4                                 0                      0
+## 5                                 0                      0
+## 6                                 0                      0
+##   ContainmentHealthIndexForDisplay EconomicSupportIndex
+## 1                                0                    0
+## 2                                0                    0
+## 3                                0                    0
+## 4                                0                    0
+## 5                                0                    0
+## 6                                0                    0
+##   EconomicSupportIndexForDisplay
+## 1                              0
+## 2                              0
+## 3                              0
+## 4                              0
+## 5                              0
+## 6                              0</code></pre>
 <p>This table is very similar to the other one, with country, date and several columns detailing the response of each country on a given day. The explanation for each variable is available in the dataset <a href="https://github.com/OxCGRT/covid-policy-tracker/blob/master/documentation/codebook.md">github repository</a>:</p>
 <div id="containment-and-closure-policies" class="section level5">
 <h5>Containment and closure policies</h5>
@@ -1914,48 +1934,48 @@ head(country_response)</code></pre>
 ## 4                 159.227                46.831                        0
 ## 5                 177.959                18.733                        0
 ## 6                 262.256                84.296                        0
-##   new_deaths_per_million total_tests new_tests new_tests_smoothed
-## 1                      0          NA        NA                 NA
-## 2                      0          NA        NA                 NA
-## 3                      0          NA        NA                 NA
-## 4                      0          NA        NA                 NA
-## 5                      0          NA        NA                 NA
-## 6                      0          NA        NA                 NA
-##   total_tests_per_thousand new_tests_per_thousand
-## 1                       NA                     NA
-## 2                       NA                     NA
-## 3                       NA                     NA
-## 4                       NA                     NA
-## 5                       NA                     NA
-## 6                       NA                     NA
-##   new_tests_smoothed_per_thousand tests_units stringency_index population
-## 1                              NA                         0.00     106766
-## 2                              NA                        30.56     106766
-## 3                              NA                        44.84     106766
-## 4                              NA                        44.84     106766
-## 5                              NA                        44.84     106766
-## 6                              NA                        44.84     106766
-##   population_density median_age aged_65_older aged_70_older gdp_per_capita
-## 1              584.8       41.2        13.085         7.452       35973.78
-## 2              584.8       41.2        13.085         7.452       35973.78
-## 3              584.8       41.2        13.085         7.452       35973.78
-## 4              584.8       41.2        13.085         7.452       35973.78
-## 5              584.8       41.2        13.085         7.452       35973.78
-## 6              584.8       41.2        13.085         7.452       35973.78
-##   extreme_poverty cvd_death_rate diabetes_prevalence female_smokers
-## 1              NA             NA               11.62             NA
-## 2              NA             NA               11.62             NA
-## 3              NA             NA               11.62             NA
-## 4              NA             NA               11.62             NA
-## 5              NA             NA               11.62             NA
-## 6              NA             NA               11.62             NA
-##   male_smokers handwashing_facilities hospital_beds_per_100k
-## 1           NA                     NA                     NA
-## 2           NA                     NA                     NA
-## 3           NA                     NA                     NA
-## 4           NA                     NA                     NA
-## 5           NA                     NA                     NA
-## 6           NA                     NA                     NA</code></pre>
+##   new_deaths_per_million total_tests new_tests total_tests_per_thousand
+## 1                      0          NA        NA                       NA
+## 2                      0          NA        NA                       NA
+## 3                      0          NA        NA                       NA
+## 4                      0          NA        NA                       NA
+## 5                      0          NA        NA                       NA
+## 6                      0          NA        NA                       NA
+##   new_tests_per_thousand new_tests_smoothed new_tests_smoothed_per_thousand
+## 1                     NA                 NA                              NA
+## 2                     NA                 NA                              NA
+## 3                     NA                 NA                              NA
+## 4                     NA                 NA                              NA
+## 5                     NA                 NA                              NA
+## 6                     NA                 NA                              NA
+##   tests_units stringency_index population population_density median_age
+## 1                         0.00     106766              584.8       41.2
+## 2                        30.56     106766              584.8       41.2
+## 3                        41.67     106766              584.8       41.2
+## 4                        41.67     106766              584.8       41.2
+## 5                        41.67     106766              584.8       41.2
+## 6                        41.67     106766              584.8       41.2
+##   aged_65_older aged_70_older gdp_per_capita extreme_poverty cvd_death_rate
+## 1        13.085         7.452       35973.78              NA             NA
+## 2        13.085         7.452       35973.78              NA             NA
+## 3        13.085         7.452       35973.78              NA             NA
+## 4        13.085         7.452       35973.78              NA             NA
+## 5        13.085         7.452       35973.78              NA             NA
+## 6        13.085         7.452       35973.78              NA             NA
+##   diabetes_prevalence female_smokers male_smokers handwashing_facilities
+## 1               11.62             NA           NA                     NA
+## 2               11.62             NA           NA                     NA
+## 3               11.62             NA           NA                     NA
+## 4               11.62             NA           NA                     NA
+## 5               11.62             NA           NA                     NA
+## 6               11.62             NA           NA                     NA
+##   hospital_beds_per_100k
+## 1                     NA
+## 2                     NA
+## 3                     NA
+## 4                     NA
+## 5                     NA
+## 6                     NA</code></pre>
 <p>Date here is stored as a character in the format <strong>Year-Month-Day</strong>, so we will tell R that this is the format and it will figure the date out automatically. In the R syntax, we will indicate this format as <strong>%Y-%m-%d</strong></p>
 <pre class="r"><code>country_covid$date &lt;- as.Date(country_covid$date, format=&#39;%Y-%m-%d&#39;)</code></pre>
 <p>Let’s look again. Now the type of the column <strong>date</strong> is<code>date</code> and not <code>character</code> anymore.</p>
@@ -1974,48 +1994,48 @@ head(country_response)</code></pre>
 ## 4                 159.227                46.831                        0
 ## 5                 177.959                18.733                        0
 ## 6                 262.256                84.296                        0
-##   new_deaths_per_million total_tests new_tests new_tests_smoothed
-## 1                      0          NA        NA                 NA
-## 2                      0          NA        NA                 NA
-## 3                      0          NA        NA                 NA
-## 4                      0          NA        NA                 NA
-## 5                      0          NA        NA                 NA
-## 6                      0          NA        NA                 NA
-##   total_tests_per_thousand new_tests_per_thousand
-## 1                       NA                     NA
-## 2                       NA                     NA
-## 3                       NA                     NA
-## 4                       NA                     NA
-## 5                       NA                     NA
-## 6                       NA                     NA
-##   new_tests_smoothed_per_thousand tests_units stringency_index population
-## 1                              NA                         0.00     106766
-## 2                              NA                        30.56     106766
-## 3                              NA                        44.84     106766
-## 4                              NA                        44.84     106766
-## 5                              NA                        44.84     106766
-## 6                              NA                        44.84     106766
-##   population_density median_age aged_65_older aged_70_older gdp_per_capita
-## 1              584.8       41.2        13.085         7.452       35973.78
-## 2              584.8       41.2        13.085         7.452       35973.78
-## 3              584.8       41.2        13.085         7.452       35973.78
-## 4              584.8       41.2        13.085         7.452       35973.78
-## 5              584.8       41.2        13.085         7.452       35973.78
-## 6              584.8       41.2        13.085         7.452       35973.78
-##   extreme_poverty cvd_death_rate diabetes_prevalence female_smokers
-## 1              NA             NA               11.62             NA
-## 2              NA             NA               11.62             NA
-## 3              NA             NA               11.62             NA
-## 4              NA             NA               11.62             NA
-## 5              NA             NA               11.62             NA
-## 6              NA             NA               11.62             NA
-##   male_smokers handwashing_facilities hospital_beds_per_100k
-## 1           NA                     NA                     NA
-## 2           NA                     NA                     NA
-## 3           NA                     NA                     NA
-## 4           NA                     NA                     NA
-## 5           NA                     NA                     NA
-## 6           NA                     NA                     NA</code></pre>
+##   new_deaths_per_million total_tests new_tests total_tests_per_thousand
+## 1                      0          NA        NA                       NA
+## 2                      0          NA        NA                       NA
+## 3                      0          NA        NA                       NA
+## 4                      0          NA        NA                       NA
+## 5                      0          NA        NA                       NA
+## 6                      0          NA        NA                       NA
+##   new_tests_per_thousand new_tests_smoothed new_tests_smoothed_per_thousand
+## 1                     NA                 NA                              NA
+## 2                     NA                 NA                              NA
+## 3                     NA                 NA                              NA
+## 4                     NA                 NA                              NA
+## 5                     NA                 NA                              NA
+## 6                     NA                 NA                              NA
+##   tests_units stringency_index population population_density median_age
+## 1                         0.00     106766              584.8       41.2
+## 2                        30.56     106766              584.8       41.2
+## 3                        41.67     106766              584.8       41.2
+## 4                        41.67     106766              584.8       41.2
+## 5                        41.67     106766              584.8       41.2
+## 6                        41.67     106766              584.8       41.2
+##   aged_65_older aged_70_older gdp_per_capita extreme_poverty cvd_death_rate
+## 1        13.085         7.452       35973.78              NA             NA
+## 2        13.085         7.452       35973.78              NA             NA
+## 3        13.085         7.452       35973.78              NA             NA
+## 4        13.085         7.452       35973.78              NA             NA
+## 5        13.085         7.452       35973.78              NA             NA
+## 6        13.085         7.452       35973.78              NA             NA
+##   diabetes_prevalence female_smokers male_smokers handwashing_facilities
+## 1               11.62             NA           NA                     NA
+## 2               11.62             NA           NA                     NA
+## 3               11.62             NA           NA                     NA
+## 4               11.62             NA           NA                     NA
+## 5               11.62             NA           NA                     NA
+## 6               11.62             NA           NA                     NA
+##   hospital_beds_per_100k
+## 1                     NA
+## 2                     NA
+## 3                     NA
+## 4                     NA
+## 5                     NA
+## 6                     NA</code></pre>
 <p>Let’s do the same to the second table. This time, the format is <strong>YearMonthDay</strong>, without a separator. Because of that, R read it as if it were integer numbers, which is wrong, so we need first to convert them to character and then to date:</p>
 <pre class="r"><code>country_response$Date &lt;- as.character(country_response$Date)
 country_response$Date &lt;- as.Date(country_response$Date, format=&#39;%Y%m%d&#39;)</code></pre>
@@ -2084,23 +2104,44 @@ country_response$Date &lt;- as.Date(country_response$Date, format=&#39;%Y%m%d&#3
 ## 4             NA              NA               0                         0
 ## 5             NA              NA               0                         0
 ## 6             NA              NA               0                         0
-##   LegacyStringencyIndex LegacyStringencyIndexForDisplay
-## 1                     0                               0
-## 2                     0                               0
-## 3                     0                               0
-## 4                     0                               0
-## 5                     0                               0
-## 6                     0                               0</code></pre>
+##   StringencyLegacyIndex StringencyLegacyIndexForDisplay GovernmentResponseIndex
+## 1                     0                               0                       0
+## 2                     0                               0                       0
+## 3                     0                               0                       0
+## 4                     0                               0                       0
+## 5                     0                               0                       0
+## 6                     0                               0                       0
+##   GovernmentResponseIndexForDisplay ContainmentHealthIndex
+## 1                                 0                      0
+## 2                                 0                      0
+## 3                                 0                      0
+## 4                                 0                      0
+## 5                                 0                      0
+## 6                                 0                      0
+##   ContainmentHealthIndexForDisplay EconomicSupportIndex
+## 1                                0                    0
+## 2                                0                    0
+## 3                                0                    0
+## 4                                0                    0
+## 5                                0                    0
+## 6                                0                    0
+##   EconomicSupportIndexForDisplay
+## 1                              0
+## 2                              0
+## 3                              0
+## 4                              0
+## 5                              0
+## 6                              0</code></pre>
 </div>
 <div id="summarizing-important-data" class="section level4">
 <h4>Summarizing important data</h4>
 <p>Since covid19 has an incubation time of up to 2 weeks, it is reasonable to assume that the current number of daily cases is a result of interventions that have been done in the last few weeks, so instead of using all data on all interventions ever done, we will record the most common intervention on the last 30 days. So, for example, if schools have been closed for most days during the last 4 weeks, we will record a country state as schools closed.</p>
-<p>To do that, we will start by filtering the <code>covid_response</code> table, which holds our interventions, to include only records in the last 30 days. Since we transformed the <code>Date</code> column in an actual date already, R will allow us to do math. To get the current date (2020-05-19), we use the function <code>Sys.Date()</code>:</p>
+<p>To do that, we will start by filtering the <code>covid_response</code> table, which holds our interventions, to include only records in the last 30 days. Since we transformed the <code>Date</code> column in an actual date already, R will allow us to do math. To get the current date (2020-05-26), we use the function <code>Sys.Date()</code>:</p>
 <pre class="r"><code>Sys.Date()</code></pre>
-<pre><code>## [1] &quot;2020-05-19&quot;</code></pre>
+<pre><code>## [1] &quot;2020-05-26&quot;</code></pre>
 <p>So, for example, the difference between today and January first is:</p>
 <pre class="r"><code>Sys.Date() - as.Date(&#39;2020-01-01&#39;)</code></pre>
-<pre><code>## Time difference of 139 days</code></pre>
+<pre><code>## Time difference of 146 days</code></pre>
 <p>We an use that to find rows which for which the date is less or equal to 30 days before today. Let’s do that for the first 10 records:</p>
 <pre class="r"><code>Sys.Date() - country_response$Date[1:10] &lt;= 30</code></pre>
 <pre><code>##  [1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE</code></pre>
@@ -2108,82 +2149,103 @@ country_response$Date &lt;- as.Date(country_response$Date, format=&#39;%Y%m%d&#3
 <pre class="r"><code>country_response &lt;- country_response[as.numeric(Sys.Date() - country_response$Date) &lt;=  30, ]
 head(country_response)</code></pre>
 <pre><code>##     CountryName CountryCode       Date C1_School.closing C1_Flag
-## 110       Aruba         ABW 2020-04-19                 3       1
-## 111       Aruba         ABW 2020-04-20                 3       1
-## 112       Aruba         ABW 2020-04-21                 3       1
-## 113       Aruba         ABW 2020-04-22                 3       1
-## 114       Aruba         ABW 2020-04-23                 3       1
-## 115       Aruba         ABW 2020-04-24                 3       1
+## 117       Aruba         ABW 2020-04-26                 3       1
+## 118       Aruba         ABW 2020-04-27                 3       1
+## 119       Aruba         ABW 2020-04-28                 3       1
+## 120       Aruba         ABW 2020-04-29                 3       1
+## 121       Aruba         ABW 2020-04-30                 3       1
+## 122       Aruba         ABW 2020-05-01                 3       1
 ##     C2_Workplace.closing C2_Flag C3_Cancel.public.events C3_Flag
-## 110                    3       1                       2       1
-## 111                    3       1                       2       1
-## 112                    3       1                       2       1
-## 113                    3       1                       2       1
-## 114                    3       1                       2       1
-## 115                    3       1                       2       1
+## 117                    3       1                       2       1
+## 118                    3       1                       2       1
+## 119                    3       1                       2       1
+## 120                    3       1                       2       1
+## 121                    3       1                       2       1
+## 122                    3       1                       2       1
 ##     C4_Restrictions.on.gatherings C4_Flag C5_Close.public.transport C5_Flag
-## 110                             4       1                         0      NA
-## 111                             4       1                         0      NA
-## 112                             4       1                         0      NA
-## 113                             4       1                         0      NA
-## 114                             4       1                         0      NA
-## 115                             4       1                         0      NA
+## 117                             4       1                         0      NA
+## 118                             4       1                         0      NA
+## 119                             4       1                         0      NA
+## 120                             4       1                         0      NA
+## 121                             4       1                         0      NA
+## 122                             4       1                         0      NA
 ##     C6_Stay.at.home.requirements C6_Flag C7_Restrictions.on.internal.movement
-## 110                            2       1                                    2
-## 111                            2       1                                    2
-## 112                            2       1                                    2
-## 113                            2       1                                    2
-## 114                            2       1                                    2
-## 115                            2       1                                    2
+## 117                            2       1                                    2
+## 118                            2       1                                    2
+## 119                            2       1                                    2
+## 120                            2       1                                    2
+## 121                            2       1                                    2
+## 122                            2       1                                    2
 ##     C7_Flag C8_International.travel.controls E1_Income.support E1_Flag
-## 110       1                                4                 0      NA
-## 111       1                                3                 0      NA
-## 112       1                                3                 0      NA
-## 113       1                                3                 0      NA
-## 114       1                                3                 0      NA
-## 115       1                                3                 0      NA
+## 117       1                                3                 2       1
+## 118       1                                3                 2       1
+## 119       1                                3                 2       1
+## 120       1                                3                 2       1
+## 121       1                                3                 2       1
+## 122       1                                3                 2       1
 ##     E2_Debt.contract.relief E3_Fiscal.measures E4_International.support
-## 110                       2                  0                        0
-## 111                       2                  0                        0
-## 112                       2                  0                        0
-## 113                       2                  0                        0
-## 114                       2                  0                        0
-## 115                       2                  0                        0
+## 117                       0                  0                        0
+## 118                       0                  0                        0
+## 119                       0                  0                        0
+## 120                       0                  0                        0
+## 121                       0                  0                        0
+## 122                       0                  0                        0
 ##     H1_Public.information.campaigns H1_Flag H2_Testing.policy
-## 110                               2       1                 1
-## 111                               2       1                 1
-## 112                               2       1                 1
-## 113                               2       1                 1
-## 114                               2       1                 1
-## 115                               2       1                 1
+## 117                               2       1                 1
+## 118                               2       1                 1
+## 119                               2       1                 1
+## 120                               2       1                 1
+## 121                               2       1                 1
+## 122                               2       1                 1
 ##     H3_Contact.tracing H4_Emergency.investment.in.healthcare
-## 110                  0                                     0
-## 111                  0                                     0
-## 112                  0                                     0
-## 113                  0                                     0
-## 114                  0                                     0
-## 115                  0                                     0
+## 117                  1                                     0
+## 118                  1                                     0
+## 119                  1                                     0
+## 120                  1                                     0
+## 121                  1                                     0
+## 122                  1                                     0
 ##     H5_Investment.in.vaccines M1_Wildcard ConfirmedCases ConfirmedDeaths
-## 110                         0          NA             96               2
-## 111                         0          NA             97               2
-## 112                         0          NA             97               2
-## 113                         0          NA             97               2
-## 114                         0          NA            100               2
-## 115                         0          NA            100               2
-##     StringencyIndex StringencyIndexForDisplay LegacyStringencyIndex
-## 110           86.24                     86.24                 82.86
-## 111           83.46                     83.46                 80.00
-## 112           83.46                     83.46                 80.00
-## 113           83.46                     83.46                 80.00
-## 114           83.46                     83.46                 80.00
-## 115           83.46                     83.46                 80.00
-##     LegacyStringencyIndexForDisplay
-## 110                           82.86
-## 111                           80.00
-## 112                           80.00
-## 113                           80.00
-## 114                           80.00
-## 115                           80.00</code></pre>
+## 117                         0          NA            100               2
+## 118                         0          NA            100               2
+## 119                         0          NA            100               2
+## 120                         0          NA            100               2
+## 121                         0          NA            100               2
+## 122                         0          NA            100               2
+##     StringencyIndex StringencyIndexForDisplay StringencyLegacyIndex
+## 117           82.41                     82.41                    80
+## 118           82.41                     82.41                    80
+## 119           82.41                     82.41                    80
+## 120           82.41                     82.41                    80
+## 121           82.41                     82.41                    80
+## 122           82.41                     82.41                    80
+##     StringencyLegacyIndexForDisplay GovernmentResponseIndex
+## 117                              80                   71.15
+## 118                              80                   71.15
+## 119                              80                   71.15
+## 120                              80                   71.15
+## 121                              80                   71.15
+## 122                              80                   71.15
+##     GovernmentResponseIndexForDisplay ContainmentHealthIndex
+## 117                             71.15                     75
+## 118                             71.15                     75
+## 119                             71.15                     75
+## 120                             71.15                     75
+## 121                             71.15                     75
+## 122                             71.15                     75
+##     ContainmentHealthIndexForDisplay EconomicSupportIndex
+## 117                               75                   50
+## 118                               75                   50
+## 119                               75                   50
+## 120                               75                   50
+## 121                               75                   50
+## 122                               75                   50
+##     EconomicSupportIndexForDisplay
+## 117                             50
+## 118                             50
+## 119                             50
+## 120                             50
+## 121                             50
+## 122                             50</code></pre>
 <p>Now that all dates correspond to the last 30 days, we can aggregate all columns except name and date by country code. Since R does not have a bultin function to calculate the mode (i. e. the most frequent) of a sequence of numbers, we will create a new function to do that. This function will use <code>table()</code> to calculate the frequency of each category and <code>which()</code> to index the category that has the same frequency as the maximum frequency. If there is a tie, we will pick the intervention that was in place first. If all input values are NA, we return NA</p>
 <pre class="r"><code>get_mode &lt;- function(x){
   if (all(is.na(x))) {return(NA)}
@@ -2218,21 +2280,21 @@ head(country_response)</code></pre>
 common_responses &lt;- aggregate(only_responses, by = country_response[&#39;CountryCode&#39;], FUN = function(x) get_mode(x))
 head(common_responses)</code></pre>
 <pre><code>##   CountryCode C1_School.closing C1_Flag C2_Workplace.closing C2_Flag
-## 1         ABW                 3       1                    3       1
+## 1         ABW                 3       1                    2       1
 ## 2         AFG                 3       1                    3       0
 ## 3         AGO                 3       1                    2       1
-## 4         ALB                 3       1                    2       0
+## 4         ALB                 3       1                    2       1
 ## 5         AND                 3       1                    2       1
 ## 6         ARE                 3       1                    2       1
 ##   C3_Cancel.public.events C3_Flag C4_Restrictions.on.gatherings C4_Flag
 ## 1                       2       1                             4       1
 ## 2                       2       1                             4       1
-## 3                       2       1                             4       1
+## 3                       2       1                             3       1
 ## 4                       2       1                             4       1
 ## 5                       1       1                             0    &lt;NA&gt;
 ## 6                       2       1                             4       1
 ##   C5_Close.public.transport C5_Flag C6_Stay.at.home.requirements C6_Flag
-## 1                         0       1                            2       1
+## 1                         0    &lt;NA&gt;                            2       1
 ## 2                         2       0                            2       0
 ## 3                         1       1                            2       1
 ## 4                         2       0                            2       1
@@ -2241,13 +2303,13 @@ head(common_responses)</code></pre>
 ##   C7_Restrictions.on.internal.movement C7_Flag C8_International.travel.controls
 ## 1                                    2       1                                3
 ## 2                                    2       0                                1
-## 3                                    2       1                                4
+## 3                                    2       0                                4
 ## 4                                    2       1                                4
 ## 5                                    0    &lt;NA&gt;                                3
 ## 6                                    1       1                                4
 ##   E1_Income.support E1_Flag E2_Debt.contract.relief E3_Fiscal.measures
-## 1                 0    &lt;NA&gt;                       2                  0
-## 2                 0    &lt;NA&gt;                       0               &lt;NA&gt;
+## 1                 2       1                       0                  0
+## 2                 0    &lt;NA&gt;                       0                  0
 ## 3                 0    &lt;NA&gt;                       2                  0
 ## 4                 2       0                       1                  0
 ## 5                 2       1                       0                  0
@@ -2257,36 +2319,57 @@ head(common_responses)</code></pre>
 ## 2                        0                               2       1
 ## 3                        0                               1       1
 ## 4                        0                               2       1
-## 5                     &lt;NA&gt;                               2       1
+## 5                        0                               2       1
 ## 6                        0                               2       1
 ##   H2_Testing.policy H3_Contact.tracing H4_Emergency.investment.in.healthcare
-## 1                 1                  0                                     0
+## 1                 1                  1                                     0
 ## 2                 1                  1                                     0
 ## 3                 2                  0                                     0
 ## 4                 2                  1                                     0
 ## 5                 3                  1                                     0
 ## 6                 3                  2                                     0
 ##   H5_Investment.in.vaccines M1_Wildcard ConfirmedCases ConfirmedDeaths
-## 1                         0          NA            100               2
+## 1                         0          NA            101               3
 ## 2                         0          NA           6402              57
-## 3                         0          NA             24               2
-## 4                         0          NA            548              31
-## 5                         0          NA            743              40
-## 6                         0          NA           6302              64
-##   StringencyIndex StringencyIndexForDisplay LegacyStringencyIndex
-## 1           83.46                     83.46                    80
-## 2           76.33                     76.33                 75.48
-## 3           86.77                     86.77                 84.05
-## 4           88.36                     88.36                 85.24
-## 5           59.12                     59.12                 74.05
-## 6           86.77                     86.77                 85.24
-##   LegacyStringencyIndexForDisplay
-## 1                              80
-## 2                           75.48
-## 3                           84.05
-## 4                           85.24
-## 5                           74.05
-## 6                           85.24</code></pre>
+## 3                         0          NA             48               2
+## 4                         0          NA            712              31
+## 5                         0          NA            761              51
+## 6                         0          NA           9813              64
+##   StringencyIndex StringencyIndexForDisplay StringencyLegacyIndex
+## 1            78.7                      78.7                 76.43
+## 2            78.7                      78.7                 75.48
+## 3            78.7                      78.7                 80.48
+## 4           89.81                     89.81                 88.81
+## 5           52.78                        50                 74.05
+## 6           81.48                     81.48                 85.24
+##   StringencyLegacyIndexForDisplay GovernmentResponseIndex
+## 1                           76.43                   68.59
+## 2                           75.48                    60.9
+## 3                           80.48                   67.31
+## 4                           88.81                   80.77
+## 5                           71.19                   55.77
+## 6                           85.24                   79.49
+##   GovernmentResponseIndexForDisplay ContainmentHealthIndex
+## 1                             68.59                  71.97
+## 2                              60.9                  71.97
+## 3                             67.31                  70.45
+## 4                             80.77                  84.09
+## 5                             61.54                  56.82
+## 6                             79.49                  84.85
+##   ContainmentHealthIndexForDisplay EconomicSupportIndex
+## 1                            71.97                   50
+## 2                            71.97                    0
+## 3                            70.45                   50
+## 4                            84.09                 62.5
+## 5                            54.55                   50
+## 6                            84.85                   50
+##   EconomicSupportIndexForDisplay
+## 1                             50
+## 2                              0
+## 3                             50
+## 4                           62.5
+## 5                            100
+## 6                             50</code></pre>
 <p>Also, the number of new cases in a particular day depends on factors such as how many people were working on tests (fewer on weekends, for example), so instead of relying on a single day, let’s average the daily cases in the last 5 days as our response variable. We will use the same trick as above, but in the <code>country_covid</code> table. We will also remove columns about total cases, since these don’t make sense averaging.</p>
 <pre class="r"><code>columns_total &lt;- c(&#39;total_cases&#39;, &#39;total_deaths&#39;, &#39;total_cases_per_million&#39;, &#39;total_deaths_per_million&#39;, &#39;total_tests&#39;, &#39;total_tests_per_thousand&#39;)
 idx = match(columns_total, colnames(country_covid))
@@ -2297,25 +2380,25 @@ only_covid &lt;- country_covid_5[4:length(country_covid_5)]
 average_covid &lt;- aggregate(only_covid, by = country_covid_5[&#39;iso_code&#39;], FUN = mean, na.rm = T)
 head(average_covid)</code></pre>
 <pre><code>##   iso_code new_cases new_deaths new_cases_per_million new_deaths_per_million
-## 1      ABW       0.0        0.0                0.0000                  0.000
-## 2      AFG     369.2        8.6                9.4842                  0.221
-## 3      AGO       0.6        0.0                0.0182                  0.000
-## 4      AIA       0.0        0.0                0.0000                  0.000
-## 5      ALB      13.6        0.0                4.7258                  0.000
-## 6      AND       0.2        0.4                2.5884                  5.177
-##   new_tests new_tests_smoothed new_tests_per_thousand
-## 1       NaN                NaN                    NaN
-## 2       NaN                NaN                    NaN
-## 3       NaN                NaN                    NaN
-## 4       NaN                NaN                    NaN
-## 5       NaN                NaN                    NaN
-## 6       NaN                NaN                    NaN
+## 1      ABW       0.0        0.0                0.0000                 0.0000
+## 2      AFG     605.6        6.4               15.5568                 0.1644
+## 3      AGO       3.4        0.2                0.1036                 0.0060
+## 4      AIA       0.0        0.0                0.0000                 0.0000
+## 5      ALB       8.0        0.2                2.7798                 0.0694
+## 6      AND       0.2        0.0                2.5884                 0.0000
+##   new_tests new_tests_per_thousand new_tests_smoothed
+## 1       NaN                    NaN                NaN
+## 2       NaN                    NaN                NaN
+## 3       NaN                    NaN                NaN
+## 4       NaN                    NaN                NaN
+## 5       NaN                    NaN                NaN
+## 6       NaN                    NaN                NaN
 ##   new_tests_smoothed_per_thousand tests_units stringency_index population
 ## 1                             NaN          NA              NaN     106766
 ## 2                             NaN          NA              NaN   38928341
-## 3                             NaN          NA            84.78   32866268
+## 3                             NaN          NA            81.48   32866268
 ## 4                             NaN          NA              NaN      15002
-## 5                             NaN          NA              NaN    2877800
+## 5                             NaN          NA            84.26    2877800
 ## 6                             NaN          NA              NaN      77265
 ##   population_density median_age aged_65_older aged_70_older gdp_per_capita
 ## 1            584.800       41.2        13.085         7.452      35973.781
@@ -2373,12 +2456,12 @@ colnames(past_covid)[2] &lt;- &#39;past_cases&#39;
 
 head(past_covid)</code></pre>
 <pre><code>##   iso_code past_cases
-## 1      ABW        0.8
-## 2      AFG       48.6
-## 3      AGO        1.0
+## 1      ABW        0.6
+## 2      AFG       86.4
+## 3      AGO        0.2
 ## 4      AIA        0.0
-## 5      ALB       16.2
-## 6      AND       11.6</code></pre>
+## 5      ALB       25.6
+## 6      AND        3.2</code></pre>
 </div>
 </div>
 <div id="joining-datasets" class="section level3">
@@ -2392,26 +2475,26 @@ head(past_covid)</code></pre>
 <p>Now let’s have a look at the data.frame</p>
 <pre class="r"><code>head(joint_covid)</code></pre>
 <pre><code>##   iso_code past_cases new_cases new_deaths new_cases_per_million
-## 1      ABW        0.8       0.0        0.0                0.0000
-## 2      AFG       48.6     369.2        8.6                9.4842
-## 3      AGO        1.0       0.6        0.0                0.0182
-## 4      ALB       16.2      13.6        0.0                4.7258
-## 5      AND       11.6       0.2        0.4                2.5884
-## 6      ARE      356.2     760.8        3.6               76.9230
-##   new_deaths_per_million new_tests new_tests_smoothed new_tests_per_thousand
-## 1                 0.0000       NaN                NaN                    NaN
-## 2                 0.2210       NaN                NaN                    NaN
-## 3                 0.0000       NaN                NaN                    NaN
-## 4                 0.0000       NaN                NaN                    NaN
-## 5                 5.1770       NaN                NaN                    NaN
-## 6                 0.3638       NaN                NaN                    NaN
+## 1      ABW        0.6       0.0        0.0                0.0000
+## 2      AFG       86.4     605.6        6.4               15.5568
+## 3      AGO        0.2       3.4        0.2                0.1036
+## 4      ALB       25.6       8.0        0.2                2.7798
+## 5      AND        3.2       0.2        0.0                2.5884
+## 6      ARE      509.6     860.6        3.0               87.0136
+##   new_deaths_per_million new_tests new_tests_per_thousand new_tests_smoothed
+## 1                 0.0000       NaN                    NaN                NaN
+## 2                 0.1644       NaN                    NaN                NaN
+## 3                 0.0060       NaN                    NaN                NaN
+## 4                 0.0694       NaN                    NaN                NaN
+## 5                 0.0000       NaN                    NaN                NaN
+## 6                 0.3030       NaN                    NaN                NaN
 ##   new_tests_smoothed_per_thousand tests_units stringency_index population
 ## 1                             NaN          NA              NaN     106766
 ## 2                             NaN          NA              NaN   38928341
-## 3                             NaN          NA         84.78000   32866268
-## 4                             NaN          NA              NaN    2877800
+## 3                             NaN          NA            81.48   32866268
+## 4                             NaN          NA            84.26    2877800
 ## 5                             NaN          NA              NaN      77265
-## 6                             NaN          NA         76.01333    9890400
+## 6                             NaN          NA              NaN    9890400
 ##   population_density median_age aged_65_older aged_70_older gdp_per_capita
 ## 1            584.800       41.2        13.085         7.452      35973.781
 ## 2             54.422       18.6         2.581         1.337       1803.987
@@ -2428,20 +2511,20 @@ head(past_covid)</code></pre>
 ## 6             NaN        317.840               17.26            1.2
 ##   male_smokers handwashing_facilities hospital_beds_per_100k total_cases
 ## 1          NaN                    NaN                    NaN         101
-## 2          NaN                 37.746                   0.50        7072
-## 3          NaN                 26.664                    NaN          48
-## 4         51.2                    NaN                   2.89         948
-## 5         37.8                    NaN                    NaN         761
-## 6         37.4                    NaN                   1.20       24190
+## 2          NaN                 37.746                   0.50       11173
+## 3          NaN                 26.664                    NaN          69
+## 4         51.2                    NaN                   2.89        1004
+## 5         37.8                    NaN                    NaN         763
+## 6         37.4                    NaN                   1.20       30307
 ##   total_deaths total_cases_per_million total_deaths_per_million total_tests
 ## 1            3                 945.994                   28.099          NA
-## 2          173                 181.667                    4.444          NA
-## 3            2                   1.460                    0.061          NA
-## 4           31                 329.418                   10.772          NA
-## 5           51                9849.220                  660.066          NA
-## 6          224                2445.806                   22.648          NA
+## 2          219                 287.015                    5.626          NA
+## 3            4                   2.099                    0.122          NA
+## 4           32                 348.878                   11.120          NA
+## 5           51                9875.105                  660.066          NA
+## 6          248                3064.285                   25.075          NA
 ##   total_tests_per_thousand C1_School.closing C1_Flag C2_Workplace.closing
-## 1                       NA                 3       1                    3
+## 1                       NA                 3       1                    2
 ## 2                       NA                 3       1                    3
 ## 3                       NA                 3       1                    2
 ## 4                       NA                 3       1                    2
@@ -2450,12 +2533,12 @@ head(past_covid)</code></pre>
 ##   C2_Flag C3_Cancel.public.events C3_Flag C4_Restrictions.on.gatherings C4_Flag
 ## 1       1                       2       1                             4       1
 ## 2       0                       2       1                             4       1
-## 3       1                       2       1                             4       1
-## 4       0                       2       1                             4       1
+## 3       1                       2       1                             3       1
+## 4       1                       2       1                             4       1
 ## 5       1                       1       1                             0    &lt;NA&gt;
 ## 6       1                       2       1                             4       1
 ##   C5_Close.public.transport C5_Flag C6_Stay.at.home.requirements C6_Flag
-## 1                         0       1                            2       1
+## 1                         0    &lt;NA&gt;                            2       1
 ## 2                         2       0                            2       0
 ## 3                         1       1                            2       1
 ## 4                         2       0                            2       1
@@ -2464,13 +2547,13 @@ head(past_covid)</code></pre>
 ##   C7_Restrictions.on.internal.movement C7_Flag C8_International.travel.controls
 ## 1                                    2       1                                3
 ## 2                                    2       0                                1
-## 3                                    2       1                                4
+## 3                                    2       0                                4
 ## 4                                    2       1                                4
 ## 5                                    0    &lt;NA&gt;                                3
 ## 6                                    1       1                                4
 ##   E1_Income.support E1_Flag E2_Debt.contract.relief E3_Fiscal.measures
-## 1                 0    &lt;NA&gt;                       2                  0
-## 2                 0    &lt;NA&gt;                       0               &lt;NA&gt;
+## 1                 2       1                       0                  0
+## 2                 0    &lt;NA&gt;                       0                  0
 ## 3                 0    &lt;NA&gt;                       2                  0
 ## 4                 2       0                       1                  0
 ## 5                 2       1                       0                  0
@@ -2480,36 +2563,57 @@ head(past_covid)</code></pre>
 ## 2                        0                               2       1
 ## 3                        0                               1       1
 ## 4                        0                               2       1
-## 5                     &lt;NA&gt;                               2       1
+## 5                        0                               2       1
 ## 6                        0                               2       1
 ##   H2_Testing.policy H3_Contact.tracing H4_Emergency.investment.in.healthcare
-## 1                 1                  0                                     0
+## 1                 1                  1                                     0
 ## 2                 1                  1                                     0
 ## 3                 2                  0                                     0
 ## 4                 2                  1                                     0
 ## 5                 3                  1                                     0
 ## 6                 3                  2                                     0
 ##   H5_Investment.in.vaccines M1_Wildcard ConfirmedCases ConfirmedDeaths
-## 1                         0          NA            100               2
+## 1                         0          NA            101               3
 ## 2                         0          NA           6402              57
-## 3                         0          NA             24               2
-## 4                         0          NA            548              31
-## 5                         0          NA            743              40
-## 6                         0          NA           6302              64
-##   StringencyIndex StringencyIndexForDisplay LegacyStringencyIndex
-## 1           83.46                     83.46                    80
-## 2           76.33                     76.33                 75.48
-## 3           86.77                     86.77                 84.05
-## 4           88.36                     88.36                 85.24
-## 5           59.12                     59.12                 74.05
-## 6           86.77                     86.77                 85.24
-##   LegacyStringencyIndexForDisplay
-## 1                              80
-## 2                           75.48
-## 3                           84.05
-## 4                           85.24
-## 5                           74.05
-## 6                           85.24</code></pre>
+## 3                         0          NA             48               2
+## 4                         0          NA            712              31
+## 5                         0          NA            761              51
+## 6                         0          NA           9813              64
+##   StringencyIndex StringencyIndexForDisplay StringencyLegacyIndex
+## 1            78.7                      78.7                 76.43
+## 2            78.7                      78.7                 75.48
+## 3            78.7                      78.7                 80.48
+## 4           89.81                     89.81                 88.81
+## 5           52.78                        50                 74.05
+## 6           81.48                     81.48                 85.24
+##   StringencyLegacyIndexForDisplay GovernmentResponseIndex
+## 1                           76.43                   68.59
+## 2                           75.48                    60.9
+## 3                           80.48                   67.31
+## 4                           88.81                   80.77
+## 5                           71.19                   55.77
+## 6                           85.24                   79.49
+##   GovernmentResponseIndexForDisplay ContainmentHealthIndex
+## 1                             68.59                  71.97
+## 2                              60.9                  71.97
+## 3                             67.31                  70.45
+## 4                             80.77                  84.09
+## 5                             61.54                  56.82
+## 6                             79.49                  84.85
+##   ContainmentHealthIndexForDisplay EconomicSupportIndex
+## 1                            71.97                   50
+## 2                            71.97                    0
+## 3                            70.45                   50
+## 4                            84.09                 62.5
+## 5                            54.55                   50
+## 6                            84.85                   50
+##   EconomicSupportIndexForDisplay
+## 1                             50
+## 2                              0
+## 3                             50
+## 4                           62.5
+## 5                            100
+## 6                             50</code></pre>
 </div>
 <div id="adding-country-names-and-region-data" class="section level3">
 <h3>Adding country names and region data</h3>
@@ -2614,33 +2718,33 @@ head(all_country_data)</code></pre>
 <p>This is our final dataset:</p>
 <pre class="r"><code>head(joint_covid)</code></pre>
 <pre><code>##   iso_code         country_name                    world_region past_cases
-## 1      ABW                Aruba Latin America and the Caribbean        0.8
-## 2      AFG          Afghanistan            Asia and the Pacific       48.6
-## 3      AGO               Angola                          Africa        1.0
-## 4      ALB              Albania                          Europe       16.2
-## 5      AND              Andorra                          Europe       11.6
-## 6      ARE United Arab Emirates                       West Asia      356.2
+## 1      ABW                Aruba Latin America and the Caribbean        0.6
+## 2      AFG          Afghanistan            Asia and the Pacific       86.4
+## 3      AGO               Angola                          Africa        0.2
+## 4      ALB              Albania                          Europe       25.6
+## 5      AND              Andorra                          Europe        3.2
+## 6      ARE United Arab Emirates                       West Asia      509.6
 ##   new_cases new_deaths new_cases_per_million new_deaths_per_million new_tests
 ## 1       0.0        0.0                0.0000                 0.0000       NaN
-## 2     369.2        8.6                9.4842                 0.2210       NaN
-## 3       0.6        0.0                0.0182                 0.0000       NaN
-## 4      13.6        0.0                4.7258                 0.0000       NaN
-## 5       0.2        0.4                2.5884                 5.1770       NaN
-## 6     760.8        3.6               76.9230                 0.3638       NaN
-##   new_tests_smoothed new_tests_per_thousand new_tests_smoothed_per_thousand
-## 1                NaN                    NaN                             NaN
-## 2                NaN                    NaN                             NaN
-## 3                NaN                    NaN                             NaN
-## 4                NaN                    NaN                             NaN
-## 5                NaN                    NaN                             NaN
-## 6                NaN                    NaN                             NaN
+## 2     605.6        6.4               15.5568                 0.1644       NaN
+## 3       3.4        0.2                0.1036                 0.0060       NaN
+## 4       8.0        0.2                2.7798                 0.0694       NaN
+## 5       0.2        0.0                2.5884                 0.0000       NaN
+## 6     860.6        3.0               87.0136                 0.3030       NaN
+##   new_tests_per_thousand new_tests_smoothed new_tests_smoothed_per_thousand
+## 1                    NaN                NaN                             NaN
+## 2                    NaN                NaN                             NaN
+## 3                    NaN                NaN                             NaN
+## 4                    NaN                NaN                             NaN
+## 5                    NaN                NaN                             NaN
+## 6                    NaN                NaN                             NaN
 ##   tests_units stringency_index population population_density median_age
 ## 1          NA              NaN     106766            584.800       41.2
 ## 2          NA              NaN   38928341             54.422       18.6
-## 3          NA         84.78000   32866268             23.890       16.8
-## 4          NA              NaN    2877800            104.871       38.0
+## 3          NA            81.48   32866268             23.890       16.8
+## 4          NA            84.26    2877800            104.871       38.0
 ## 5          NA              NaN      77265            163.755        NaN
-## 6          NA         76.01333    9890400            112.442       34.0
+## 6          NA              NaN    9890400            112.442       34.0
 ##   aged_65_older aged_70_older gdp_per_capita extreme_poverty cvd_death_rate
 ## 1        13.085         7.452      35973.781             NaN            NaN
 ## 2         2.581         1.337       1803.987             NaN        597.029
@@ -2657,34 +2761,34 @@ head(all_country_data)</code></pre>
 ## 6               17.26            1.2         37.4                    NaN
 ##   hospital_beds_per_100k total_cases total_deaths total_cases_per_million
 ## 1                    NaN         101            3                 945.994
-## 2                   0.50        7072          173                 181.667
-## 3                    NaN          48            2                   1.460
-## 4                   2.89         948           31                 329.418
-## 5                    NaN         761           51                9849.220
-## 6                   1.20       24190          224                2445.806
+## 2                   0.50       11173          219                 287.015
+## 3                    NaN          69            4                   2.099
+## 4                   2.89        1004           32                 348.878
+## 5                    NaN         763           51                9875.105
+## 6                   1.20       30307          248                3064.285
 ##   total_deaths_per_million total_tests total_tests_per_thousand
 ## 1                   28.099          NA                       NA
-## 2                    4.444          NA                       NA
-## 3                    0.061          NA                       NA
-## 4                   10.772          NA                       NA
+## 2                    5.626          NA                       NA
+## 3                    0.122          NA                       NA
+## 4                   11.120          NA                       NA
 ## 5                  660.066          NA                       NA
-## 6                   22.648          NA                       NA
+## 6                   25.075          NA                       NA
 ##   C1_School.closing C1_Flag C2_Workplace.closing C2_Flag
-## 1                 3       1                    3       1
+## 1                 3       1                    2       1
 ## 2                 3       1                    3       0
 ## 3                 3       1                    2       1
-## 4                 3       1                    2       0
+## 4                 3       1                    2       1
 ## 5                 3       1                    2       1
 ## 6                 3       1                    2       1
 ##   C3_Cancel.public.events C3_Flag C4_Restrictions.on.gatherings C4_Flag
 ## 1                       2       1                             4       1
 ## 2                       2       1                             4       1
-## 3                       2       1                             4       1
+## 3                       2       1                             3       1
 ## 4                       2       1                             4       1
 ## 5                       1       1                             0    &lt;NA&gt;
 ## 6                       2       1                             4       1
 ##   C5_Close.public.transport C5_Flag C6_Stay.at.home.requirements C6_Flag
-## 1                         0       1                            2       1
+## 1                         0    &lt;NA&gt;                            2       1
 ## 2                         2       0                            2       0
 ## 3                         1       1                            2       1
 ## 4                         2       0                            2       1
@@ -2693,13 +2797,13 @@ head(all_country_data)</code></pre>
 ##   C7_Restrictions.on.internal.movement C7_Flag C8_International.travel.controls
 ## 1                                    2       1                                3
 ## 2                                    2       0                                1
-## 3                                    2       1                                4
+## 3                                    2       0                                4
 ## 4                                    2       1                                4
 ## 5                                    0    &lt;NA&gt;                                3
 ## 6                                    1       1                                4
 ##   E1_Income.support E1_Flag E2_Debt.contract.relief E3_Fiscal.measures
-## 1                 0    &lt;NA&gt;                       2                  0
-## 2                 0    &lt;NA&gt;                       0               &lt;NA&gt;
+## 1                 2       1                       0                  0
+## 2                 0    &lt;NA&gt;                       0                  0
 ## 3                 0    &lt;NA&gt;                       2                  0
 ## 4                 2       0                       1                  0
 ## 5                 2       1                       0                  0
@@ -2709,36 +2813,57 @@ head(all_country_data)</code></pre>
 ## 2                        0                               2       1
 ## 3                        0                               1       1
 ## 4                        0                               2       1
-## 5                     &lt;NA&gt;                               2       1
+## 5                        0                               2       1
 ## 6                        0                               2       1
 ##   H2_Testing.policy H3_Contact.tracing H4_Emergency.investment.in.healthcare
-## 1                 1                  0                                     0
+## 1                 1                  1                                     0
 ## 2                 1                  1                                     0
 ## 3                 2                  0                                     0
 ## 4                 2                  1                                     0
 ## 5                 3                  1                                     0
 ## 6                 3                  2                                     0
 ##   H5_Investment.in.vaccines M1_Wildcard ConfirmedCases ConfirmedDeaths
-## 1                         0          NA            100               2
+## 1                         0          NA            101               3
 ## 2                         0          NA           6402              57
-## 3                         0          NA             24               2
-## 4                         0          NA            548              31
-## 5                         0          NA            743              40
-## 6                         0          NA           6302              64
-##   StringencyIndex StringencyIndexForDisplay LegacyStringencyIndex
-## 1           83.46                     83.46                    80
-## 2           76.33                     76.33                 75.48
-## 3           86.77                     86.77                 84.05
-## 4           88.36                     88.36                 85.24
-## 5           59.12                     59.12                 74.05
-## 6           86.77                     86.77                 85.24
-##   LegacyStringencyIndexForDisplay
-## 1                              80
-## 2                           75.48
-## 3                           84.05
-## 4                           85.24
-## 5                           74.05
-## 6                           85.24</code></pre>
+## 3                         0          NA             48               2
+## 4                         0          NA            712              31
+## 5                         0          NA            761              51
+## 6                         0          NA           9813              64
+##   StringencyIndex StringencyIndexForDisplay StringencyLegacyIndex
+## 1            78.7                      78.7                 76.43
+## 2            78.7                      78.7                 75.48
+## 3            78.7                      78.7                 80.48
+## 4           89.81                     89.81                 88.81
+## 5           52.78                        50                 74.05
+## 6           81.48                     81.48                 85.24
+##   StringencyLegacyIndexForDisplay GovernmentResponseIndex
+## 1                           76.43                   68.59
+## 2                           75.48                    60.9
+## 3                           80.48                   67.31
+## 4                           88.81                   80.77
+## 5                           71.19                   55.77
+## 6                           85.24                   79.49
+##   GovernmentResponseIndexForDisplay ContainmentHealthIndex
+## 1                             68.59                  71.97
+## 2                              60.9                  71.97
+## 3                             67.31                  70.45
+## 4                             80.77                  84.09
+## 5                             61.54                  56.82
+## 6                             79.49                  84.85
+##   ContainmentHealthIndexForDisplay EconomicSupportIndex
+## 1                            71.97                   50
+## 2                            71.97                    0
+## 3                            70.45                   50
+## 4                            84.09                 62.5
+## 5                            54.55                   50
+## 6                            84.85                   50
+##   EconomicSupportIndexForDisplay
+## 1                             50
+## 2                              0
+## 3                             50
+## 4                           62.5
+## 5                            100
+## 6                             50</code></pre>
 <p>We will now save it to use later. Since this code will pull up new data every day it is run, let’s save the file with today’s date in the name. We can concatenate different character vectors by using the function <code>paste0()</code> and get today’s date as a character by using the function <code>as.character()</code></p>
 <pre class="r"><code>filename = paste0(&#39;covid_data_&#39;, as.character(Sys.Date()),&#39;.csv&#39;)
 write.csv(x = joint_covid, file = filename)</code></pre>
