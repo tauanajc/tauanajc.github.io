@@ -15,9 +15,9 @@ To do this, we will use a dataset about covid19 put together by Our World in Dat
 <meta property="og:description" content="In this tutorial, we will learn the basics of how statistical modeling in R works, and then briefly overview methods of ordination.
 To do this, we will use a dataset about covid19 put together by Our World in Data, joined to another dataset obtained in the same place that includes country responses (school closings, etc). The main goal here is to learn about modelling in R, but we also include in the end the steps taken to clean the data and merge tables as we need here.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="/courses/2020_stri_introR/tutorials/l4_stats/">
-        <link rel="stylesheet" href="/courses/2020_stri_introR/dist/site.css">
-        <link rel="stylesheet" href="/courses/2020_stri_introR/dist/syntax.css">
+<meta property="og:url" content="https://tauanacunha.com/courses/2020_stri_introR/tutorials/l4_stats/">
+        <link rel="stylesheet" href="https://tauanacunha.com/courses/2020_stri_introR/dist/site.css">
+        <link rel="stylesheet" href="https://tauanacunha.com/courses/2020_stri_introR/dist/syntax.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         
@@ -34,10 +34,10 @@ To do this, we will use a dataset about covid19 put together by Our World in Dat
                     <div class="site-title-wrapper">
                         
                             <h1 class="site-title">
-                                <a title="Tutorials" href="/courses/2020_stri_introR/">Tutorials</a>
+                                <a title="Tutorials" href="https://tauanacunha.com/courses/2020_stri_introR/">Tutorials</a>
                             </h1>
                         
-                        <a class="button-square" href="/courses/2020_stri_introR/index.xml"><i class="fa fa-rss"></i></a>
+                        <a class="button-square" href="https://tauanacunha.com/courses/2020_stri_introR/index.xml"><i class="fa fa-rss"></i></a>
                         
                         
                         
@@ -1176,34 +1176,38 @@ head(covid_interventions)</code></pre>
 <p>The function to do NMDS is <code>metaMDS</code>:</p>
 <pre class="r"><code>mds &lt;- metaMDS(intervention_differences)</code></pre>
 <pre><code>## Run 0 stress 0.2121924 
-## Run 1 stress 0.2108269 
+## Run 1 stress 0.2104096 
 ## ... New best solution
-## ... Procrustes: rmse 0.02365216  max resid 0.2587511 
-## Run 2 stress 0.2111373 
-## ... Procrustes: rmse 0.03826848  max resid 0.3671035 
-## Run 3 stress 0.2303788 
-## Run 4 stress 0.2186277 
-## Run 5 stress 0.2104019 
+## ... Procrustes: rmse 0.02917463  max resid 0.1716615 
+## Run 2 stress 0.210169 
 ## ... New best solution
-## ... Procrustes: rmse 0.04125284  max resid 0.3850763 
-## Run 6 stress 0.2126274 
-## Run 7 stress 0.2126199 
-## Run 8 stress 0.211299 
-## Run 9 stress 0.2126195 
-## Run 10 stress 0.2211411 
-## Run 11 stress 0.2115133 
-## Run 12 stress 0.2126201 
-## Run 13 stress 0.2167959 
-## Run 14 stress 0.2126322 
-## Run 15 stress 0.2167862 
-## Run 16 stress 0.2126338 
-## Run 17 stress 0.212686 
-## Run 18 stress 0.2113348 
-## Run 19 stress 0.2122625 
-## Run 20 stress 0.2115375 
+## ... Procrustes: rmse 0.01143463  max resid 0.1075097 
+## Run 3 stress 0.2103996 
+## ... Procrustes: rmse 0.007447184  max resid 0.07897808 
+## Run 4 stress 0.2242409 
+## Run 5 stress 0.2310695 
+## Run 6 stress 0.2124232 
+## Run 7 stress 0.2116716 
+## Run 8 stress 0.2238267 
+## Run 9 stress 0.2101876 
+## ... Procrustes: rmse 0.004221556  max resid 0.03701536 
+## Run 10 stress 0.2120351 
+## Run 11 stress 0.2125278 
+## Run 12 stress 0.2101505 
+## ... New best solution
+## ... Procrustes: rmse 0.001622653  max resid 0.01463242 
+## Run 13 stress 0.2193315 
+## Run 14 stress 0.2253689 
+## Run 15 stress 0.2103424 
+## ... Procrustes: rmse 0.01060459  max resid 0.107734 
+## Run 16 stress 0.2104722 
+## ... Procrustes: rmse 0.0385496  max resid 0.3823246 
+## Run 17 stress 0.2106813 
+## Run 18 stress 0.2230071 
+## Run 19 stress 0.2116843 
+## Run 20 stress 0.222422 
 ## *** No convergence -- monoMDS stopping criteria:
-##      1: no. of iterations &gt;= maxit
-##     19: stress ratio &gt; sratmax</code></pre>
+##     20: stress ratio &gt; sratmax</code></pre>
 <p>We can use <code>plot</code> to visualize the results now:</p>
 <pre class="r"><code>plot(mds)</code></pre>
 <pre><code>## species scores not available</code></pre>
@@ -1213,12 +1217,12 @@ head(covid_interventions)</code></pre>
 
 head(mds_result)</code></pre>
 <pre><code>##         MDS1       MDS2                    world_region         country_name
-## 1 -1.2509728  0.7370459 Latin America and the Caribbean                Aruba
-## 2 -1.1768616 -1.8959121            Asia and the Pacific          Afghanistan
-## 3 -0.7618385  0.3276026                          Africa               Angola
-## 4 -0.5532353 -0.1306257                          Europe              Albania
-## 5  3.5360182 -0.7589061                          Europe              Andorra
-## 6 -0.5299589  0.6126979                       West Asia United Arab Emirates
+## 1 -1.2631453  0.7693465 Latin America and the Caribbean                Aruba
+## 2 -1.2182270 -1.9106342            Asia and the Pacific          Afghanistan
+## 3 -0.7599974  0.3553130                          Africa               Angola
+## 4 -0.5735751 -0.1060386                          Europe              Albania
+## 5  3.5898715 -0.7376186                          Europe              Andorra
+## 6 -0.5328711  0.6123819                       West Asia United Arab Emirates
 ##   C1_School.closing C1_Flag C2_Workplace.closing C3_Cancel.public.events
 ## 1                 3       1                    3                       2
 ## 2                 3       1                    3                       2
@@ -2877,7 +2881,7 @@ write.csv(x = joint_covid, file = filename)</code></pre>
 
     <div class="share">
         
-            <a class="icon-twitter" href="https://twitter.com/share?text=Tutorial%204%20-%20Statistical%20Modeling&url=%2fcourses%2f2020_stri_introR%2ftutorials%2fl4_stats%2f"
+            <a class="icon-twitter" href="https://twitter.com/share?text=Tutorial%204%20-%20Statistical%20Modeling&url=https%3a%2f%2ftauanacunha.com%2fcourses%2f2020_stri_introR%2ftutorials%2fl4_stats%2f"
                 onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                 <i class="fa fa-twitter"></i>
                 <span class="hidden">Twitter</span>
@@ -2885,7 +2889,7 @@ write.csv(x = joint_covid, file = filename)</code></pre>
         
 
         
-            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=%2fcourses%2f2020_stri_introR%2ftutorials%2fl4_stats%2f"
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftauanacunha.com%2fcourses%2f2020_stri_introR%2ftutorials%2fl4_stats%2f"
                 onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                 <i class="fa fa-facebook"></i>
                 <span class="hidden">Facebook</span>
@@ -2906,7 +2910,7 @@ write.csv(x = joint_covid, file = filename)</code></pre>
             <div class="container">
                 <div class="site-title-wrapper">
                     <h1 class="site-title">
-                        <a title="Tutorials" href="/courses/2020_stri_introR/">Tutorials</a>
+                        <a title="Tutorials" href="https://tauanacunha.com/courses/2020_stri_introR/">Tutorials</a>
                     </h1>
                     <a class="button-square button-jump-top js-jump-top" href="#">
                         <i class="fa fa-angle-up"></i>
@@ -2923,9 +2927,9 @@ write.csv(x = joint_covid, file = filename)</code></pre>
             </div>
         </footer>
 
-        <script src="/courses/2020_stri_introR/js/jquery-1.11.3.min.js"></script>
-        <script src="/courses/2020_stri_introR/js/jquery.fitvids.js"></script>
-        <script src="/courses/2020_stri_introR/js/scripts.js"></script>
+        <script src="https://tauanacunha.com/courses/2020_stri_introR/js/jquery-1.11.3.min.js"></script>
+        <script src="https://tauanacunha.com/courses/2020_stri_introR/js/jquery.fitvids.js"></script>
+        <script src="https://tauanacunha.com/courses/2020_stri_introR/js/scripts.js"></script>
     </body>
 </html>
 

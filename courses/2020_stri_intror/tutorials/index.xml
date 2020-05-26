@@ -2,51 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tutorials</title>
-    <link>/courses/2020_stri_introR/tutorials/</link>
+    <link>https://tauanacunha.com/courses/2020_stri_introR/tutorials/</link>
     <description>Recent content on Tutorials</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 20 May 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/courses/2020_stri_introR/tutorials/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tauanacunha.com/courses/2020_stri_introR/tutorials/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Tutorial 4 - Statistical Modeling</title>
-      <link>/courses/2020_stri_introR/tutorials/l4_stats/</link>
+      <link>https://tauanacunha.com/courses/2020_stri_introR/tutorials/l4_stats/</link>
       <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/courses/2020_stri_introR/tutorials/l4_stats/</guid>
+      <guid>https://tauanacunha.com/courses/2020_stri_introR/tutorials/l4_stats/</guid>
       <description>In this tutorial, we will learn the basics of how statistical modeling in R works, and then briefly overview methods of ordination.
 To do this, we will use a dataset about covid19 put together by Our World in Data, joined to another dataset obtained in the same place that includes country responses (school closings, etc). The main goal here is to learn about modelling in R, but we also include in the end the steps taken to clean the data and merge tables as we need here.</description>
     </item>
     
     <item>
       <title>Tutorial 3 - Graphs</title>
-      <link>/courses/2020_stri_introR/tutorials/l3_graphs/</link>
+      <link>https://tauanacunha.com/courses/2020_stri_introR/tutorials/l3_graphs/</link>
       <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/courses/2020_stri_introR/tutorials/l3_graphs/</guid>
+      <guid>https://tauanacunha.com/courses/2020_stri_introR/tutorials/l3_graphs/</guid>
       <description>Plots are important tools in data exploration, when you are first looking at your dataset and checking how data is distributed. It is also critical at a later stage, when you carefully design and customize figures to present your work in a talk or manuscript.
 Today we will go over two sets of tools available for plotting in R: basic built-in functions, and a specific graphical package, ggplot2 (we will talk about packages in a minute).</description>
     </item>
     
     <item>
       <title>Tutorial 2 - Flow Control</title>
-      <link>/courses/2020_stri_introR/tutorials/l2_flowcontrol/</link>
+      <link>https://tauanacunha.com/courses/2020_stri_introR/tutorials/l2_flowcontrol/</link>
       <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/courses/2020_stri_introR/tutorials/l2_flowcontrol/</guid>
+      <guid>https://tauanacunha.com/courses/2020_stri_introR/tutorials/l2_flowcontrol/</guid>
       <description>Functions, loops, and if/else statements  Getting started Remember everything in a line after the # sign is comments that will not be run. Look in these comments for practice exercises for the tutorial, which will be marked #Practice
 Always begin by setting the working directory (the folder on your computer where R will read and write data files) I like to start by asking R for the current working directory to remind me of the correct formatting</description>
     </item>
     
     <item>
       <title>Tutorial 1 - How R Works</title>
-      <link>/courses/2020_stri_introR/tutorials/l1_howrworks/</link>
+      <link>https://tauanacunha.com/courses/2020_stri_introR/tutorials/l1_howrworks/</link>
       <pubDate>Wed, 29 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/courses/2020_stri_introR/tutorials/l1_howrworks/</guid>
+      <guid>https://tauanacunha.com/courses/2020_stri_introR/tutorials/l1_howrworks/</guid>
       <description>Hello people! Welcome to the Introduction to R course 2020 organized by the STRI community. Some of you are already familiriazed with R and Rstudio, but for others this probably is one of the first times using it. So we will start from the beginning. Along the document you will find some examples, it’s highly recommended to try to run those examples in your computer. Thanks for joining and we hope this will be useful for your future projects :)</description>
     </item>
     
