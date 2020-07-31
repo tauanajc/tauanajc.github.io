@@ -2,34 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Courses Taught on Tauana J. Cunha</title>
-    <link>/courses/</link>
+    <link>https://tauanacunha.com/courses/</link>
     <description>Recent content in Courses Taught on Tauana J. Cunha</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Tauana Cunha {year}</copyright>
-    <lastBuildDate>Wed, 22 Apr 2020 10:23:45 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 01 Feb 2018 22:18:45 -0400</lastBuildDate>
     
-	    <atom:link href="/courses/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://tauanacunha.com/courses/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Introduction to R</title>
-      <link>/courses/2020_stri_intror/</link>
-      <pubDate>Wed, 22 Apr 2020 10:23:45 -0400</pubDate>
-      
-      <guid>/courses/2020_stri_intror/</guid>
-      <description>&lt;p&gt;2020&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://tauanajc.github.io/2020_stri_introR&#34;&gt;WEBSITE&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Online.&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title>Invertebrate Zoology</title>
-      <link>/courses/2018_inver-extensionharvard/</link>
+      <link>https://tauanacunha.com/courses/2018_inver-extensionharvard/</link>
       <pubDate>Thu, 01 Feb 2018 22:18:45 -0400</pubDate>
       
-      <guid>/courses/2018_inver-extensionharvard/</guid>
+      <guid>https://tauanacunha.com/courses/2018_inver-extensionharvard/</guid>
       <description>&lt;p&gt;Spring 2018&lt;/p&gt;
 &lt;p&gt;Code BIOS E-27, &lt;a href=&#34;https://canvas.harvard.edu/courses/35083&#34;&gt;WEBSITE&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;On-campus and/or online.&lt;/p&gt;
@@ -39,10 +27,10 @@
     
     <item>
       <title>Phylogenetics and Phylogeography in the Era of Genomics</title>
-      <link>/courses/2017_phylogeo-nomics-harvard/</link>
+      <link>https://tauanacunha.com/courses/2017_phylogeo-nomics-harvard/</link>
       <pubDate>Fri, 01 Sep 2017 22:18:45 -0400</pubDate>
       
-      <guid>/courses/2017_phylogeo-nomics-harvard/</guid>
+      <guid>https://tauanacunha.com/courses/2017_phylogeo-nomics-harvard/</guid>
       <description>&lt;p&gt;Fall 2017&lt;/p&gt;
 &lt;p&gt;Code OEB275r, &lt;a href=&#34;https://canvas.harvard.edu/courses/31068&#34;&gt;WEBSITE&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The course will review the recent literature on methods of analysis in phylogenomics and phylogeography, with particular attention to analysis of large-scale data sets; accommodating gene tree heterogeneity; adequacy of models at the level of DNA sequence evolution and demographic history; and estimation of critical parameters of population history, such as phylogenetic relationships, reticulate evolutionary histories, rates of gene flow and species boundaries.  Weekly sessions will consist of presentations and discussions led by students and by international experts, including hands-on sessions working with state-of-the-art software.&lt;/p&gt;
@@ -51,10 +39,10 @@
     
     <item>
       <title>Biology and Evolution of Invertebrate Animals</title>
-      <link>/courses/2016_inver-harvard/</link>
+      <link>https://tauanacunha.com/courses/2016_inver-harvard/</link>
       <pubDate>Mon, 01 Feb 2016 22:18:45 -0400</pubDate>
       
-      <guid>/courses/2016_inver-harvard/</guid>
+      <guid>https://tauanacunha.com/courses/2016_inver-harvard/</guid>
       <description>&lt;p&gt;Spring 2015 &amp;amp; 2016&lt;/p&gt;
 &lt;p&gt;Code OEB51, &lt;a href=&#34;https://canvas.harvard.edu/courses/10394&#34;&gt;WEBSITE&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Introduction to invertebrate diversity. Covers anatomy, biology and evolutionary relationships of the main animal phyla including sponges, mollusks, annelids, arthropods, among others. Special emphasis is placed on understanding the broad diversity of animal forms and their adaptations to different ecosystems and how these shape animal evolution. Lectures are complemented with a mandatory weekly lab and a field trip to Bocas del Toro, Panama, an area of outstanding marine diversity in the Caribbean.&lt;/p&gt;
@@ -63,10 +51,10 @@
     
     <item>
       <title>R Language in the Analysis of Ecological Data</title>
-      <link>/courses/2013_r-usp/</link>
+      <link>https://tauanacunha.com/courses/2013_r-usp/</link>
       <pubDate>Fri, 01 Feb 2013 22:18:45 -0400</pubDate>
       
-      <guid>/courses/2013_r-usp/</guid>
+      <guid>https://tauanacunha.com/courses/2013_r-usp/</guid>
       <description>&lt;p&gt;Spring 2013&lt;/p&gt;
 &lt;p&gt;Code BIE5782, &lt;a href=&#34;http://ecologia.ib.usp.br/bie5782/doku.php?id=start&#34;&gt;WEBSITE&lt;/a&gt;&lt;/p&gt;
 </description>
@@ -74,10 +62,10 @@
     
     <item>
       <title>Invertebrates</title>
-      <link>/courses/2010_inver-usp/</link>
+      <link>https://tauanacunha.com/courses/2010_inver-usp/</link>
       <pubDate>Mon, 01 Feb 2010 22:18:45 -0400</pubDate>
       
-      <guid>/courses/2010_inver-usp/</guid>
+      <guid>https://tauanacunha.com/courses/2010_inver-usp/</guid>
       <description>&lt;p&gt;Spring 2010&lt;/p&gt;
 &lt;p&gt;Code BIZ0213, &lt;a href=&#34;http://marcus.ib.usp.br/biz213/&#34;&gt;WEBSITE&lt;/a&gt;&lt;/p&gt;
 </description>
@@ -85,10 +73,10 @@
     
     <item>
       <title>Biological Diversity and Phylogeny</title>
-      <link>/courses/2008_dbf-usp/</link>
+      <link>https://tauanacunha.com/courses/2008_dbf-usp/</link>
       <pubDate>Fri, 01 Feb 2008 22:18:45 -0400</pubDate>
       
-      <guid>/courses/2008_dbf-usp/</guid>
+      <guid>https://tauanacunha.com/courses/2008_dbf-usp/</guid>
       <description>&lt;p&gt;Spring 2008&lt;/p&gt;
 &lt;p&gt;Code 0410113, &lt;a href=&#34;http://www.ib.usp.br/inter/0410113&#34;&gt;WEBSITE&lt;/a&gt;&lt;/p&gt;
 </description>

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Morphospace on Tauana J. Cunha</title>
-    <link>/tags/morphospace/</link>
+    <link>https://tauanacunha.com/tags/morphospace/</link>
     <description>Recent content in Morphospace on Tauana J. Cunha</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Tauana Cunha {year}</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 01:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/tags/morphospace/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://tauanacunha.com/tags/morphospace/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Evolution of shell shape</title>
-      <link>/project/shell-shape-evolution/</link>
+      <link>https://tauanacunha.com/project/shell-shape-evolution/</link>
       <pubDate>Sun, 01 Jan 2017 01:00:00 +0000</pubDate>
       
-      <guid>/project/shell-shape-evolution/</guid>
+      <guid>https://tauanacunha.com/project/shell-shape-evolution/</guid>
       <description>&lt;p&gt;From observations of the fossil record, it has been noticed that gastropod shells at the second half of the Mesozoic Era were sturdier and more ornamented than shells from earlier times. A coincident increase in predation has led to the hypothesis that enemy-related interactions were a main driver of phenotypic changes in these organisms (escalation hypothesis). Modern experiments provide data on better-defended forms at present times, but no quantitative data exists for most traits to evaluate the long-term impact of these interactions on the morphological evolution of gastropods. I use focus-stacking to photograph hundreds of fossil shells from the Mesozoic and early Cenozoic to study the evolution of shell shape, with particular attention to trends in spiral height.&lt;/p&gt;
 </description>
     </item>

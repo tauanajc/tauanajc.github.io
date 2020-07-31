@@ -2,32 +2,58 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>News on Tauana J. Cunha</title>
-    <link>/news/</link>
+    <link>https://tauanacunha.com/news/</link>
     <description>Recent content in News on Tauana J. Cunha</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Tauana Cunha {year}</copyright>
-    <lastBuildDate>Fri, 10 Jan 2020 14:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2020 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/news/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://tauanacunha.com/news/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Invited talk at the SBE meeting</title>
+      <link>https://tauanacunha.com/news/2020-sbemeeting/</link>
+      <pubDate>Wed, 29 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/news/2020-sbemeeting/</guid>
+      <description>&lt;p&gt;In COVID-19 times, an amazing group of early career scientists stepped up to organize the first &lt;a href=&#34;https://sbemeeting.weebly.com&#34;&gt;Systematics, Biogeography and Evolution (SBE)&lt;/a&gt; virtual meeting. The program reached over 1200 atendees from all over the world, allowing participation of many who often cannot attend regular meetings due to financial or other restrictions.&lt;/p&gt;
+&lt;p&gt;Most talks were further streamed live and are available on &lt;a href=&#34;https://www.youtube.com/channel/UCgGlkPp4jCoZoatnG2--RJA/featured&#34;&gt;YouTube&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Check out my invited talk to the symposium of Phylogenomics and Molecular Evolution: &lt;a href=&#34;https://youtu.be/B7AUrtVMjpw?t=3097&#34;&gt;Congruence and Conflict in Phylogenomics&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tauanacunha.com/news-projs/sbe-phylogenomics.pdf&#34; alt=&#34;SBE&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tauanacunha.com/news-projs/sbe-atendees.pdf&#34; alt=&#34;SBE&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tauanacunha.com/news-projs/sbe-speakers.pdf&#34; alt=&#34;SBE&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>GGI grant</title>
+      <link>https://tauanacunha.com/news/2020-ggi/</link>
+      <pubDate>Fri, 10 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/news/2020-ggi/</guid>
+      <description>&lt;p&gt;More about the Global Genome Initiative (GGI): &lt;a href=&#34;https://naturalhistory.si.edu/research/global-genome-initiative&#34;&gt;https://naturalhistory.si.edu/research/global-genome-initiative&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;We will use this grant to collect and send many species of marine gastropods from the Pacific side of Panama to the National Museum of Natural History in Washington DC. Importantly, we will sequence some of their genomes to support work on population genomics and connectivity of marine species.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Postdoc at STRI</title>
-      <link>/news/2020-stri/</link>
+      <link>https://tauanacunha.com/news/2020-stri/</link>
       <pubDate>Fri, 10 Jan 2020 14:00:00 -0400</pubDate>
       
-      <guid>/news/2020-stri/</guid>
+      <guid>https://tauanacunha.com/news/2020-stri/</guid>
       <description>&lt;p&gt;Arrived in Panama to stay for two years as a Postdoctoral Fellow at the Smithsonian Tropical Research Institute! Keep an eye out to learn more about the predictive power of life history strategies over the dispersal capacity of marine snails.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Talks at Unicamp and USP</title>
-      <link>/news/2019-usp-unicamp/</link>
+      <link>https://tauanacunha.com/news/2019-usp-unicamp/</link>
       <pubDate>Thu, 05 Sep 2019 20:12:58 -0400</pubDate>
       
-      <guid>/news/2019-usp-unicamp/</guid>
+      <guid>https://tauanacunha.com/news/2019-usp-unicamp/</guid>
       <description>&lt;p&gt;Just visited Unicamp and USP and got to see so many friends!&lt;/p&gt;
 &lt;p&gt;Talks were at the &lt;a href=&#34;http://bioforumunicamp.blogspot.com/2019/08/tauana-junqueira-cunha-harvard.html&#34;&gt;Biofórum&lt;/a&gt; seminar series at Unicamp, and the &lt;a href=&#34;http://ecoencontros.ib.usp.br/pt/seminarios/anteriores.html&#34;&gt;EcoEncontros&lt;/a&gt; series at USP.&lt;/p&gt;
 </description>
@@ -35,72 +61,72 @@
     
     <item>
       <title>World Congress of Malacology</title>
-      <link>/news/2019-wcm/</link>
+      <link>https://tauanacunha.com/news/2019-wcm/</link>
       <pubDate>Sat, 17 Aug 2019 20:12:58 -0400</pubDate>
       
-      <guid>/news/2019-wcm/</guid>
+      <guid>https://tauanacunha.com/news/2019-wcm/</guid>
       <description>&lt;p&gt;This year the World Congress of Malacology happened in the beautiful Monterey Bay area, in California. I gave a talk on our gastropod phylogeny, and a poster on the evolution of shell shape.
 Also, my first dive in cold waters (10ºC!) was so worth it! Frizzle anemone, kelp forest, gumboot chitons, and most importantly, giant keyhole limpets and the beautiful jeweled topsnail.&lt;/p&gt;
 &lt;p&gt;World malacologists:
-&lt;img src=&#34;/post/wcm2019-all.jpg&#34; alt=&#34;World malacologists&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://tauanacunha.com/post/wcm2019-all.jpg&#34; alt=&#34;World malacologists&#34;&gt;&lt;/p&gt;
 &lt;p&gt;(mostly former) Giribet Lab members happy after dives (Vanessa González, Gonzalo Giribet, me, Sarah Lemer):
-&lt;img src=&#34;/post/wcm2019-giribetlab.jpg&#34; alt=&#34;Giribet Lab divers&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://tauanacunha.com/post/wcm2019-giribetlab.jpg&#34; alt=&#34;Giribet Lab divers&#34;&gt;&lt;/p&gt;
 &lt;p&gt;With frizzle anemone:
-&lt;img src=&#34;/post/wcm2019-anemone.jpg&#34; alt=&#34;Tauana and frizzle anemone&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://tauanacunha.com/post/wcm2019-anemone.jpg&#34; alt=&#34;Tauana and frizzle anemone&#34;&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Evolution meeting</title>
-      <link>/news/2019-evolution-meeting/</link>
+      <link>https://tauanacunha.com/news/2019-evolution-meeting/</link>
       <pubDate>Fri, 21 Jun 2019 20:12:58 -0400</pubDate>
       
-      <guid>/news/2019-evolution-meeting/</guid>
+      <guid>https://tauanacunha.com/news/2019-evolution-meeting/</guid>
       <description>&lt;p&gt;Just arrived in Providence RI for the Evolution meeting. Tomorrow evening I will be presenting my work on vetigastropod fossils, on the evolution of their shell shape:&lt;/p&gt;
 &lt;p&gt;ExHallBC_14 - Poster 96&lt;/p&gt;
 &lt;p&gt;For those who are not here, or would like to see it in further details later, here it is:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/poster-evo2019.png&#34; alt=&#34;poster-evo19&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tauanacunha.com/post/poster-evo2019.png&#34; alt=&#34;poster-evo19&#34;&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>PhD defended, SnailedIt!</title>
-      <link>/news/2019-phd-defense/</link>
+      <link>https://tauanacunha.com/news/2019-phd-defense/</link>
       <pubDate>Mon, 03 Jun 2019 20:12:58 -0400</pubDate>
       
-      <guid>/news/2019-phd-defense/</guid>
+      <guid>https://tauanacunha.com/news/2019-phd-defense/</guid>
       <description>&lt;p&gt;I am now Dr. Tauana Cunha!&lt;/p&gt;
 &lt;p&gt;Thank you to family, friends, colleagues and institutions that supported me and my work during the PhD, and to everyone that came for the public presentation. Celebrated in great style with an awesome snail cake by lab friends Caitlin Baker and Vanessa Knutson!&lt;/p&gt;
 &lt;p&gt;SNAILED IT! =D&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/news-projs/defense1.jpg&#34; alt=&#34;defense&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/news-projs/defense2.jpg&#34; alt=&#34;defense&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/news-projs/defense3.jpg&#34; alt=&#34;defense&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/news-projs/defense4.jpg&#34; alt=&#34;defense&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tauanacunha.com/news-projs/defense1.jpg&#34; alt=&#34;defense&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tauanacunha.com/news-projs/defense2.jpg&#34; alt=&#34;defense&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tauanacunha.com/news-projs/defense3.jpg&#34; alt=&#34;defense&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tauanacunha.com/news-projs/defense4.jpg&#34; alt=&#34;defense&#34;&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Fissurellidae phylogeny and biogeography in MPE</title>
-      <link>/news/2019-mpe/</link>
+      <link>https://tauanacunha.com/news/2019-mpe/</link>
       <pubDate>Tue, 02 Apr 2019 20:12:58 -0400</pubDate>
       
-      <guid>/news/2019-mpe/</guid>
+      <guid>https://tauanacunha.com/news/2019-mpe/</guid>
       <description>&lt;p&gt;In this paper we…&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;build a phylogeny for the diverse and widespread keyhole limpets, leading to updates in classification&lt;/li&gt;
 &lt;li&gt;used fossil data to calibrate the tree&lt;/li&gt;
 &lt;li&gt;added geographical information to estimate their distribution through time!&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;a href=&#34;/publication/cunha-2019-b/&#34;&gt;Get it here!&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://tauanacunha.com/publication/cunha-2019-b/&#34;&gt;Get it here!&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Gastropod phylogenomics in Proceedings B</title>
-      <link>/news/2019-proceedingsb/</link>
+      <link>https://tauanacunha.com/news/2019-proceedingsb/</link>
       <pubDate>Wed, 13 Mar 2019 20:12:58 -0400</pubDate>
       
-      <guid>/news/2019-proceedingsb/</guid>
+      <guid>https://tauanacunha.com/news/2019-proceedingsb/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;Curious about how gastropods (snails, limpets and slugs) are related?&lt;/li&gt;
 &lt;li&gt;Interested in phylogenomic methods applied to ancient and short internodes?&lt;/li&gt;
@@ -111,53 +137,53 @@ Also, my first dive in cold waters (10ºC!) was so worth it! Frizzle anemone, ke
     
     <item>
       <title>First preprint of my PhD</title>
-      <link>/news/2018-preprint/</link>
+      <link>https://tauanacunha.com/news/2018-preprint/</link>
       <pubDate>Wed, 31 Oct 2018 20:12:58 -0400</pubDate>
       
-      <guid>/news/2018-preprint/</guid>
+      <guid>https://tauanacunha.com/news/2018-preprint/</guid>
       <description>&lt;p&gt;Celebrating halloween with the first preprint of my PhD: &lt;a href=&#34;https://www.biorxiv.org/content/10.1101/457770v1&#34;&gt;Deep gastropod relationships resolved&lt;/a&gt;. Check it out to see how different groups of snails, limpets and slugs are related to each other! And for some cool phylogenomics methods. Feedback welcome :)&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Visiting European museums for fossils</title>
-      <link>/news/2018-museum-visits/</link>
+      <link>https://tauanacunha.com/news/2018-museum-visits/</link>
       <pubDate>Sun, 12 Aug 2018 20:12:58 -0400</pubDate>
       
-      <guid>/news/2018-museum-visits/</guid>
+      <guid>https://tauanacunha.com/news/2018-museum-visits/</guid>
       <description>&lt;p&gt;Returning after four weeks of visiting invertebrate paleontology collections at the Oxford University Museum of Natural History, the Natural History Museum in London, and the National Museum of Natural History in Paris! Work: photographing fossil shells from the Mesozoic and early Cenozoic. Thanks to all of the collection curators/managers, colleagues and friends that helped and made me company during this time!&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/news-projs/paris_lapse.gif&#34; alt=&#34;paris_lapse&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/news-projs/img_8247.jpg&#34; alt=&#34;equipment&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/news-projs/oxford_lapse.gif&#34; alt=&#34;oxford_lapse&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tauanacunha.com/news-projs/paris_lapse.gif&#34; alt=&#34;paris_lapse&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tauanacunha.com/news-projs/img_8247.jpg&#34; alt=&#34;equipment&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tauanacunha.com/news-projs/oxford_lapse.gif&#34; alt=&#34;oxford_lapse&#34;&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Faculty for the Future Fellowship!</title>
-      <link>/news/2018-fff/</link>
+      <link>https://tauanacunha.com/news/2018-fff/</link>
       <pubDate>Thu, 29 Mar 2018 20:12:58 -0400</pubDate>
       
-      <guid>/news/2018-fff/</guid>
+      <guid>https://tauanacunha.com/news/2018-fff/</guid>
       <description>&lt;p&gt;Just got the wonderful news that my application was selected for a &lt;a href=&#34;https://www.facultyforthefuture.net&#34;&gt;Faculty for the Future Fellowship&lt;/a&gt;! Recipients are women in STEM fields who may become role models in the sciences upon returning to their home countries. The fellowship will fund the last year of my PhD at Harvard, working with the phylogenetic relationships of gastropods, their biogeography in the marine environment and the evolution of shell shape across large time scales.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Teaching Award!</title>
-      <link>/news/2018-teaching-award/</link>
+      <link>https://tauanacunha.com/news/2018-teaching-award/</link>
       <pubDate>Wed, 07 Mar 2018 20:12:58 -0400</pubDate>
       
-      <guid>/news/2018-teaching-award/</guid>
+      <guid>https://tauanacunha.com/news/2018-teaching-award/</guid>
       <description>&lt;p&gt;After a great semester with many leading researchers coming to talk to us about all sorts of topics and software on phylogeography and phylogenomics, I got the &lt;a href=&#34;https://bokcenter.harvard.edu/teaching-awards&#34;&gt;Certificate of Distinction in Teaching&lt;/a&gt; from the Derek Bok Center for my work at &amp;lsquo;Phylogenetics and Phylogeography in the Era of Genomics&amp;rsquo; (OEB275r) last Fall!&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>G4 Symposium</title>
-      <link>/news/2017-g4symposium/</link>
+      <link>https://tauanacunha.com/news/2017-g4symposium/</link>
       <pubDate>Thu, 27 Apr 2017 20:12:58 -0400</pubDate>
       
-      <guid>/news/2017-g4symposium/</guid>
+      <guid>https://tauanacunha.com/news/2017-g4symposium/</guid>
       <description>&lt;p&gt;In OEB-Harvard, all fourth year students present to the whole department in the G4 Symposium. It is one of the milestones of our program and everyone did so great!&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;G4cohort.jpg&#34; alt=&#34;G4cohort.jpg&#34;&gt;&lt;/p&gt;
 </description>
@@ -165,50 +191,50 @@ Also, my first dive in cold waters (10ºC!) was so worth it! Frizzle anemone, ke
     
     <item>
       <title>Merit Fellowship</title>
-      <link>/news/2017-merit-gsas/</link>
+      <link>https://tauanacunha.com/news/2017-merit-gsas/</link>
       <pubDate>Fri, 21 Apr 2017 20:12:58 -0400</pubDate>
       
-      <guid>/news/2017-merit-gsas/</guid>
+      <guid>https://tauanacunha.com/news/2017-merit-gsas/</guid>
       <description>&lt;p&gt;Just found out that my application was selected for a Merit Fellowship from Harvard GSAS! (Award from the John Parker Bequest, 1873)&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>NSF DDIG Award!</title>
-      <link>/news/2016-ddig/</link>
+      <link>https://tauanacunha.com/news/2016-ddig/</link>
       <pubDate>Tue, 20 Dec 2016 20:12:58 -0400</pubDate>
       
-      <guid>/news/2016-ddig/</guid>
+      <guid>https://tauanacunha.com/news/2016-ddig/</guid>
       <description>&lt;p&gt;Just got the awesome news that &lt;a href=&#34;https://www.nsf.gov/awardsearch/showAward?AWD_ID=1701648&amp;amp;HistoricalAwards=false&#34;&gt;my NSF DDIG&lt;/a&gt; was approved! Gastropod shell morphology, here we go!&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Teaching Award</title>
-      <link>/news/2016-teaching-award/</link>
+      <link>https://tauanacunha.com/news/2016-teaching-award/</link>
       <pubDate>Wed, 19 Oct 2016 20:12:58 -0400</pubDate>
       
-      <guid>/news/2016-teaching-award/</guid>
+      <guid>https://tauanacunha.com/news/2016-teaching-award/</guid>
       <description>&lt;p&gt;Got a second &lt;a href=&#34;https://bokcenter.harvard.edu/teaching-awards&#34;&gt;Certificate of Distinction in Teaching&lt;/a&gt; from the Derek Bok Center for my teaching of &amp;lsquo;Biology and Evolution of Invertebrate Animals&amp;rsquo; (OEB51) this last Spring. Another great semester with the most wonderful animals and great students!&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>SSB Research Award</title>
-      <link>/news/2015-ssb/</link>
+      <link>https://tauanacunha.com/news/2015-ssb/</link>
       <pubDate>Fri, 23 Oct 2015 20:12:58 -0400</pubDate>
       
-      <guid>/news/2015-ssb/</guid>
+      <guid>https://tauanacunha.com/news/2015-ssb/</guid>
       <description>&lt;p&gt;Just received the &lt;a href=&#34;https://www.systbio.org/graduate-student-research-awards.html&#34;&gt;Graduate Student Research Award&lt;/a&gt; from the Society of Systematic Biologists! Let&amp;rsquo;s go, gastropods!&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Teaching award</title>
-      <link>/news/2015-teaching-award/</link>
+      <link>https://tauanacunha.com/news/2015-teaching-award/</link>
       <pubDate>Tue, 20 Oct 2015 20:12:58 -0400</pubDate>
       
-      <guid>/news/2015-teaching-award/</guid>
+      <guid>https://tauanacunha.com/news/2015-teaching-award/</guid>
       <description>&lt;p&gt;I was awarded a &lt;a href=&#34;https://bokcenter.harvard.edu/teaching-awards&#34;&gt;Certificate of Distinction in Teaching&lt;/a&gt; from the Derek Bok Center for my teaching of &amp;lsquo;Biology and Evolution of Invertebrate Animals&amp;rsquo; (OEB51) in the Spring. It was a great semester with an enthusiastic group of students!&lt;/p&gt;
 </description>
     </item>
