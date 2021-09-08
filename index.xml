@@ -7,62 +7,34 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Tauana Cunha {year}</copyright>
-    <lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://tauanacunha.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Recent &amp; Upcoming Talks</title>
-      <link>https://tauanacunha.com/talk/</link>
-      <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
-      
-      <guid>https://tauanacunha.com/talk/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>News</title>
-      <link>https://tauanacunha.com/news/</link>
-      <pubDate>Mon, 04 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://tauanacunha.com/news/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Courses Taught</title>
-      <link>https://tauanacunha.com/courses/</link>
-      <pubDate>Wed, 29 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://tauanacunha.com/courses/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Publications</title>
-      <link>https://tauanacunha.com/publication/</link>
-      <pubDate>Fri, 30 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://tauanacunha.com/publication/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Projects</title>
       <link>https://tauanacunha.com/project/</link>
-      <pubDate>Tue, 01 Jan 2019 01:00:00 +0000</pubDate>
+      <pubDate>Tue, 07 Sep 2021 01:00:00 +0000</pubDate>
       
       <guid>https://tauanacunha.com/project/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Posts</title>
+      <title>Blog Posts</title>
       <link>https://tauanacunha.com/post/</link>
-      <pubDate>Mon, 15 Feb 2016 20:12:58 -0400</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://tauanacunha.com/post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Courses Taught</title>
+      <link>https://tauanacunha.com/courses/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/courses/</guid>
       <description></description>
     </item>
     
@@ -303,6 +275,33 @@
   
 &lt;/div&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>News</title>
+      <link>https://tauanacunha.com/news/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/news/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Publications</title>
+      <link>https://tauanacunha.com/publication/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/publication/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent &amp; Upcoming Talks</title>
+      <link>https://tauanacunha.com/talk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/talk/</guid>
+      <description></description>
     </item>
     
   </channel>

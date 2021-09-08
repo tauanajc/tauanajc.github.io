@@ -7,82 +7,10 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Tauana Cunha {year}</copyright>
-    <lastBuildDate>Tue, 01 Jan 2019 01:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jan 2018 01:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://tauanacunha.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Bioinformatics</title>
-      <link>https://tauanacunha.com/tags/bioinformatics/</link>
-      <pubDate>Tue, 01 Jan 2019 01:00:00 +0000</pubDate>
-      
-      <guid>https://tauanacunha.com/tags/bioinformatics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Fissurellidae</title>
-      <link>https://tauanacunha.com/tags/fissurellidae/</link>
-      <pubDate>Tue, 01 Jan 2019 01:00:00 +0000</pubDate>
-      
-      <guid>https://tauanacunha.com/tags/fissurellidae/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Gastropoda</title>
-      <link>https://tauanacunha.com/tags/gastropoda/</link>
-      <pubDate>Tue, 01 Jan 2019 01:00:00 +0000</pubDate>
-      
-      <guid>https://tauanacunha.com/tags/gastropoda/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Phylogenomics</title>
-      <link>https://tauanacunha.com/tags/phylogenomics/</link>
-      <pubDate>Tue, 01 Jan 2019 01:00:00 +0000</pubDate>
-      
-      <guid>https://tauanacunha.com/tags/phylogenomics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Phylogeny</title>
-      <link>https://tauanacunha.com/tags/phylogeny/</link>
-      <pubDate>Tue, 01 Jan 2019 01:00:00 +0000</pubDate>
-      
-      <guid>https://tauanacunha.com/tags/phylogeny/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Systematics</title>
-      <link>https://tauanacunha.com/tags/systematics/</link>
-      <pubDate>Tue, 01 Jan 2019 01:00:00 +0000</pubDate>
-      
-      <guid>https://tauanacunha.com/tags/systematics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Transcriptomes</title>
-      <link>https://tauanacunha.com/tags/transcriptomes/</link>
-      <pubDate>Tue, 01 Jan 2019 01:00:00 +0000</pubDate>
-      
-      <guid>https://tauanacunha.com/tags/transcriptomes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Vetigastropoda</title>
-      <link>https://tauanacunha.com/tags/vetigastropoda/</link>
-      <pubDate>Tue, 01 Jan 2019 01:00:00 +0000</pubDate>
-      
-      <guid>https://tauanacunha.com/tags/vetigastropoda/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>BioGeoBEARS</title>
@@ -108,6 +36,24 @@
       <pubDate>Mon, 01 Jan 2018 01:00:00 +0000</pubDate>
       
       <guid>https://tauanacunha.com/tags/dispersal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fissurellidae</title>
+      <link>https://tauanacunha.com/tags/fissurellidae/</link>
+      <pubDate>Mon, 01 Jan 2018 01:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/tags/fissurellidae/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gastropoda</title>
+      <link>https://tauanacunha.com/tags/gastropoda/</link>
+      <pubDate>Mon, 01 Jan 2018 01:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/tags/gastropoda/</guid>
       <description></description>
     </item>
     
@@ -162,6 +108,15 @@
       <pubDate>Sun, 01 Jan 2017 01:00:00 +0000</pubDate>
       
       <guid>https://tauanacunha.com/tags/morphospace/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vetigastropoda</title>
+      <link>https://tauanacunha.com/tags/vetigastropoda/</link>
+      <pubDate>Sun, 01 Jan 2017 01:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/tags/vetigastropoda/</guid>
       <description></description>
     </item>
     

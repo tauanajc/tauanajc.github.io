@@ -1,41 +1,59 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Giribet, G on Tauana J. Cunha</title>
+    <title>Giribet G on Tauana J. Cunha</title>
     <link>https://tauanacunha.com/authors/giribet-g/</link>
-    <description>Recent content in Giribet, G on Tauana J. Cunha</description>
+    <description>Recent content in Giribet G on Tauana J. Cunha</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Tauana Cunha {year}</copyright>
-    <lastBuildDate>Fri, 30 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Sep 2021 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://tauanacunha.com/authors/giribet-g/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>A phylogenomic framework for Vetigastropoda (Mollusca)</title>
-      <link>https://tauanacunha.com/publication/cunha-2019-c/</link>
-      <pubDate>Fri, 30 Aug 2019 00:00:00 +0000</pubDate>
+      <title>Investigating sources of conflict in deep phylogenomics of vetigastropod snails</title>
+      <link>https://tauanacunha.com/publication/cunha-2021-systbio/</link>
+      <pubDate>Fri, 03 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://tauanacunha.com/publication/cunha-2019-c/</guid>
+      <guid>https://tauanacunha.com/publication/cunha-2021-systbio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Comprehensive species sampling and sophisticated algorithmic approaches refute the monophyly of Arachnida</title>
+      <link>https://tauanacunha.com/publication/ballesteros-2021/</link>
+      <pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/publication/ballesteros-2021/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tightening the girdle: phylotranscriptomics of Polyplacophora</title>
+      <link>https://tauanacunha.com/publication/moles-2021-jmolluscanstud/</link>
+      <pubDate>Wed, 16 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/publication/moles-2021-jmolluscanstud/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A congruent topology for deep gastropod relationships</title>
-      <link>https://tauanacunha.com/publication/cunha-2019-a/</link>
+      <link>https://tauanacunha.com/publication/cunha-2019-proceedingsb/</link>
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tauanacunha.com/publication/cunha-2019-a/</guid>
+      <guid>https://tauanacunha.com/publication/cunha-2019-proceedingsb/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Putting keyhole limpets on the map: phylogeny and biogeography of the globally distributed marine family Fissurellidae (Vetigastropoda, Mollusca)</title>
-      <link>https://tauanacunha.com/publication/cunha-2019-b/</link>
+      <link>https://tauanacunha.com/publication/cunha-2019-mpe/</link>
       <pubDate>Tue, 19 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://tauanacunha.com/publication/cunha-2019-b/</guid>
+      <guid>https://tauanacunha.com/publication/cunha-2019-mpe/</guid>
       <description></description>
     </item>
     

@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Tauana J. Cunha</title>
+    <title>Blog Posts on Tauana J. Cunha</title>
     <link>https://tauanacunha.com/post/</link>
-    <description>Recent content in Posts on Tauana J. Cunha</description>
+    <description>Recent content in Blog Posts on Tauana J. Cunha</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Tauana Cunha {year}</copyright>
-    <lastBuildDate>Mon, 15 Feb 2016 20:12:58 -0400</lastBuildDate>
     
 	    <atom:link href="https://tauanacunha.com/post/index.xml" rel="self" type="application/rss+xml" />
     

@@ -7,7 +7,6 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Tauana Cunha {year}</copyright>
-    <lastBuildDate>Wed, 29 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://tauanacunha.com/courses/index.xml" rel="self" type="application/rss+xml" />
     
@@ -27,9 +26,10 @@
       <pubDate>Thu, 01 Feb 2018 22:18:45 -0400</pubDate>
       
       <guid>https://tauanacunha.com/courses/2018_inver-extensionharvard/</guid>
-      <description>&lt;p&gt;Spring 2018&lt;/p&gt;
+      <description>&lt;p&gt;Spring 2018, Harvard Extension School&lt;/p&gt;
 &lt;p&gt;Code BIOS E-27, &lt;a href=&#34;https://canvas.harvard.edu/courses/35083&#34;&gt;WEBSITE&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;On-campus and/or online.&lt;/p&gt;
+&lt;p&gt;Instructor: Cassandra Extavour&lt;/p&gt;
 &lt;p&gt;This course introduces students to the diversity of invertebrates, which are the vast majority of all animals on the planet. We cover the development, adult anatomy, biology, and evolutionary relationships of the main animal phyla including but not limited to sponges, mollusks, annelids, and arthropods. Special emphasis is placed on understanding the similarities and differences in embryonic development, the broad diversity of animal forms and their adaptations to different ecosystems, and how these phenomena shape animal evolution. The aim of this course is to understand animal diversity from a phylogenetic perspective as well as from a developmental and functional morphology point of view, and to be able to understand the evolution and divergence of these features in the context of animal evolution.&lt;/p&gt;
 </description>
     </item>
@@ -40,8 +40,9 @@
       <pubDate>Fri, 01 Sep 2017 22:18:45 -0400</pubDate>
       
       <guid>https://tauanacunha.com/courses/2017_phylogeo-nomics-harvard/</guid>
-      <description>&lt;p&gt;Fall 2017&lt;/p&gt;
+      <description>&lt;p&gt;Fall 2017, Harvard University&lt;/p&gt;
 &lt;p&gt;Code OEB275r, &lt;a href=&#34;https://canvas.harvard.edu/courses/31068&#34;&gt;WEBSITE&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Instructor: Scott Edwards&lt;/p&gt;
 &lt;p&gt;The course will review the recent literature on methods of analysis in phylogenomics and phylogeography, with particular attention to analysis of large-scale data sets; accommodating gene tree heterogeneity; adequacy of models at the level of DNA sequence evolution and demographic history; and estimation of critical parameters of population history, such as phylogenetic relationships, reticulate evolutionary histories, rates of gene flow and species boundaries.  Weekly sessions will consist of presentations and discussions led by students and by international experts, including hands-on sessions working with state-of-the-art software.&lt;/p&gt;
 </description>
     </item>
@@ -52,8 +53,9 @@
       <pubDate>Mon, 01 Feb 2016 22:18:45 -0400</pubDate>
       
       <guid>https://tauanacunha.com/courses/2016_inver-harvard/</guid>
-      <description>&lt;p&gt;Spring 2015 &amp;amp; 2016&lt;/p&gt;
+      <description>&lt;p&gt;Spring 2015 &amp;amp; 2016, Harvard University&lt;/p&gt;
 &lt;p&gt;Code OEB51, &lt;a href=&#34;https://canvas.harvard.edu/courses/10394&#34;&gt;WEBSITE&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Instructors: Cassandra Extavour (2016), Gonzalo Giribet (2015)&lt;/p&gt;
 &lt;p&gt;Introduction to invertebrate diversity. Covers anatomy, biology and evolutionary relationships of the main animal phyla including sponges, mollusks, annelids, arthropods, among others. Special emphasis is placed on understanding the broad diversity of animal forms and their adaptations to different ecosystems and how these shape animal evolution. Lectures are complemented with a mandatory weekly lab and a field trip to Bocas del Toro, Panama, an area of outstanding marine diversity in the Caribbean.&lt;/p&gt;
 </description>
     </item>
@@ -64,7 +66,7 @@
       <pubDate>Fri, 01 Feb 2013 22:18:45 -0400</pubDate>
       
       <guid>https://tauanacunha.com/courses/2013_r-usp/</guid>
-      <description>&lt;p&gt;Spring 2013&lt;/p&gt;
+      <description>&lt;p&gt;Spring 2013, University of São Paulo&lt;/p&gt;
 &lt;p&gt;Code BIE5782, &lt;a href=&#34;http://ecologia.ib.usp.br/bie5782/doku.php?id=start&#34;&gt;WEBSITE&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
@@ -75,8 +77,8 @@
       <pubDate>Mon, 01 Feb 2010 22:18:45 -0400</pubDate>
       
       <guid>https://tauanacunha.com/courses/2010_inver-usp/</guid>
-      <description>&lt;p&gt;Spring 2010&lt;/p&gt;
-&lt;p&gt;Code BIZ0213, &lt;a href=&#34;http://marcus.ib.usp.br/biz213/&#34;&gt;WEBSITE&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;Spring 2010, University of São Paulo&lt;/p&gt;
+&lt;p&gt;Code BIZ0213, &lt;a href=&#34;https://biz0213.ib.usp.br&#34;&gt;WEBSITE&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -86,8 +88,8 @@
       <pubDate>Fri, 01 Feb 2008 22:18:45 -0400</pubDate>
       
       <guid>https://tauanacunha.com/courses/2008_dbf-usp/</guid>
-      <description>&lt;p&gt;Spring 2008&lt;/p&gt;
-&lt;p&gt;Code 0410113, &lt;a href=&#34;http://www.ib.usp.br/inter/0410113&#34;&gt;WEBSITE&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;Spring 2008, University of São Paulo&lt;/p&gt;
+&lt;p&gt;Code 0410113, &lt;a href=&#34;https://dbf.ib.usp.br&#34;&gt;WEBSITE&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

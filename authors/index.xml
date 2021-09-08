@@ -7,36 +7,179 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Tauana Cunha {year}</copyright>
-    <lastBuildDate>Wed, 29 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Sep 2021 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://tauanacunha.com/authors/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title></title>
-      <link>https://tauanacunha.com/authors/admin/</link>
-      <pubDate>Wed, 29 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://tauanacunha.com/authors/admin/</guid>
-      <description>&lt;p&gt;I am an evolutionary biologist interested in the origin and maintenance of invertebrate diversity, with marine gastropods as my main study system. My research is based on fieldwork and museum collections, comprising phylogenomics, biogeography, population and evolutionary genomics. I&amp;rsquo;m a Smithsonian Institution Postdoctoral Fellow at &lt;a href=&#34;https://stri.si.edu&#34;&gt;STRI&lt;/a&gt; in &lt;a href=&#34;https://collinlab.weebly.com&#34;&gt;Rachel Collin&amp;rsquo;s Lab&lt;/a&gt;, with a PhD from Harvard University in &lt;a href=&#34;https://giribetgroup.oeb.harvard.edu&#34;&gt;Gonzalo Giribet&amp;rsquo;s Lab&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>**Cunha, TJ**</title>
+      <title>**Cunha TJ**</title>
       <link>https://tauanacunha.com/authors/cunha-tj/</link>
-      <pubDate>Fri, 30 Aug 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 03 Sep 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tauanacunha.com/authors/cunha-tj/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Giribet, G</title>
+      <title>Giribet G</title>
       <link>https://tauanacunha.com/authors/giribet-g/</link>
-      <pubDate>Fri, 30 Aug 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 03 Sep 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tauanacunha.com/authors/giribet-g/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reimer JD</title>
+      <link>https://tauanacunha.com/authors/reimer-jd/</link>
+      <pubDate>Fri, 03 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/authors/reimer-jd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Arango CP</title>
+      <link>https://tauanacunha.com/authors/arango-cp/</link>
+      <pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/authors/arango-cp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Baker CM</title>
+      <link>https://tauanacunha.com/authors/baker-cm/</link>
+      <pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/authors/baker-cm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ballesteros JA</title>
+      <link>https://tauanacunha.com/authors/ballesteros-ja/</link>
+      <pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/authors/ballesteros-ja/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Benavides LR</title>
+      <link>https://tauanacunha.com/authors/benavides-lr/</link>
+      <pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/authors/benavides-lr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gainett G</title>
+      <link>https://tauanacunha.com/authors/gainett-g/</link>
+      <pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/authors/gainett-g/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gavish-Regev E</title>
+      <link>https://tauanacunha.com/authors/gavish-regev-e/</link>
+      <pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/authors/gavish-regev-e/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Harvey MS</title>
+      <link>https://tauanacunha.com/authors/harvey-ms/</link>
+      <pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/authors/harvey-ms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hormiga G</title>
+      <link>https://tauanacunha.com/authors/hormiga-g/</link>
+      <pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/authors/hormiga-g/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ontano AZ</title>
+      <link>https://tauanacunha.com/authors/ontano-az/</link>
+      <pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/authors/ontano-az/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Santibanez-Lopez CE</title>
+      <link>https://tauanacunha.com/authors/santibanez-lopez-ce/</link>
+      <pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/authors/santibanez-lopez-ce/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Setton EVW</title>
+      <link>https://tauanacunha.com/authors/setton-evw/</link>
+      <pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/authors/setton-evw/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sharma PP</title>
+      <link>https://tauanacunha.com/authors/sharma-pp/</link>
+      <pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/authors/sharma-pp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wheeler WC</title>
+      <link>https://tauanacunha.com/authors/wheeler-wc/</link>
+      <pubDate>Tue, 03 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/authors/wheeler-wc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Combosch D</title>
+      <link>https://tauanacunha.com/authors/combosch-d/</link>
+      <pubDate>Wed, 16 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/authors/combosch-d/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lemer, S</title>
+      <link>https://tauanacunha.com/authors/lemer-s/</link>
+      <pubDate>Wed, 16 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/authors/lemer-s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Moles J</title>
+      <link>https://tauanacunha.com/authors/moles-j/</link>
+      <pubDate>Wed, 16 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/authors/moles-j/</guid>
       <description></description>
     </item>
     
@@ -55,15 +198,6 @@
       <pubDate>Tue, 19 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>https://tauanacunha.com/authors/kano-y/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Lemer, S</title>
-      <link>https://tauanacunha.com/authors/lemer-s/</link>
-      <pubDate>Tue, 19 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://tauanacunha.com/authors/lemer-s/</guid>
       <description></description>
     </item>
     
@@ -92,6 +226,16 @@
       
       <guid>https://tauanacunha.com/authors/sumida-pyg/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tauanacunha.com/authors/admin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/authors/admin/</guid>
+      <description>&lt;p&gt;I am an evolutionary biologist interested in the origin and maintenance of invertebrate diversity, with marine gastropods as my main study system. My research is based on fieldwork and museum collections, comprising phylogenomics, biogeography, population and evolutionary genomics. I&amp;rsquo;m a Smithsonian Institution Postdoctoral Fellow at &lt;a href=&#34;https://stri.si.edu&#34;&gt;STRI&lt;/a&gt; in &lt;a href=&#34;https://collinlab.weebly.com&#34;&gt;Rachel Collin&amp;rsquo;s Lab&lt;/a&gt;, with a PhD from Harvard University in &lt;a href=&#34;https://giribetgroup.oeb.harvard.edu&#34;&gt;Gonzalo Giribet&amp;rsquo;s Lab&lt;/a&gt;.&lt;/p&gt;
+</description>
     </item>
     
   </channel>
