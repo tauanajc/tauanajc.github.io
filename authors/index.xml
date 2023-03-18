@@ -7,7 +7,7 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Tauana Cunha {year}</copyright>
-    <lastBuildDate>Fri, 08 Jul 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Mar 2023 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://tauanacunha.com/authors/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,9 +15,54 @@
     <item>
       <title>**Cunha TJ**</title>
       <link>https://tauanacunha.com/authors/cunha-tj/</link>
-      <pubDate>Wed, 09 Feb 2022 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 03 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://tauanacunha.com/authors/cunha-tj/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fernández-Simón J</title>
+      <link>https://tauanacunha.com/authors/fern%C3%A1ndez-sim%C3%B3n-j/</link>
+      <pubDate>Fri, 03 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/authors/fern%C3%A1ndez-sim%C3%B3n-j/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Giribet G</title>
+      <link>https://tauanacunha.com/authors/giribet-g/</link>
+      <pubDate>Fri, 03 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/authors/giribet-g/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Moles J</title>
+      <link>https://tauanacunha.com/authors/moles-j/</link>
+      <pubDate>Fri, 03 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/authors/moles-j/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Petrula M</title>
+      <link>https://tauanacunha.com/authors/petrula-m/</link>
+      <pubDate>Fri, 03 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/authors/petrula-m/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reimer JD</title>
+      <link>https://tauanacunha.com/authors/reimer-jd/</link>
+      <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/authors/reimer-jd/</guid>
       <description></description>
     </item>
     
@@ -72,15 +117,6 @@
       <pubDate>Wed, 09 Feb 2022 00:00:00 +0000</pubDate>
       
       <guid>https://tauanacunha.com/authors/gavish-regev-e/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Giribet G</title>
-      <link>https://tauanacunha.com/authors/giribet-g/</link>
-      <pubDate>Wed, 09 Feb 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://tauanacunha.com/authors/giribet-g/</guid>
       <description></description>
     </item>
     
@@ -148,15 +184,6 @@
     </item>
     
     <item>
-      <title>Reimer JD</title>
-      <link>https://tauanacunha.com/authors/reimer-jd/</link>
-      <pubDate>Fri, 03 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://tauanacunha.com/authors/reimer-jd/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Combosch D</title>
       <link>https://tauanacunha.com/authors/combosch-d/</link>
       <pubDate>Wed, 16 Jun 2021 00:00:00 +0000</pubDate>
@@ -171,15 +198,6 @@
       <pubDate>Wed, 16 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://tauanacunha.com/authors/lemer-s/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Moles J</title>
-      <link>https://tauanacunha.com/authors/moles-j/</link>
-      <pubDate>Wed, 16 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://tauanacunha.com/authors/moles-j/</guid>
       <description></description>
     </item>
     
@@ -234,9 +252,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://tauanacunha.com/authors/admin/</guid>
-      <description>&lt;p&gt;I am interested in the evolution of invertebrate diversity, especially in the marine realm. My research is centered in the phylogeny, biogeography and genomics of gastropods (snails, limpets and slugs), integrating museum collections and fieldwork.&lt;/p&gt;
-&lt;p&gt;I am a postdoc at the &lt;a href=&#34;https://www.fieldmuseum.org/science/research&#34;&gt;Field Museum&lt;/a&gt; in Chicago, and was previously at the &lt;a href=&#34;https://stri.si.edu&#34;&gt;Smithsonian Tropical Research Institute&lt;/a&gt; in Panama. I did my Ph.D. in &lt;a href=&#34;https://giribetgroup.oeb.harvard.edu&#34;&gt;Gonzalo Giribet&amp;rsquo;s Lab&lt;/a&gt; at Harvard University, and my B.Sc. at the &lt;a href=&#34;https://www.ib.usp.br&#34;&gt;University of Sao Paulo&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Major current projects include the assembly of genomes from non-model invertebrates, analyzing the genetic connectivity of snails from the Tropical Eastern Pacific, and investigating how the diverse feeding mechanisms of gastropods have evolved across geological timescales.&lt;/p&gt;
+      <description>&lt;p&gt;I am interested in the evolution of invertebrate diversity, especially in the marine realm. Major current projects include the assembly of genomes from non-model invertebrates, analyzing the genetic connectivity of snails from the Tropical Eastern Pacific, and investigating how the diverse feeding mechanisms of gastropods have evolved across geological timescales.&lt;/p&gt;
+&lt;p&gt;I am a postdoc at the &lt;a href=&#34;https://www.fieldmuseum.org/science/research&#34;&gt;Field Museum&lt;/a&gt; in Chicago, and was previously at the &lt;a href=&#34;https://stri.si.edu&#34;&gt;Smithsonian Tropical Research Institute&lt;/a&gt; in Panama. I got my Ph.D. at &lt;a href=&#34;https://giribetgroup.oeb.harvard.edu&#34;&gt;Harvard University&lt;/a&gt;, and my B.Sc. at the &lt;a href=&#34;https://www.ib.usp.br&#34;&gt;University of Sao Paulo&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

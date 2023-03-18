@@ -7,10 +7,28 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Tauana Cunha {year}</copyright>
-    <lastBuildDate>Wed, 09 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Feb 2023 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://tauanacunha.com/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Photographic Checklist, DNA Barcoding, and New Species of Sea Slugs and Snails from the Faafu Atoll, Maldives (Gastropoda: Heterobranchia and Vetigastropoda)</title>
+      <link>https://tauanacunha.com/publication/cunha-2023-diversity/</link>
+      <pubDate>Fri, 03 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/publication/cunha-2023-diversity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Investigating sources of conflict in deep phylogenomics of vetigastropod snails</title>
+      <link>https://tauanacunha.com/publication/cunha-2022-systbio/</link>
+      <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/publication/cunha-2022-systbio/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Comprehensive species sampling and sophisticated algorithmic approaches refute the monophyly of Arachnida</title>
@@ -18,15 +36,6 @@
       <pubDate>Wed, 09 Feb 2022 00:00:00 +0000</pubDate>
       
       <guid>https://tauanacunha.com/publication/ballesteros-2021/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Investigating sources of conflict in deep phylogenomics of vetigastropod snails</title>
-      <link>https://tauanacunha.com/publication/cunha-2021-systbio/</link>
-      <pubDate>Fri, 03 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://tauanacunha.com/publication/cunha-2021-systbio/</guid>
       <description></description>
     </item>
     

@@ -7,6 +7,7 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Tauana Cunha {year}</copyright>
+    <lastBuildDate>Thu, 28 Jun 2018 00:00:00 +0100</lastBuildDate>
     
 	    <atom:link href="https://tauanacunha.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +19,16 @@
       
       <guid>https://tauanacunha.com/project/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Privacy Policy</title>
+      <link>https://tauanacunha.com/privacy/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
+      
+      <guid>https://tauanacunha.com/privacy/</guid>
+      <description>&lt;p&gt;This website uses cookies to ensure you get the best experience.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -44,8 +55,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://tauanacunha.com/gallery/</guid>
-      <description>&lt;h3 id=&#34;fieldwork-localities---click-for-interactive-viewhttpswwwgooglecommapsdu0embedmid1xlf8hcmrkn2owrer7o4qaq6aihtij8ia&#34;&gt;&lt;a href=&#34;https://www.google.com/maps/d/u/0/embed?mid=1XLF8hCMrkN2owREr7o4Qaq6aIHtIj8IA&#34;&gt;Fieldwork localities - click for interactive view&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;map.pdf&#34; alt=&#34;map&#34;&gt;&lt;/p&gt;
+      <description>&lt;h3 id=&#34;fieldwork-localities---interactive-viewhttpswwwgooglecommapsdu0embedmid1xlf8hcmrkn2owrer7o4qaq6aihtij8ia&#34;&gt;&lt;a href=&#34;https://www.google.com/maps/d/u/0/embed?mid=1XLF8hCMrkN2owREr7o4Qaq6aIHtIj8IA&#34;&gt;Fieldwork localities - interactive view&lt;/a&gt;&lt;/h3&gt;
+&lt;!--![map](map.pdf)--&gt;
 &lt;h3 id=&#34;2020-2022-panama-throughout-the-pacific-coast&#34;&gt;2020-2022 Panama, throughout the Pacific Coast&lt;/h3&gt;
 
 

@@ -3,8 +3,63 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://tauanacunha.com/talk/example/</loc>
-    <lastmod>2019-06-16T10:31:53-05:00</lastmod>
+    <loc>https://tauanacunha.com/authors/</loc>
+    <lastmod>2023-04-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tauanacunha.com/news/2023-onygbe/</loc>
+    <lastmod>2023-04-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tauanacunha.com/authors/cunha-tj/</loc>
+    <lastmod>2023-03-17T19:14:26-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tauanacunha.com/publication_types/2/</loc>
+    <lastmod>2023-03-17T19:14:26-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tauanacunha.com/authors/fern%C3%A1ndez-sim%C3%B3n-j/</loc>
+    <lastmod>2023-03-17T19:14:26-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tauanacunha.com/authors/giribet-g/</loc>
+    <lastmod>2023-03-17T19:14:26-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tauanacunha.com/authors/moles-j/</loc>
+    <lastmod>2023-03-17T19:14:26-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tauanacunha.com/news/2023-diversity/</loc>
+    <lastmod>2023-02-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tauanacunha.com/authors/petrula-m/</loc>
+    <lastmod>2023-03-17T19:14:26-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tauanacunha.com/publication/cunha-2023-diversity/</loc>
+    <lastmod>2023-03-17T19:14:26-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tauanacunha.com/publication_types/</loc>
+    <lastmod>2023-03-17T19:14:26-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tauanacunha.com/news/2022-grainger/</loc>
+    <lastmod>2022-11-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -18,13 +73,18 @@
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/authors/</loc>
-    <lastmod>2022-09-09T14:27:35-05:00</lastmod>
+    <loc>https://tauanacunha.com/news/2022-si-vouchers/</loc>
+    <lastmod>2022-07-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/news/2022-si-vouchers/</loc>
-    <lastmod>2022-07-10T00:00:00+00:00</lastmod>
+    <loc>https://tauanacunha.com/publication/cunha-2022-systbio/</loc>
+    <lastmod>2023-01-03T15:18:01-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tauanacunha.com/authors/reimer-jd/</loc>
+    <lastmod>2023-01-03T15:18:01-06:00</lastmod>
   </url>
   
   <url>
@@ -40,16 +100,6 @@
   <url>
     <loc>https://tauanacunha.com/news/2022-stri-photo-contest/</loc>
     <lastmod>2022-03-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tauanacunha.com/authors/cunha-tj/</loc>
-    <lastmod>2022-03-14T11:02:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tauanacunha.com/publication_types/2/</loc>
-    <lastmod>2022-03-14T11:02:14-05:00</lastmod>
   </url>
   
   <url>
@@ -88,11 +138,6 @@
   </url>
   
   <url>
-    <loc>https://tauanacunha.com/authors/giribet-g/</loc>
-    <lastmod>2022-03-14T11:02:14-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://tauanacunha.com/authors/harvey-ms/</loc>
     <lastmod>2022-03-14T11:02:14-05:00</lastmod>
   </url>
@@ -109,11 +154,6 @@
   
   <url>
     <loc>https://tauanacunha.com/authors/ontano-az/</loc>
-    <lastmod>2022-03-14T11:02:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tauanacunha.com/publication_types/</loc>
     <lastmod>2022-03-14T11:02:14-05:00</lastmod>
   </url>
   
@@ -139,27 +179,17 @@
   
   <url>
     <loc>https://tauanacunha.com/project/inver-phylogeny/</loc>
-    <lastmod>2021-09-07T15:51:48-05:00</lastmod>
+    <lastmod>2023-03-17T17:49:28-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://tauanacunha.com/project/</loc>
-    <lastmod>2021-09-07T16:26:41-05:00</lastmod>
+    <lastmod>2023-03-17T19:20:53-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://tauanacunha.com/news/2021-systbio/</loc>
     <lastmod>2021-09-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tauanacunha.com/publication/cunha-2021-systbio/</loc>
-    <lastmod>2021-09-07T15:13:20-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tauanacunha.com/authors/reimer-jd/</loc>
-    <lastmod>2021-09-07T15:13:20-05:00</lastmod>
   </url>
   
   <url>
@@ -169,11 +199,6 @@
   
   <url>
     <loc>https://tauanacunha.com/authors/lemer-s/</loc>
-    <lastmod>2022-03-14T10:56:07-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tauanacunha.com/authors/moles-j/</loc>
     <lastmod>2022-03-14T10:56:07-05:00</lastmod>
   </url>
   
@@ -280,6 +305,16 @@
   <url>
     <loc>https://tauanacunha.com/news/2018-museum-visits/</loc>
     <lastmod>2018-08-12T20:12:58-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tauanacunha.com/privacy/</loc>
+    <lastmod>2023-03-17T17:41:25-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tauanacunha.com/</loc>
+    <lastmod>2023-03-17T17:41:25-05:00</lastmod>
   </url>
   
   <url>
@@ -534,7 +569,7 @@
   
   <url>
     <loc>https://tauanacunha.com/authors/admin/</loc>
-    <lastmod>2022-09-09T14:27:35-05:00</lastmod>
+    <lastmod>2023-01-03T14:40:15-06:00</lastmod>
   </url>
   
   <url>
@@ -553,7 +588,12 @@
   
   <url>
     <loc>https://tauanacunha.com/gallery/</loc>
-    <lastmod>2022-09-12T12:03:55-05:00</lastmod>
+    <lastmod>2023-01-03T15:33:56-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tauanacunha.com/project/inver-genomics/</loc>
+    <lastmod>2023-03-17T19:20:53-05:00</lastmod>
   </url>
   
   <url>
@@ -569,11 +609,6 @@
   <url>
     <loc>https://tauanacunha.com/talk/</loc>
     <lastmod>2019-06-16T10:31:53-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tauanacunha.com/</loc>
-    <lastmod>2022-09-12T12:03:55-05:00</lastmod>
   </url>
   
 </urlset>
