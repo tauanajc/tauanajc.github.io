@@ -13,13 +13,37 @@
     
     
     <item>
+      <title>Invertebrate Genomics</title>
+      <link>https://tauanacunha.com/project/inver-genomics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/project/inver-genomics/</guid>
+      <description>&lt;p&gt;Using portable technologies for long-read sequencing, we are assembling genomes of various non-model invertebrate phyla and investigating the genomic basis of key traits.&lt;/p&gt;
+&lt;p&gt;For parasitic hairworms (Nematomorpha), we generated the first genomes of the phylum, finding a surprising loss of about 30% of universal metazoan genes &lt;a href=&#34;https://tauanacunha.com/publication/cunha-2023-currbiol/&#34;&gt;(Cunha et al. 2023 Curr Biol)&lt;/a&gt;. By looking at the function of missing genes in other animals, we demonstrate that hairworms lack the genetic machinery to produce cilia, organelles conserved at an even broader scale, across protists and even some plants and fungi.&lt;/p&gt;
+&lt;p&gt;In the genome of meiofaunal penis worms (Priapulida), we have found a key molting gene previously only detected in Panarthopoda, suggesting a deeper origin of Halloween genes at the base of Ecdysozoa &lt;a href=&#34;https://tauanacunha.com/publication/lord-2023-gbe/&#34;&gt;(Lord, Cunha et al. 2023 GBE)&lt;/a&gt;. We have also learned how high repeat content, intron size inflation, and gene family expansion have shaped the gigantic genomes of velvet worms (Onychophora) &lt;a href=&#34;https://tauanacunha.com/publication/sato-2023-gbe/&#34;&gt;(Sato, Cunha et al. 2023 GBE)&lt;/a&gt;.&lt;/p&gt;
+&lt;br&gt;</description>
+    </item>
+    
+    <item>
+      <title>Marine Biodiversity</title>
+      <link>https://tauanacunha.com/project/biodiversity/</link>
+      <pubDate>Tue, 01 Jan 2013 01:00:00 +0000</pubDate>
+      
+      <guid>https://tauanacunha.com/project/biodiversity/</guid>
+      <description>&lt;p&gt;With &lt;a href=&#34;https://tauanacunha.com/gallery&#34;&gt;fieldwork around the world&lt;/a&gt;, we explore the diversity and distribution of marine fauna. In the Maldives, for example, two weeks of sampling led to over 100 species of snails and slugs, half of which had never been recorded in the archipelago before &lt;a href=&#34;https://tauanacunha.com/publication/cunha-2023-diversity/&#34;&gt;(Cunha et al. 2023 Diversity)&lt;/a&gt;. We document this biodiversity with vouchers in natural history collections, photos of live specimens, and genetic barcodes for all species (many of which might have never been sequenced before). Several new species are discovered and described.&lt;/p&gt;
+&lt;p&gt;Other targeted areas include the Canary Islands (results coming soon) and the Abrolhos Archipelago, the largest and most diverse reef complex of the South Atlantic, where we identified the patterns of distribution of macrofaunal invertebrates in time and space &lt;a href=&#34;https://tauanacunha.com/publication/cunha-2013-csr/&#34;&gt;(Cunha et al. 2013 CSR)&lt;/a&gt;.&lt;/p&gt;
+&lt;br&gt;</description>
+    </item>
+    
+    <item>
       <title>Phylogeny of Invertebrate Clades</title>
       <link>https://tauanacunha.com/project/inver-phylogeny/</link>
       <pubDate>Tue, 07 Sep 2021 01:00:00 +0000</pubDate>
       
       <guid>https://tauanacunha.com/project/inver-phylogeny/</guid>
-      <description>&lt;p&gt;Gastropods (snails, limpets and slugs) are arguably the most diverse group of animals in the oceans today, with main lineages having diverged hundreds of millions of years ago. I use an array of sequencing and inference methods to resolve gastropod relationships at different levels: from ancient divergences between major gastropod lineages &lt;a href=&#34;https://tauanacunha.com/publication/cunha-2019-proceedingsb/&#34;&gt;(Cunha &amp;amp; Giribet 2019 Proceedings B)&lt;/a&gt;, to divergences between subfamilies and genera &lt;a href=&#34;https://tauanacunha.com/publication/cunha-2019-mpe/&#34;&gt;(Cunha et al. 2019 MPE)&lt;/a&gt;, while also investigating what biological and systematic sources of error cause conflict between genes and analyses in genomic-scale datasets &lt;a href=&#34;https://tauanacunha.com/publication/cunha-2022-systbio/&#34;&gt;(Cunha, Reimer &amp;amp; Giribet 2021 Syst Bio)&lt;/a&gt;. Collaborations on other diverse groups of invertebrates (e.g. placement of horseshoe crabs within a paraphyletic Arachnida; resolution of the chiton phylogeny) lead to a better understanding of the animal Tree of Life.&lt;/p&gt;
-</description>
+      <description>&lt;p&gt;Gastropods (snails, limpets and slugs) are arguably the most diverse group of animals in the oceans today, with main lineages having diverged hundreds of millions of years ago. I use an array of sequencing and inference methods to resolve gastropod relationships at different levels: from ancient divergences between major gastropod lineages &lt;a href=&#34;https://tauanacunha.com/publication/cunha-2019-proceedingsb/&#34;&gt;(Cunha &amp;amp; Giribet 2019 Proceedings B)&lt;/a&gt;, to divergences between subfamilies and genera &lt;a href=&#34;https://tauanacunha.com/publication/cunha-2019-mpe/&#34;&gt;(Cunha et al. 2019 MPE)&lt;/a&gt;, while also investigating what biological and systematic sources of error cause conflict between genes and analyses in genomic-scale datasets &lt;a href=&#34;https://tauanacunha.com/publication/cunha-2022-systbio/&#34;&gt;(Cunha, Reimer &amp;amp; Giribet 2021 Syst Bio)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Collaborations on other diverse groups of invertebrates (e.g. placement of horseshoe crabs within a paraphyletic Arachnida; resolution of the chiton phylogeny) lead to a better understanding of the animal Tree of Life.&lt;/p&gt;
+&lt;br&gt;</description>
     </item>
     
     <item>
@@ -39,26 +63,6 @@
       
       <guid>https://tauanacunha.com/project/shell-shape-evolution/</guid>
       <description>&lt;p&gt;From observations of the fossil record, it has been noticed that gastropod shells at the second half of the Mesozoic Era were sturdier and more ornamented than shells from earlier times. A coincident increase in predation has led to the hypothesis that enemy-related interactions were a main driver of phenotypic changes in these organisms (escalation hypothesis). Modern experiments provide data on better-defended forms at present times, but no quantitative data exists for most traits to evaluate the long-term impact of these interactions on the morphological evolution of gastropods. I use focus-stacking to photograph hundreds of fossil shells from the Mesozoic and early Cenozoic to study the evolution of shell shape, with particular attention to trends in spiral height.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Benthic Ecology</title>
-      <link>https://tauanacunha.com/project/ecology/</link>
-      <pubDate>Tue, 01 Jan 2013 01:00:00 +0000</pubDate>
-      
-      <guid>https://tauanacunha.com/project/ecology/</guid>
-      <description>&lt;p&gt;During my undergraduate program at the University of São Paulo, I studied the diversity of invertebrates associated with brown seaweed (&lt;em&gt;Dictyota&lt;/em&gt; spp.) and their patterns of distribution in time and space &lt;a href=&#34;https://tauanacunha.com/publication/cunha-2013-csr/&#34;&gt;(Cunha et al. 2013 CSR)&lt;/a&gt;. This project, together with many others from different Brazilian institutions and labs, targeted the Abrolhos Archipelago, the largest and most diverse reef complex of the South Atlantic. This work was done with Paulo Sumida in the &lt;a href=&#34;http://lamp.io.usp.br&#34;&gt;Lab of Deep Sea Ecology and Evolution&lt;/a&gt; at the University of São Paulo. Broader initiative: &lt;a href=&#34;http://www3.io.usp.br:48080/lamp/index.php/projetos/todos/11-portugues/principal/projetos-concluidos/95-pro-abrolhos&#34;&gt;Pró-Abrolhos&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Invertebrate Genomics</title>
-      <link>https://tauanacunha.com/project/inver-genomics/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://tauanacunha.com/project/inver-genomics/</guid>
-      <description>&lt;p&gt;Coming soon!&lt;/p&gt;
 </description>
     </item>
     
